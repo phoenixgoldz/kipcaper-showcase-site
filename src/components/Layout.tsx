@@ -44,10 +44,10 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <span>© {new Date().getFullYear()} Kip Caper</span>
           </div>
           <div className="flex gap-4">
-            <a href="/" className="story-link">Home</a>
-            <a href="/codex" className="story-link">Codex</a>
-            <a href="/updates" className="story-link">Updates</a>
-            <a href="/media" className="story-link">Media</a>
+            <Link to="/" className="story-link">Home</Link>
+            <Link to="/codex" className="story-link">Codex</Link>
+            <Link to="/updates" className="story-link">Updates</Link>
+            <Link to="/media" className="story-link">Media</Link>
           </div>
         </div>
       </footer>

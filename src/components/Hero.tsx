@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"; import { Link } from "react-router-dom";
 const EMBLEM_SRC = "/lovable-uploads/587ae039-a119-445b-a4ae-686bd447dace.png";
 import parchment from "@/assets/parchment-texture.jpg";
 import { useEffect, useRef } from "react";
@@ -38,10 +38,10 @@ export const Hero = () => {
           </ul>
           <div className="flex gap-3 pt-2">
             <Button asChild variant="hero" className="hover-scale">
-              <a href="/join" aria-label="Join the Heist">Join the Heist</a>
+              <Link to="/join" aria-label="Join the Heist">Join the Heist</Link>
             </Button>
             <Button asChild variant="outline" className="hover-scale">
-              <a href="/codex" aria-label="Read the Codex">Read the Codex</a>
+              <Link to="/codex" aria-label="Read the Codex">Read the Codex</Link>
             </Button>
           </div>
           <p className="text-sm text-muted-foreground">“Green means gone.”</p>
