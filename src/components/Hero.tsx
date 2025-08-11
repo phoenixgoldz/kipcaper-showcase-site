@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import emblem from "@/assets/emblem-masked-koala.png";
+const EMBLEM_SRC = "/lovable-uploads/587ae039-a119-445b-a4ae-686bd447dace.png";
 import parchment from "@/assets/parchment-texture.jpg";
 import { useEffect, useRef } from "react";
 
@@ -9,9 +9,11 @@ export const Hero = () => {
   useEffect(() => {
     const node = emblemRef.current;
     if (!node) return;
+    const mql = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mql.matches) return;
     const onMove = (e: MouseEvent) => {
       const { innerWidth, innerHeight } = window;
-      const x = (e.clientX / innerWidth - 0.5) * 10; // -5..5
+      const x = (e.clientX / innerWidth - 0.5) * 10;
       const y = (e.clientY / innerHeight - 0.5) * 10;
       node.style.transform = `translate3d(${x}px, ${y}px, 0)`;
     };
@@ -47,7 +49,7 @@ export const Hero = () => {
         <div className="relative h-[340px] sm:h-[420px] lg:h-[520px] grain-overlay">
           <img src={parchment} alt="Codex parchment background" className="absolute inset-0 w-full h-full object-cover opacity-40 rounded-lg" />
           <div ref={emblemRef} className="absolute inset-0 flex items-center justify-center transition-transform will-change-transform">
-            <img src={emblem} alt="Masked koala calling card with subtle glow" className="h-48 sm:h-64 lg:h-72 drop-shadow-[0_0_30px_hsl(142_53%_66%/.25)]" />
+            <img src={EMBLEM_SRC} alt="Masked koala calling card with subtle glow" loading="lazy" className="h-48 sm:h-64 lg:h-72 drop-shadow-[0_0_30px_hsl(142_53%_66%/.25)]" />
           </div>
         </div>
       </div>

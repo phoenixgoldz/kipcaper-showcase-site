@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import emblem from "@/assets/emblem-masked-koala.png";
+const EMBLEM_SRC = "/lovable-uploads/587ae039-a119-445b-a4ae-686bd447dace.png";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
@@ -23,7 +23,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         role="banner">
         <div className="container mx-auto flex items-center justify-between py-3">
           <Link to="/" className="flex items-center gap-3">
-            <img src={emblem} alt="Kip Caper masked koala emblem" className="h-9 w-9 rounded-md shadow" />
+            <img src={EMBLEM_SRC} alt="Kip Caper masked koala emblem" loading="lazy" className="h-9 w-9 rounded-md shadow" />
             <span className="font-display text-lg">Kip Caper</span>
           </Link>
           <nav className="flex items-center gap-1" aria-label="Main Navigation">
@@ -40,7 +40,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <footer className="border-t mt-16" role="contentinfo">
         <div className="container mx-auto py-10 flex items-center justify-between text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <img src={emblem} alt="Kip emblem" className="h-6 w-6 opacity-80" />
+            <img src={EMBLEM_SRC} alt="Kip emblem" loading="lazy" className="h-6 w-6 opacity-80" />
             <span>© {new Date().getFullYear()} Kip Caper</span>
           </div>
           <div className="flex gap-4">

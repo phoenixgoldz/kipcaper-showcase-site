@@ -1,44 +1,70 @@
-[
-  {
-    "week": 1,
-    "image": "/src/assets/updates-w1.jpg",
-    "caption": "The first leaf falls.",
-    "hashtag": "#TheFirstLeafFalls",
-    "hasClue": true
-  },
-  {
-    "week": 2,
-    "image": "/src/assets/updates-w2.jpg",
-    "caption": "Not every trail is meant to be followed.",
-    "hashtag": "#TheTrailGrowsDarker",
-    "hasClue": true
-  },
-  {
-    "week": 3,
-    "image": "/src/assets/updates-w3.jpg",
-    "caption": "He was here. They don’t know what’s missing… yet.",
-    "hashtag": "#ShadowsHoldSecrets",
-    "hasClue": true
-  },
-  {
-    "week": 4,
-    "image": "/src/assets/updates-w4.jpg",
-    "caption": "The Codex isn’t just a book. It’s a key.",
-    "hashtag": "#TheKeyIsntAKey",
-    "hasClue": true
-  },
-  {
-    "week": 5,
-    "image": "/src/assets/updates-w5.jpg",
-    "caption": "Every leaf leads somewhere.",
-    "hashtag": "#NotEveryoneWillMakeIt",
-    "hasClue": true
-  },
-  {
-    "week": 6,
-    "image": "/src/assets/updates-w6.jpg",
-    "caption": "The green trail ends where it began.",
-    "hashtag": "#WhereTheTrailEnds",
-    "hasClue": true
-  }
-]
+{
+  "posts": [
+    {
+      "id": "w1",
+      "week": 1,
+      "title": "The Mark Appears",
+      "date": "2025-08-01",
+      "image": "/assets/updates/week1_1c.png",
+      "caption": "The first leaf falls.",
+      "hashtag": "#TheFirstLeafFalls",
+      "hasHiddenMark": true,
+      "alt": "Green koala mask calling card on wooden desk with moody light."
+    },
+    {
+      "id": "w2",
+      "week": 2,
+      "title": "A Whisper in the Canopy",
+      "date": "2025-08-08",
+      "image": "/assets/updates/week2_2a.png",
+      "caption": "Not every trail is meant to be followed.",
+      "hashtag": "#TheTrailGrowsDarker",
+      "hasHiddenMark": true,
+      "alt": "Calling card nestled in moss under roots at night."
+    },
+    {
+      "id": "w3",
+      "week": 3,
+      "title": "Closer to the Truth",
+      "date": "2025-08-15",
+      "image": "/assets/updates/week3_3p.png",
+      "caption": "He was here. They don’t know what’s missing… yet.",
+      "hashtag": "#ShadowsHoldSecrets",
+      "hasHiddenMark": true,
+      "alt": "Card on police windowsill; angry shadow beyond frosted glass."
+    },
+    {
+      "id": "w4",
+      "week": 4,
+      "title": "The Game Changes",
+      "date": "2025-08-22",
+      "image": "/assets/updates/week4_4e.png",
+      "caption": "The Codex isn’t just a book. It’s a key.",
+      "hashtag": "#TheKeyIsntAKey",
+      "hasHiddenMark": true,
+      "alt": "Card wedged in rusted padlock; gloved hand pulling away."
+    },
+    {
+      "id": "w5",
+      "week": 5,
+      "title": "The Hunt is On",
+      "date": "2025-08-29",
+      "image": "/assets/updates/week5_5r.png",
+      "caption": "Every leaf leads somewhere.",
+      "hashtag": "#NotEveryoneWillMakeIt",
+      "hasHiddenMark": true,
+      "alt": "Card floating in moonlit water, ripples forming rings."
+    },
+    {
+      "id": "w6",
+      "week": 6,
+      "title": "Full Reveal Tease",
+      "date": "2025-09-05",
+      "image": "/assets/updates/week6_6s.png",
+      "caption": "The green trail ends where it began.",
+      "hashtag": "#WhereTheTrailEnds",
+      "hasHiddenMark": true,
+      "alt": "Card atop Codex page showing boomerang move; Kip silhouette looming."
+    }
+  ]
+}

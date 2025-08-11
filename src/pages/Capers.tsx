@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-const STORAGE_KEY = "capers_unlocked";
+const STORAGE_KEY = "capers_solved";
 
 const Capers = () => {
   const [value, setValue] = useState("");
@@ -16,7 +16,7 @@ const Capers = () => {
 
   useEffect(() => {
     const cached = localStorage.getItem(STORAGE_KEY);
-    if (cached === "true") setUnlocked(true);
+    if (cached === "1") setUnlocked(true);
   }, []);
 
   const playTsk = () => {
@@ -35,7 +35,7 @@ const Capers = () => {
     e.preventDefault();
     if (value.trim().toUpperCase() === 'CAPERS') {
       setUnlocked(true);
-      localStorage.setItem(STORAGE_KEY, 'true');
+      localStorage.setItem(STORAGE_KEY, '1');
     } else {
       setWrong(true);
       playTsk();
