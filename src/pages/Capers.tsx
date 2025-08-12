@@ -48,7 +48,7 @@ const Capers = () => {
       <SEO title="Capers — Secret" />
       <main className="container mx-auto py-20">
         <section className="mx-auto max-w-2xl text-center">
-          <div ref={cardRef} className={`relative mx-auto w-full rounded-xl border p-8 bg-card grain-overlay ${wrong ? 'animate-scale-out' : 'animate-scale-in'}`}>
+          <div ref={cardRef} className={`relative mx-auto w-full rounded-xl border p-8 bg-card grain-overlay ${wrong ? 'flip-once' : 'animate-scale-in'}`}>
             <div className="relative h-64 rounded-lg overflow-hidden">
               <img src={parchment} alt="Codex page pedestal" className="absolute inset-0 w-full h-full object-cover opacity-40" />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -71,7 +71,7 @@ const Capers = () => {
                   <img src={reward} alt="Concept Art: Boomerang Shadow Run" className="h-20 w-32 object-cover rounded" />
                   <div>
                     <h3 className="font-display text-lg">Concept Art: Boomerang Shadow Run</h3>
-                    <a href={reward} download className="story-link">Download PNG</a>
+                    <a href={reward} download className="story-link" aria-label="Download reward image">Download PNG</a>
                   </div>
                 </div>
               </div>

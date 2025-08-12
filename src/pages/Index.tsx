@@ -2,13 +2,12 @@ import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/ui/button";
-import og from "@/assets/og-image.png";
 import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
     <Layout>
-      <SEO title="Kip Caper and The Codex Caperis — Official Site" description="A stealth‑comedy caper with cel‑shaded swagger. Heist the relics, dodge the poachers, and rebuild the Codex." image={og} />
+      <SEO title="Kip Caper and The Codex Caperis — Official Site" description="A stealth‑comedy caper with cel‑shaded swagger. Heist the relics, dodge the poachers, and rebuild the Codex." image="/assets/branding/og-mask-on-parchment.png" />
       <Hero />
       <section className="container mx-auto py-16">
         <article className="max-w-2xl">

@@ -18,7 +18,7 @@ export const SEO = ({ title, description = "Cel-shaded stealth/noir. Join the he
       <link rel="canonical" href={canonical} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      {image && <meta property="og:image" content={image} />}
+      <meta property="og:image" content={image || "/assets/branding/og-mask-on-parchment.png"} />
       <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 
-const STUDIO_LOGO = "/lovable-uploads/phoenixgold-logo.png"; // Replace with actual uploaded path if different
+const STUDIO_LOGO = "/lovable-uploads/bd2d63dc-6052-4517-af12-23cddc63cee2.png"; // Provided upload path
 
 export const StudioBadge = ({
   size = "md",
