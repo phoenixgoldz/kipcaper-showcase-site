@@ -6,10 +6,10 @@ import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 
 const ENTRIES = [
-  { name: "Silent Landing", unlocked: true, text: "Drop like a feather, sound like a rumor. Kip absorbs fall noise for a silent finish." },
-  { name: "Leaf Whistle Dash", unlocked: true, text: "Whistle the wind and ride it. Short burst, shorter temper." },
-  { name: "Wall-Run Carve", unlocked: true, text: "Feet kiss stone. Momentum keeps secrets from gravity." },
-  { name: "Eucalyptus Smoke Bomb", unlocked: true, text: "Green veil, greener exit. Stings eyes, soothes Kip." },
+  { name: "Silent Landing", unlocked: false },
+  { name: "Leaf Whistle Dash", unlocked: false },
+  { name: "Wall-Run Carve", unlocked: false },
+  { name: "Eucalyptus Smoke Bomb", unlocked: false },
   { name: "Wall-Cling", unlocked: false },
   { name: "Glide Grapple Combo", unlocked: false },
 ];
@@ -27,13 +27,13 @@ const CardItem = ({ name, unlocked, text }: { name: string; unlocked: boolean; t
               <img src={parchment} alt="Codex page parchment" className="w-full h-40 object-cover rounded-md opacity-30" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <h3 className="font-display text-xl text-center max-w-[80%]">
-                  {unlocked ? name : "Undiscovered"}
+                  {unlocked ? name : "Not discovered"}
                 </h3>
               </div>
             </div>
             <div className="mt-4 flex items-center justify-between">
               <span className="text-sm text-muted-foreground">Page</span>
-              <Badge variant={unlocked ? "default" : "secondary"}>{unlocked ? "Recovered" : "Locked"}</Badge>
+              <Badge variant={unlocked ? "default" : "secondary"}>{unlocked ? "Recovered" : "Not discovered"}</Badge>
             </div>
           </div>
           {!unlocked && (

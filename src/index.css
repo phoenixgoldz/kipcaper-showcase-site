@@ -54,10 +54,20 @@ All colors MUST be HSL. */
     --sidebar-border: 156 18% 20%;
     --sidebar-ring: 142 53% 66%;
 
+    /* Brand tokens */
+    --canopy: 156 45% 9%;
+    --mask: 145 42% 30%;
+    --glow: 142 53% 66%;
+    --rust: 30 42% 29%;
+    --gold: 40 75% 61%;
+    --ink: 165 16% 5%;
+    --mist: 140 33% 93%;
+    --shadowfade: 157 24% 13%;
+
     /* Gradients & shadows */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(142 53% 66% / 0.7));
     --gradient-subtle: linear-gradient(180deg, hsl(156 45% 9%), hsl(156 30% 12%));
-    --shadow-eucalyptus: 0 10px 30px -10px hsl(142 53% 66% / 0.35);
+    --shadow-eucalyptus: 0 0 18px rgba(122, 214, 155, 0.25);
     --shadow-ambient: 0 20px 60px -20px hsl(165 16% 5% / 0.5);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -108,6 +118,7 @@ All colors MUST be HSL. */
   }
 
   h1,h2,h3,h4 { @apply font-display; }
+  h1, h2, h3 { color: hsl(var(--gold)); }
 }
 
 /* Utilities for micro-interactions */

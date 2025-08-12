@@ -28,9 +28,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           </Link>
           <nav className="flex items-center gap-1" aria-label="Main Navigation">
             <NavLink to="/codex" className={navLinkClass}>Codex</NavLink>
-            <NavLink to="/updates" className={navLinkClass}>Updates</NavLink>
-            <NavLink to="/media" className={navLinkClass}>Media</NavLink>
-            <NavLink to="/join" className={navLinkClass}>Join</NavLink>
           </nav>
         </div>
       </header>
@@ -46,8 +43,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex gap-4">
             <Link to="/" className="story-link">Home</Link>
             <Link to="/codex" className="story-link">Codex</Link>
-            <Link to="/updates" className="story-link">Updates</Link>
-            <Link to="/media" className="story-link">Media</Link>
           </div>
         </div>
       </footer>
