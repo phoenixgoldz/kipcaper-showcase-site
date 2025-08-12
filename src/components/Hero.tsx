@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"; import { Link } from "react-rou
 const EMBLEM_SRC = "/lovable-uploads/587ae039-a119-445b-a4ae-686bd447dace.png";
 import parchment from "@/assets/parchment-texture.jpg";
 import { useEffect, useRef } from "react";
+import { StudioBadge } from "@/components/StudioBadge";
 
 export const Hero = () => {
   const emblemRef = useRef<HTMLDivElement>(null);
@@ -22,7 +23,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden noir-vignette sweep-spotlight">
       <div className="container mx-auto grid lg:grid-cols-2 gap-10 items-center py-20">
         <div className="space-y-6 animate-fade-in">
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight">
@@ -45,8 +46,11 @@ export const Hero = () => {
             </Button>
           </div>
           <p className="text-sm text-muted-foreground">“Green means gone.”</p>
+          <div className="pt-2 opacity-90">
+            <StudioBadge size="sm" />
+          </div>
         </div>
-        <div className="relative h-[340px] sm:h-[420px] lg:h-[520px] grain-overlay">
+        <div className="relative h-[340px] sm:h-[420px] lg:h-[520px] grain-overlay panel-edge hover-glow">
           <img src={parchment} alt="Codex parchment background" className="absolute inset-0 w-full h-full object-cover opacity-40 rounded-lg" />
           <div ref={emblemRef} className="absolute inset-0 flex items-center justify-center transition-transform will-change-transform">
             <img src={EMBLEM_SRC} alt="Masked koala calling card with subtle glow" loading="lazy" className="h-48 sm:h-64 lg:h-72 drop-shadow-[0_0_30px_hsl(142_53%_66%/.25)]" />

@@ -147,4 +147,33 @@ All colors MUST be HSL. */
       repeating-linear-gradient(0deg, hsl(0 0% 100% / .015) 0px, hsl(0 0% 100% / .015) 1px, transparent 1px, transparent 2px);
     mix-blend-mode: overlay; opacity: .45; border-radius: var(--radius);
   }
+
+  /* Sly Cooper-esque flourishes */
+  .noir-vignette { position: relative; }
+  .noir-vignette::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at center, hsl(var(--ink) / 0) 40%, hsl(var(--ink) / 0.6) 100%);
+    mix-blend-mode: multiply;
+  }
+
+  .sweep-spotlight { position: relative; overflow: hidden; }
+  .sweep-spotlight::before {
+    content: ""; position: absolute; inset: -20%; pointer-events: none;
+    background: linear-gradient(120deg, hsl(0 0% 100% / 0) 30%, hsl(0 0% 100% / 0.08) 50%, hsl(0 0% 100% / 0) 70%);
+    transform: translateX(-120%) rotate(5deg);
+    animation: spotlight-sweep 6s ease-in-out infinite;
+  }
+
+  @keyframes spotlight-sweep {
+    0% { transform: translateX(-120%) rotate(5deg); }
+    50% { transform: translateX(120%) rotate(5deg); }
+    100% { transform: translateX(120%) rotate(5deg); }
+  }
+
+  .panel-edge {
+    border: 1px solid hsl(var(--gold) / 0.15);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 30px -12px hsl(var(--ink) / 0.5);
+    background: linear-gradient(180deg, hsl(var(--secondary) / 0.4), hsl(var(--secondary) / 0.2));
+  }
 }
