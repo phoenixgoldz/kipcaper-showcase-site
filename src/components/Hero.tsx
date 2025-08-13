@@ -27,7 +27,7 @@ export const Hero = () => {
       <div className="container mx-auto grid lg:grid-cols-2 gap-10 items-center py-20">
         <div className="space-y-6 animate-fade-in">
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight">
-            Kip Caper and The Codex Caperis
+            Kip Caper and The Codex Caperius
           </h1>
           <p className="text-lg text-muted-foreground max-w-prose">
             A stealth-comedy caper with cel-shaded swagger. UE5.6.

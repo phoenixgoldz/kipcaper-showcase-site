@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Index = () => {
   return (
     <Layout>
-      <SEO title="Kip Caper and The Codex Caperis — Official Site" description="A stealth‑comedy caper with cel‑shaded swagger. Heist the relics, dodge the poachers, and rebuild the Codex." image="/assets/branding/og-mask-on-parchment.png" />
+      <SEO title="Kip Caper and The Codex Caperius — Official Site" description="A stealth‑comedy caper with cel‑shaded swagger. Heist the relics, dodge the poachers, and rebuild the Codex." image="/assets/branding/og-mask-on-parchment.png" />
       <Hero />
       <section className="container mx-auto py-16">
         <article className="max-w-2xl">

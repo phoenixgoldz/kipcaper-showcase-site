@@ -28,6 +28,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           </Link>
           <nav className="flex items-center gap-1" aria-label="Main Navigation">
             <NavLink to="/codex" className={navLinkClass}>Codex</NavLink>
+            <NavLink to="/media" className={navLinkClass}>Media</NavLink>
           </nav>
         </div>
       </header>
