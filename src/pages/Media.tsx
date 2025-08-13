@@ -10,6 +10,12 @@ const items = [
   { src: concept1, alt: "Concept art — forest camp at night", category: "Concept" },
   { src: engine1, alt: "In-engine dock at night", category: "In-Engine" },
   { src: callcard1, alt: "Calling card emblem variations", category: "Calling Card" },
+  { src: "/lovable-uploads/c6f1235e-1b72-4cd2-a601-3a82de575024.png", alt: "Calling card — shadow on desk (1c)", category: "Calling Card" },
+  { src: "/lovable-uploads/53ae80cf-6677-4dbe-b0bf-0b98bdfe2071.png", alt: "Calling card — forest floor (2a)", category: "Calling Card" },
+  { src: "/lovable-uploads/8aee9921-2238-4cd3-b6a7-1754cc4c0fc0.png", alt: "Calling card — window silhouette (3p)", category: "Calling Card" },
+  { src: "/lovable-uploads/97d35cdc-fdf8-4773-9daf-58b31b1e6eb9.png", alt: "Calling card — padlock (4e)", category: "Calling Card" },
+  { src: "/lovable-uploads/dde5ee9f-8cd4-45b8-8c05-17c184e30c4a.png", alt: "Calling card — whirlpool (5r)", category: "Calling Card" },
+  { src: "/lovable-uploads/efb16d1f-b1a2-4b9b-be8a-9d7e8d3981ac.png", alt: "Calling card — parchment note (6s)", category: "Calling Card" },
 ];
 
 const categories = ["All", "Concept", "In-Engine", "Calling Card"] as const;
@@ -43,12 +49,12 @@ const Media = () => {
             <Dialog key={idx}>
               <DialogTrigger asChild>
                 <figure className="rounded-lg overflow-hidden border bg-card hover:shadow-lg cursor-pointer grain-overlay">
-                  <img src={it.src} alt={it.alt} className="w-full h-52 object-cover" />
+                  <img src={it.src} alt={it.alt} className="w-full h-52 object-cover" loading="lazy" />
                   <figcaption className="p-3 text-sm text-muted-foreground">{it.category}</figcaption>
                 </figure>
               </DialogTrigger>
               <DialogContent className="max-w-3xl">
-                <img src={it.src} alt={it.alt} className="w-full h-auto rounded-md" />
+                <img src={it.src} alt={it.alt} className="w-full max-h-[80vh] object-contain rounded-md" loading="lazy" />
               </DialogContent>
             </Dialog>
           ))}

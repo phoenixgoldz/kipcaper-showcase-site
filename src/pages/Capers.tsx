@@ -20,12 +20,15 @@ const Capers = () => {
   }, []);
 
   const playTsk = () => {
-    const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const Ctx = (window.AudioContext || (window as any).webkitAudioContext);
+    if (!Ctx) return;
+    const ctx = new Ctx();
     const o = ctx.createOscillator();
     const g = ctx.createGain();
     o.type = 'square';
     o.frequency.setValueAtTime(380, ctx.currentTime);
-    g.gain.setValueAtTime(0.05, ctx.currentTime);
+    g.gain.setValueAtTime(0.04, ctx.currentTime);
     o.connect(g); g.connect(ctx.destination);
     o.start();
     o.stop(ctx.currentTime + 0.08);
