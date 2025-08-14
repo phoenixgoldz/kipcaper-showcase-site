@@ -139,7 +139,7 @@ All colors MUST be HSL. */
   .hover-lift { @apply transition-all duration-300; }
   .hover-lift:hover { transform: translateY(-8px) scale(1.02); box-shadow: var(--shadow-primary); }
 
-  .hover-glow { @apply transition-all duration-400; }
+  .hover-glow { @apply transition-all duration-300; }
   .hover-glow:hover { box-shadow: var(--shadow-glow); }
 
   .neon-glow { text-shadow: 0 0 5px currentColor, 0 0 10px currentColor; }
