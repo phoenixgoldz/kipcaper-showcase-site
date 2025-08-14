@@ -10,40 +10,101 @@ const Join = () => {
   return (
     <Layout>
       <SEO title="Join the Heist — Sign up" />
-      <header className="container mx-auto py-12">
-        <h1 className="font-display text-4xl">Join the Heist</h1>
-        <p className="text-muted-foreground mt-2">Get the drop when the trailer lands. No spam. Only capers.</p>
-      </header>
-      <main className="container mx-auto pb-20">
-        <section className="max-w-xl rounded-xl border p-6 bg-card shadow-sm">
-          <form
-            className="flex flex-col sm:flex-row gap-3"
-            action="https://buttondown.email/api/emails/subscribe"
-            method="post"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <input type="hidden" name="tag" value="KipCaper" />
-            <Input
-              type="email"
-              name="email"
-              required
-              placeholder="you@domain.com"
-              aria-label="Email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <Button type="submit" variant="hero" className="hover-scale">Sign up</Button>
-          </form>
-          <div className="mt-6 flex gap-3">
-            <Button variant="outline" asChild className="hover-scale">
-              <a href="#" aria-label="Steam Wishlist placeholder">Steam Wishlist</a>
-            </Button>
-            <Button variant="ghost" asChild className="hover-scale">
-              <a href="#" aria-label="Press Kit soon">Press Kit (soon)</a>
-            </Button>
+      
+      {/* Hero Section */}
+      <section className="relative py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/10 to-cyber-purple/10"></div>
+        <div className="container mx-auto relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h1 className="font-display text-5xl lg:text-6xl mb-6 neon-glow">Join the Heist</h1>
+            <p className="text-xl text-muted-foreground">
+              Get exclusive access to development updates, behind-the-scenes content, and early gameplay previews. 
+              No spam. Only capers.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <main className="container mx-auto pb-20">
+        <div className="max-w-2xl mx-auto">
+          <section className="glass-card p-8 tech-border hover-lift">
+            <h2 className="font-display text-2xl mb-6 text-center text-electric-blue">Sign Up for Updates</h2>
+            
+            <form
+              className="space-y-6"
+              action="https://buttondown.email/api/emails/subscribe"
+              method="post"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <input type="hidden" name="tag" value="KipCaper" />
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold mb-3 text-foreground">
+                  Email Address
+                </label>
+                <Input
+                  id="email"
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="your.email@domain.com"
+                  aria-label="Email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="h-12 text-lg rounded-xl border-2 border-electric-blue/30 focus:border-electric-blue bg-background/50"
+                />
+              </div>
+              
+              <Button type="submit" variant="hero" size="xl" className="w-full hover-lift">
+                Join the Heist
+              </Button>
+            </form>
+            
+            <div className="mt-8 pt-8 border-t border-white/10">
+              <h3 className="font-display text-lg mb-4 text-center text-cyber-purple">Quick Links</h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Button variant="outline" asChild className="hover-lift tech-border">
+                  <a href="#" aria-label="Steam Wishlist placeholder">
+                    Steam Wishlist
+                  </a>
+                </Button>
+                <Button variant="outline" asChild className="hover-lift tech-border">
+                  <a href="#" aria-label="Press Kit soon">
+                    Press Kit (soon)
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </section>
+
+          {/* Benefits Section */}
+          <section className="mt-16 grid md:grid-cols-3 gap-6">
+            <div className="glass-card p-6 text-center hover-lift">
+              <div className="w-12 h-12 bg-gradient-to-br from-electric-blue to-cyber-purple rounded-xl mx-auto mb-4 flex items-center justify-center">
+                <span className="text-xl">📧</span>
+              </div>
+              <h3 className="font-display text-lg mb-2 text-electric-blue">Exclusive Updates</h3>
+              <p className="text-sm text-muted-foreground">Get the latest development news and gameplay reveals before anyone else.</p>
+            </div>
+            
+            <div className="glass-card p-6 text-center hover-lift">
+              <div className="w-12 h-12 bg-gradient-to-br from-cyber-purple to-neon-green rounded-xl mx-auto mb-4 flex items-center justify-center">
+                <span className="text-xl">🎮</span>
+              </div>
+              <h3 className="font-display text-lg mb-2 text-cyber-purple">Early Access</h3>
+              <p className="text-sm text-muted-foreground">Opportunities for beta testing and exclusive gameplay previews.</p>
+            </div>
+            
+            <div className="glass-card p-6 text-center hover-lift">
+              <div className="w-12 h-12 bg-gradient-to-br from-neon-green to-gold-accent rounded-xl mx-auto mb-4 flex items-center justify-center">
+                <span className="text-xl">🎨</span>
+              </div>
+              <h3 className="font-display text-lg mb-2 text-neon-green">Behind the Scenes</h3>
+              <p className="text-sm text-muted-foreground">Developer insights, concept art, and making-of content.</p>
+            </div>
+          </section>
+        </div>
       </main>
     </Layout>
   );

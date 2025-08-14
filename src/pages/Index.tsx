@@ -9,14 +9,58 @@ const Index = () => {
     <Layout>
       <SEO title="Kip Caper and The Codex Caperius — Official Site" description="A stealth‑comedy caper with cel‑shaded swagger. Heist the relics, dodge the poachers, and rebuild the Codex." image="/assets/branding/og-mask-on-parchment.png" />
       <Hero />
-      <section className="container mx-auto py-16">
-        <article className="max-w-2xl">
-          <h2 className="font-display text-3xl">Join the Heist</h2>
-          <p className="text-muted-foreground mt-2">Get the drop when the trailer lands.</p>
-          <div className="mt-4">
-            <Button asChild variant="hero" className="hover-scale"><Link to="/join">Sign up</Link></Button>
+      {/* Features Section */}
+      <section className="container mx-auto py-20">
+        <div className="text-center mb-16">
+          <h2 className="font-display text-4xl lg:text-5xl mb-4 neon-glow">Game Features</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Experience the ultimate stealth-action adventure with cutting-edge gameplay mechanics
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="glass-card p-8 hover-lift group">
+            <div className="w-16 h-16 bg-gradient-to-br from-electric-blue to-cyber-purple rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span className="text-2xl">🎯</span>
+            </div>
+            <h3 className="font-display text-xl mb-3 text-electric-blue">Precision Stealth</h3>
+            <p className="text-muted-foreground">Master the art of silent movement and strategic positioning in dynamic environments.</p>
           </div>
-        </article>
+          
+          <div className="glass-card p-8 hover-lift group">
+            <div className="w-16 h-16 bg-gradient-to-br from-cyber-purple to-neon-green rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span className="text-2xl">🪃</span>
+            </div>
+            <h3 className="font-display text-xl mb-3 text-cyber-purple">Boomerang Mastery</h3>
+            <p className="text-muted-foreground">Wield your signature weapon with physics-based precision and creative problem-solving.</p>
+          </div>
+          
+          <div className="glass-card p-8 hover-lift group">
+            <div className="w-16 h-16 bg-gradient-to-br from-neon-green to-gold-accent rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span className="text-2xl">🌿</span>
+            </div>
+            <h3 className="font-display text-xl mb-3 text-neon-green">Canopy Traversal</h3>
+            <p className="text-muted-foreground">Navigate breathtaking vertical environments with fluid parkour and climbing mechanics.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="container mx-auto py-20">
+        <div className="glass-card p-12 text-center tech-border">
+          <h2 className="font-display text-4xl lg:text-5xl mb-4 neon-glow">Ready for the Heist?</h2>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Join thousands of players preparing for the ultimate caper. Get exclusive updates, behind-the-scenes content, and early access opportunities.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild variant="hero" size="xl" className="hover-lift">
+              <Link to="/join">Join the Heist</Link>
+            </Button>
+            <Button asChild variant="outline" size="xl" className="hover-lift tech-border">
+              <Link to="/media">View Gallery</Link>
+            </Button>
+          </div>
+        </div>
       </section>
     </Layout>
   );

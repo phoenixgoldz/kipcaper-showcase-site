@@ -4,6 +4,7 @@ import parchment from "@/assets/parchment-texture.jpg";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const ENTRIES = [
   { name: "Silent Landing", unlocked: false },
@@ -19,34 +20,71 @@ const CardItem = ({ name, unlocked, text }: { name: string; unlocked: boolean; t
     <Dialog>
       <DialogTrigger asChild>
         <article
-          className="relative p-5 rounded-lg border bg-card hover:shadow-lg transition will-change-transform hover:scale-[1.01] cursor-pointer"
+          className={cn(
+            "relative p-6 rounded-2xl glass-card cursor-pointer transition-all duration-500 hover-lift group",
+            unlocked ? "tech-border" : "opacity-60 hover:opacity-80"
+          )}
           style={{ perspective: "1000px" }}
         >
-          <div className="rounded-md p-6 border bg-muted/20" style={{ transform: "rotateX(2deg) rotateY(-2deg)" }}>
+          <div className={cn(
+            "rounded-xl p-8 border-2 transition-all duration-300",
+            unlocked 
+              ? "border-gold-accent/30 bg-gradient-to-br from-gold-accent/10 to-electric-blue/10" 
+              : "border-muted bg-muted/20"
+          )} style={{ transform: "rotateX(1deg) rotateY(-1deg)" }}>
             <div className="relative">
-              <img src={parchment} alt="Codex page parchment" className="w-full h-40 object-cover rounded-md opacity-30" />
+              <img 
+                src={parchment} 
+                alt="Ancient parchment background" 
+                className={cn(
+                  "w-full h-48 object-cover rounded-xl transition-opacity duration-300",
+                  unlocked ? "opacity-40" : "opacity-20"
+                )} 
+              />
               <div className="absolute inset-0 flex items-center justify-center">
-                <h3 className="font-display text-xl text-center max-w-[80%]">
-                  {unlocked ? name : "Not discovered"}
+                <h3 className={cn(
+                  "font-display text-xl text-center max-w-[90%] transition-all duration-300",
+                  unlocked ? "text-gold-accent neon-glow" : "text-muted-foreground"
+                )}>
+                  {unlocked ? name : "???"}
                 </h3>
               </div>
+              {unlocked && (
+                <div className="absolute top-4 right-4">
+                  <div className="w-8 h-8 bg-gradient-to-br from-gold-accent to-electric-blue rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                </div>
+              )}
             </div>
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">Page</span>
-              <Badge variant={unlocked ? "default" : "secondary"}>{unlocked ? "Recovered" : "Not discovered"}</Badge>
+            <div className="mt-6 flex items-center justify-between">
+              <span className="text-sm text-muted-foreground font-semibold">
+                {unlocked ? "Codex Entry" : "Locked Page"}
+              </span>
+              <Badge 
+                variant={unlocked ? "default" : "secondary"}
+                className={cn(
+                  "transition-all duration-300",
+                  unlocked && "bg-gradient-to-r from-gold-accent to-electric-blue text-white"
+                )}
+              >
+                {unlocked ? "Recovered" : "Undiscovered"}
+              </Badge>
             </div>
           </div>
           {!unlocked && (
-            <span className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-border" />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-stealth-dark/50 to-muted/50 flex items-center justify-center">
+              <div className="text-4xl opacity-50">🔒</div>
+            </div>
           )}
         </article>
       </DialogTrigger>
       {unlocked && (
-        <DialogContent>
+        <DialogContent className="glass-card border-2 border-gold-accent/30">
           <DialogHeader>
-            <DialogTitle className="font-display">{name}</DialogTitle>
+            <DialogTitle className="font-display text-2xl text-gold-accent">{name}</DialogTitle>
           </DialogHeader>
-          <p className="text-muted-foreground">{text}</p>
+          <p className="text-foreground/80 text-lg leading-relaxed">{text}</p>
         </DialogContent>
       )}
     </Dialog>

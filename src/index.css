@@ -7,42 +7,40 @@ All colors MUST be HSL. */
 
 @layer base {
   :root {
-    /* Palette — Cel-shaded stealth/noir */
-    /* Deep Canopy */
-    --background: 156 45% 9%;
-    --foreground: 140 33% 93%; /* Mist */
-
-    --card: 156 45% 9%;
-    --card-foreground: 140 33% 93%;
-
-    --popover: 156 45% 9%;
-    --popover-foreground: 140 33% 93%;
-
-    /* Mask Green as primary */
-    --primary: 145 42% 30%;
-    --primary-foreground: 140 33% 93%;
-
-    /* Noir Ink as secondary surfaces */
-    --secondary: 165 16% 5%;
-    --secondary-foreground: 140 33% 93%;
-
-    /* Muted neutrals */
-    --muted: 156 20% 18%;
-    --muted-foreground: 140 12% 72%;
-
-    /* Eucalyptus Glow for accents */
-    --accent: 142 53% 66%;
-    --accent-foreground: 165 16% 5%;
-
-    /* Rust for special accents/destructive alt */
-    --destructive: 30 42% 29%;
-    --destructive-foreground: 140 33% 93%;
-
-    --border: 156 18% 20%;
-    --input: 156 18% 20%;
-    --ring: 142 53% 66%;
-
+    /* Gaming-themed color palette */
+    --background: 5 8 12;
+    --foreground: 248 250 252;
+    --card: 8 12 18;
+    --card-foreground: 248 250 252;
+    --popover: 8 12 18;
+    --popover-foreground: 248 250 252;
+    --primary: 88 166 255;
+    --primary-foreground: 2 6 23;
+    --secondary: 15 23 42;
+    --secondary-foreground: 248 250 252;
+    --muted: 15 23 42;
+    --muted-foreground: 148 163 184;
+    --accent: 129 140 248;
+    --accent-foreground: 2 6 23;
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
+    --border: 30 41 59;
+    --input: 30 41 59;
+    --ring: 129 140 248;
     --radius: 0.75rem;
+    
+    /* Gaming brand colors */
+    --electric-blue: 88 166 255;
+    --cyber-purple: 129 140 248;
+    --neon-green: 34 197 94;
+    --gold-accent: 245 158 11;
+    --stealth-dark: 2 6 23;
+    
+    /* Enhanced gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--cyber-purple)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(var(--stealth-dark)));
+    --shadow-primary: 0 20px 60px -12px hsl(var(--electric-blue) / 0.25);
+    --shadow-glow: 0 0 60px hsl(var(--cyber-purple) / 0.3);
 
     /* Sidebar (kept consistent) */
     --sidebar-background: 156 45% 9%;
@@ -133,14 +131,42 @@ All colors MUST be HSL. */
 
 }
 
-/* Utilities for micro-interactions */
+/* Gaming-themed utilities */
 @layer utilities {
-  .hover-scale { @apply transition-transform duration-200; }
-  .hover-scale:hover { transform: scale(1.02); }
+  .hover-scale { @apply transition-all duration-300; }
+  .hover-scale:hover { transform: scale(1.05) translateZ(0); filter: brightness(1.1); }
 
-  .hover-glow {
-    box-shadow: var(--shadow-eucalyptus);
-    transition: var(--transition-smooth);
+  .hover-lift { @apply transition-all duration-300; }
+  .hover-lift:hover { transform: translateY(-8px) scale(1.02); box-shadow: var(--shadow-primary); }
+
+  .hover-glow { @apply transition-all duration-400; }
+  .hover-glow:hover { box-shadow: var(--shadow-glow); }
+
+  .neon-glow { text-shadow: 0 0 5px currentColor, 0 0 10px currentColor; }
+  
+  .glass-card { 
+    background: rgba(248, 250, 252, 0.05); 
+    backdrop-filter: blur(16px); 
+    border: 1px solid rgba(248, 250, 252, 0.1); 
+  }
+  
+  .tech-border {
+    border: 2px solid transparent;
+    background: linear-gradient(var(--card), var(--card)) padding-box,
+                var(--gradient-primary) border-box;
+  }
+
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(88, 166, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(88, 166, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .floating-animation { animation: float 6s ease-in-out infinite; }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
   }
 
   .story-link { position: relative; display: inline-block; }

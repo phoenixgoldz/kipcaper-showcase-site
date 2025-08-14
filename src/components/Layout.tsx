@@ -18,32 +18,76 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className={cn("sticky top-0 z-40 backdrop-blur border-b transition", scrolled ? "bg-background/70" : "bg-background/30")}
-        role="banner">
-        <div className="container mx-auto flex items-center justify-between py-3">
-          <Link to="/" className="flex items-center gap-3">
-            <StudioBadge size="sm" />
-            <span className="font-display text-lg">Kip Caper</span>
+    <div className="min-h-screen flex flex-col relative">
+      {/* Background effects */}
+      <div className="fixed inset-0 cyber-grid opacity-20 pointer-events-none"></div>
+      
+      <header className={cn(
+        "sticky top-0 z-50 backdrop-blur-xl border-b border-white/10 transition-all duration-300", 
+        scrolled ? "bg-background/80 shadow-2xl" : "bg-background/60"
+      )} role="banner">
+        <div className="container mx-auto flex items-center justify-between py-4">
+          <Link to="/" className="flex items-center gap-3 hover-scale group">
+            <StudioBadge size="sm" className="group-hover:rotate-12 transition-transform duration-300" />
+            <span className="font-display text-xl bg-gradient-to-r from-electric-blue to-cyber-purple bg-clip-text text-transparent">
+              Kip Caper
+            </span>
           </Link>
-          <nav className="flex items-center gap-1" aria-label="Main Navigation">
+          <nav className="flex items-center gap-2" aria-label="Main Navigation">
             <NavLink to="/codex" className={navLinkClass}>Codex</NavLink>
             <NavLink to="/media" className={navLinkClass}>Media</NavLink>
+            <NavLink to="/join" className={cn(navLinkClass({ isActive: false }), "ml-4")}>
+              <span className="px-4 py-2 bg-gradient-to-r from-electric-blue to-cyber-purple rounded-lg text-white font-semibold hover:scale-105 transition-transform">
+                Join Heist
+              </span>
+            </NavLink>
           </nav>
         </div>
       </header>
 
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 relative z-10">{children}</main>
 
-      <footer className="border-t mt-16" role="contentinfo">
-        <div className="container mx-auto py-10 flex items-center justify-between text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <StudioBadge size="sm" />
-            <span>© {new Date().getFullYear()} Kip Caper</span>
+      <footer className="relative z-10 border-t border-white/10 mt-20 glass-card" role="contentinfo">
+        <div className="container mx-auto py-12">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <StudioBadge size="sm" />
+                <span className="font-display text-lg">PhoenixGold Game Studios</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Creating immersive gaming experiences with cutting-edge technology and artistic vision.
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="font-display text-lg text-electric-blue">Game</h3>
+              <div className="flex flex-col gap-2 text-sm">
+                <Link to="/" className="story-link">Home</Link>
+                <Link to="/codex" className="story-link">Codex</Link>
+                <Link to="/media" className="story-link">Media Gallery</Link>
+                <Link to="/join" className="story-link">Join the Heist</Link>
+              </div>
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="font-display text-lg text-cyber-purple">Connect</h3>
+              <div className="flex flex-col gap-2 text-sm">
+                <a href="#" className="story-link">Steam Wishlist</a>
+                <a href="#" className="story-link">Press Kit</a>
+                <a href="#" className="story-link">Developer Blog</a>
+                <a href="#" className="story-link">Contact</a>
+              </div>
+            </div>
           </div>
-          <div className="flex gap-4">
-            <Link to="/" className="story-link">Home</Link>
-            <Link to="/codex" className="story-link">Codex</Link>
+          
+          <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
+            <span>© {new Date().getFullYear()} PhoenixGold Game Studios. All rights reserved.</span>
+            <div className="flex gap-4 mt-4 md:mt-0">
+              <a href="#" className="hover:text-electric-blue transition-colors">Privacy</a>
+              <a href="#" className="hover:text-electric-blue transition-colors">Terms</a>
+              <a href="#" className="hover:text-electric-blue transition-colors">Support</a>
+            </div>
           </div>
         </div>
       </footer>
