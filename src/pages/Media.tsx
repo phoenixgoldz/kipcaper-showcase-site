@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 
 const items = [
   // Concept art (earlier batch)
-  { src: "/lovable-uploads/7c20e02d-c842-4643-a1fa-673d6f5d784b.png", alt: "Kip Caper leaping with boomerang — concept illustration", category: "Concept" },
+  { src: "/lovable-uploads/7c20e02d-c842-4643-a1fa-673d6f5d784b.png", alt: "Kip Caper leaping with bo-staff — concept illustration", category: "Concept" },
   { src: "/lovable-uploads/34373479-80c6-46b2-b994-0e6961a507f0.png", alt: "Kip Caper character turnarounds — front, back, side views", category: "Concept" },
   { src: "/lovable-uploads/11e6d061-53ae-420f-98ae-8974aef75cd1.png", alt: "Kip Caper front view — character sheet", category: "Concept" },
   { src: "/lovable-uploads/cb832edf-0969-4097-85c2-123b1fe179a3.png", alt: "Ranger kangaroo character concept", category: "Concept" },

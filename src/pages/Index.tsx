@@ -29,9 +29,9 @@ const Index = () => {
           
           <div className="glass-card p-8 hover-lift group">
             <div className="w-16 h-16 bg-gradient-to-br from-cyber-purple to-neon-green rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <span className="text-2xl">🪃</span>
+              <span className="text-2xl">🥢</span>
             </div>
-            <h3 className="font-display text-xl mb-3 text-cyber-purple">Boomerang Mastery</h3>
+            <h3 className="font-display text-xl mb-3 text-cyber-purple">Bo-Staff Mastery</h3>
             <p className="text-muted-foreground">Wield your signature weapon with physics-based precision and creative problem-solving.</p>
           </div>
           

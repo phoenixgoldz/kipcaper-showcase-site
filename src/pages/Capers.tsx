@@ -71,9 +71,9 @@ const Capers = () => {
               <div className="mt-6 text-left">
                 <p className="text-accent font-medium">Nicely done, sleuth. Kip approves.</p>
                 <div className="mt-4 rounded-lg border p-4 bg-muted/20 flex items-center gap-4">
-                  <img src={reward} alt="Concept Art: Boomerang Shadow Run" className="h-20 w-32 object-cover rounded" />
+                  <img src={reward} alt="Concept Art: Bo-Staff Shadow Run" className="h-20 w-32 object-cover rounded" />
                   <div>
-                    <h3 className="font-display text-lg">Concept Art: Boomerang Shadow Run</h3>
+                    <h3 className="font-display text-lg">Concept Art: Bo-Staff Shadow Run</h3>
                     <a href={reward} download className="story-link" aria-label="Download reward image">Download PNG</a>
                   </div>
                 </div>
