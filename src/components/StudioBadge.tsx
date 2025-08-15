@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 
-const STUDIO_LOGO = "/lovable-uploads/bd2d63dc-6052-4517-af12-23cddc63cee2.png"; // Provided upload path
+const STUDIO_LOGO = "/lovable-uploads/812e7e44-96fc-4eb8-94e0-98f94d9f159f.png"; // PhoenixGold Game Studios logo
 
 export const StudioBadge = ({
   size = "md",

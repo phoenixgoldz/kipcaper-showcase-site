@@ -7,40 +7,43 @@ All colors MUST be HSL. */
 
 @layer base {
   :root {
-    /* Gaming-themed color palette */
-    --background: 5 8 12;
-    --foreground: 248 250 252;
-    --card: 8 12 18;
-    --card-foreground: 248 250 252;
-    --popover: 8 12 18;
-    --popover-foreground: 248 250 252;
-    --primary: 88 166 255;
-    --primary-foreground: 2 6 23;
-    --secondary: 15 23 42;
-    --secondary-foreground: 248 250 252;
-    --muted: 15 23 42;
-    --muted-foreground: 148 163 184;
-    --accent: 129 140 248;
-    --accent-foreground: 2 6 23;
-    --destructive: 239 68 68;
-    --destructive-foreground: 248 250 252;
-    --border: 30 41 59;
-    --input: 30 41 59;
-    --ring: 129 140 248;
+    /* Kip Caper color palette */
+    --background: 225 20% 8%;           /* Midnight Shadow base */
+    --foreground: 140 33% 93%;          /* Light mist text */
+    --card: 144 23% 20%;                /* Jungle Green cards */
+    --card-foreground: 140 33% 93%;     /* Light text on cards */
+    --popover: 144 23% 20%;             /* Jungle Green popover */
+    --popover-foreground: 140 33% 93%;  /* Light text */
+    --primary: 144 23% 20%;             /* Jungle Green primary */
+    --primary-foreground: 140 33% 93%;  /* Light text on primary */
+    --secondary: 27 35% 26%;            /* Bark Brown secondary */
+    --secondary-foreground: 140 33% 93%; /* Light text */
+    --muted: 36 10% 75%;                /* Koala Grey muted */
+    --muted-foreground: 225 20% 8%;     /* Dark text on muted */
+    --accent: 119 100% 72%;             /* Mystic Green Glow accent */
+    --accent-foreground: 225 20% 8%;    /* Dark text on accent */
+    --destructive: 0 84% 60%;           /* Red for errors */
+    --destructive-foreground: 140 33% 93%; /* Light text */
+    --border: 144 15% 30%;              /* Darker jungle border */
+    --input: 144 15% 30%;               /* Input borders */
+    --ring: 119 100% 72%;               /* Mystic Green ring */
     --radius: 0.75rem;
     
-    /* Gaming brand colors */
-    --electric-blue: 88 166 255;
-    --cyber-purple: 129 140 248;
-    --neon-green: 34 197 94;
-    --gold-accent: 245 158 11;
-    --stealth-dark: 2 6 23;
+    /* Kip Caper brand colors */
+    --jungle-green: 144 23% 20%;        /* #2E5E3A */
+    --eucalyptus-mist: 134 34% 65%;     /* #8CBF8A */
+    --bark-brown: 27 35% 26%;           /* #5A3E2B */
+    --treasure-gold: 48 100% 68%;       /* #FFD55A */
+    --koala-grey: 36 10% 75%;           /* #BFB7AE */
+    --midnight-shadow: 225 20% 8%;      /* #1B1B2F */
+    --mystic-green: 119 100% 72%;       /* #76FF7B */
     
     /* Enhanced gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--cyber-purple)));
-    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(var(--stealth-dark)));
-    --shadow-primary: 0 20px 60px -12px hsl(var(--electric-blue) / 0.25);
-    --shadow-glow: 0 0 60px hsl(var(--cyber-purple) / 0.3);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--treasure-gold)), hsl(var(--mystic-green)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--midnight-shadow)), hsl(var(--jungle-green)));
+    --gradient-jungle: linear-gradient(135deg, hsl(var(--jungle-green)), hsl(var(--eucalyptus-mist)));
+    --shadow-primary: 0 20px 60px -12px hsl(var(--treasure-gold) / 0.25);
+    --shadow-glow: 0 0 60px hsl(var(--mystic-green) / 0.3);
 
     /* Sidebar (kept consistent) */
     --sidebar-background: 156 45% 9%;
@@ -116,7 +119,7 @@ All colors MUST be HSL. */
   }
 
   h1,h2,h3,h4 { @apply font-display; }
-  h1, h2, h3 { color: hsl(var(--gold)); }
+  h1, h2, h3 { color: hsl(var(--treasure-gold)); }
 
   /* Focus styles for accessibility */
   a:focus-visible, button:focus-visible, [role="button"]:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
@@ -158,8 +161,8 @@ All colors MUST be HSL. */
 
   .cyber-grid {
     background-image: 
-      linear-gradient(rgba(88, 166, 255, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(88, 166, 255, 0.1) 1px, transparent 1px);
+      linear-gradient(hsl(var(--mystic-green) / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--mystic-green) / 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 

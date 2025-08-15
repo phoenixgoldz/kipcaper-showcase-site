@@ -61,7 +61,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Kip Caper color palette
+				'jungle-green': 'hsl(var(--jungle-green))',
+				'eucalyptus-mist': 'hsl(var(--eucalyptus-mist))',
+				'bark-brown': 'hsl(var(--bark-brown))',
+				'treasure-gold': 'hsl(var(--treasure-gold))',
+				'koala-grey': 'hsl(var(--koala-grey))',
+				'midnight-shadow': 'hsl(var(--midnight-shadow))',
+				'mystic-green': 'hsl(var(--mystic-green))'
 			},
 			fontFamily: {
 				sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Cantarell", "Helvetica Neue", "Arial", "sans-serif"],

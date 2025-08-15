@@ -20,26 +20,26 @@ const Index = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="glass-card p-8 hover-lift group">
-            <div className="w-16 h-16 bg-gradient-to-br from-electric-blue to-cyber-purple rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 bg-gradient-to-br from-jungle-green to-eucalyptus-mist rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
               <span className="text-2xl">🎯</span>
             </div>
-            <h3 className="font-display text-xl mb-3 text-electric-blue">Precision Stealth</h3>
+            <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Precision Stealth</h3>
             <p className="text-muted-foreground">Master the art of silent movement and strategic positioning in dynamic environments.</p>
           </div>
           
           <div className="glass-card p-8 hover-lift group">
-            <div className="w-16 h-16 bg-gradient-to-br from-cyber-purple to-neon-green rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 bg-gradient-to-br from-eucalyptus-mist to-mystic-green rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
               <span className="text-2xl">🥢</span>
             </div>
-            <h3 className="font-display text-xl mb-3 text-cyber-purple">Bo-Staff Mastery</h3>
+            <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Bo-Staff Mastery</h3>
             <p className="text-muted-foreground">Wield your signature weapon with physics-based precision and creative problem-solving.</p>
           </div>
           
           <div className="glass-card p-8 hover-lift group">
-            <div className="w-16 h-16 bg-gradient-to-br from-neon-green to-gold-accent rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 bg-gradient-to-br from-mystic-green to-treasure-gold rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
               <span className="text-2xl">🌿</span>
             </div>
-            <h3 className="font-display text-xl mb-3 text-neon-green">Canopy Traversal</h3>
+            <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Canopy Traversal</h3>
             <p className="text-muted-foreground">Navigate breathtaking vertical environments with fluid parkour and climbing mechanics.</p>
           </div>
         </div>
