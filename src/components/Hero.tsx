@@ -30,19 +30,19 @@ export const Hero = () => {
             Kip Caper and The Codex Caperius
           </h1>
           <p className="text-lg text-muted-foreground max-w-prose">
-            A stealth-comedy caper with cel-shaded swagger. UE5.6.
+            "Join me, Kip Caper, for the greatest global heist of our time. We'll outwit poachers, nab relics, and put the Codex Caperius back where it belongs—one daring job at a time."
           </p>
           <ul className="space-y-2 text-foreground/90">
-            <li>• Heist the relics. Dodge the poachers.</li>
-            <li>• Gadgets, glides, and eucalyptus-fueled upgrades.</li>
-            <li>• Unlock the <span className="text-accent font-medium">Codex</span>—one page at a time.</li>
+            <li>• Swipe back the relics before the poachers sniff them out.</li>
+            <li>• Master gadgets, glides, and eucalyptus-fueled tricks.</li>
+            <li>• Crack the <span className="text-accent font-medium">Codex</span>—page by stolen page.</li>
           </ul>
           <div className="flex gap-3 pt-2">
-            <Button asChild variant="hero" className="hover-scale">
+            <Button asChild variant="hero" className="hover-scale kip-heist-glow">
               <Link to="/join" aria-label="Join the Heist">Join the Heist</Link>
             </Button>
-            <Button asChild variant="outline" className="hover-scale">
-              <Link to="/codex" aria-label="Read the Codex">Read the Codex</Link>
+            <Button asChild variant="outline" className="hover-scale codex-flip">
+              <Link to="/codex" aria-label="Peek Inside the Codex">Peek Inside the Codex</Link>
             </Button>
           </div>
           <p className="text-sm text-muted-foreground">“Green means gone.”</p>
@@ -50,10 +50,10 @@ export const Hero = () => {
             <StudioBadge size="sm" />
           </div>
         </div>
-        <div className="relative h-[340px] sm:h-[420px] lg:h-[520px] grain-overlay panel-edge hover-glow">
+        <div className="relative h-[340px] sm:h-[420px] lg:h-[520px] grain-overlay panel-edge hover-glow parchment-sway">
           <img src={parchment} alt="Codex parchment background" className="absolute inset-0 w-full h-full object-cover opacity-40 rounded-lg" />
           <div ref={emblemRef} className="absolute inset-0 flex items-center justify-center transition-transform will-change-transform">
-            <img src={EMBLEM_SRC} alt="Masked koala calling card with subtle glow" loading="lazy" className="h-48 sm:h-64 lg:h-72 drop-shadow-[0_0_30px_hsl(142_53%_66%/.25)]" />
+            <img src={EMBLEM_SRC} alt="Masked koala calling card with mystic glow" loading="lazy" className="h-48 sm:h-64 lg:h-72 codex-pulse" />
           </div>
         </div>
       </div>

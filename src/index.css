@@ -226,8 +226,59 @@ All colors MUST be HSL. */
   }
   .flip-once { animation: flip-once 0.3s ease-in-out; transform-style: preserve-3d; }
 
+  /* Kip Caper specific animations */
+  @keyframes codex-pulse {
+    0%, 100% { 
+      filter: drop-shadow(0 0 20px hsl(var(--mystic-green) / 0.4)); 
+      transform: scale(1);
+    }
+    50% { 
+      filter: drop-shadow(0 0 40px hsl(var(--mystic-green) / 0.7)); 
+      transform: scale(1.02);
+    }
+  }
+  .codex-pulse { animation: codex-pulse 4s ease-in-out infinite; }
+
+  @keyframes parchment-sway {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-2px) rotate(0.5deg); }
+    66% { transform: translateY(2px) rotate(-0.5deg); }
+  }
+  .parchment-sway::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, transparent 30%, hsl(var(--treasure-gold) / 0.1) 50%, transparent 70%);
+    animation: parchment-sway 8s ease-in-out infinite;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  @keyframes kip-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--treasure-gold) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--treasure-gold) / 0.6), 0 0 60px hsl(var(--mystic-green) / 0.3); }
+  }
+  .kip-heist-glow:hover { animation: kip-glow 1.5s ease-in-out infinite; }
+  .kip-glow:hover { animation: kip-glow 1.5s ease-in-out infinite; }
+
+  .codex-flip:hover { 
+    animation: flip-once 0.6s ease-in-out;
+    box-shadow: 0 0 30px hsl(var(--mystic-green) / 0.4);
+  }
+
+  .codex-peek:hover {
+    background: linear-gradient(45deg, hsl(var(--jungle-green)), hsl(var(--eucalyptus-mist)));
+    border-color: hsl(var(--mystic-green));
+    color: white;
+    transform: translateY(-2px) scale(1.05);
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .sweep-spotlight::before { animation: none !important; }
     .flip-once { animation: none !important; }
+    .codex-pulse { animation: none !important; }
+    .parchment-sway::before { animation: none !important; }
+    .kip-heist-glow:hover { animation: none !important; }
+    .kip-glow:hover { animation: none !important; }
   }
 }

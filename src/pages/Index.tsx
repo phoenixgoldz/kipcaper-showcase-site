@@ -24,7 +24,7 @@ const Index = () => {
               <span className="text-2xl">🎯</span>
             </div>
             <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Precision Stealth</h3>
-            <p className="text-muted-foreground">Master the art of silent movement and strategic positioning in dynamic environments.</p>
+            <p className="text-muted-foreground">Slip past the clueless with style and zero footprints.</p>
           </div>
           
           <div className="glass-card p-8 hover-lift group">
@@ -32,7 +32,7 @@ const Index = () => {
               <span className="text-2xl">🥢</span>
             </div>
             <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Bo-Staff Mastery</h3>
-            <p className="text-muted-foreground">Wield your signature weapon with physics-based precision and creative problem-solving.</p>
+            <p className="text-muted-foreground">Spin it, vault with it, bonk with it—your trusty bamboo never quits.</p>
           </div>
           
           <div className="glass-card p-8 hover-lift group">
@@ -40,7 +40,7 @@ const Index = () => {
               <span className="text-2xl">🌿</span>
             </div>
             <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Canopy Traversal</h3>
-            <p className="text-muted-foreground">Navigate breathtaking vertical environments with fluid parkour and climbing mechanics.</p>
+            <p className="text-muted-foreground">From drainpipes to treetop zip lines—if it's climbable, it's mine-able.</p>
           </div>
         </div>
       </section>
@@ -50,14 +50,14 @@ const Index = () => {
         <div className="glass-card p-12 text-center tech-border">
           <h2 className="font-display text-4xl lg:text-5xl mb-4 neon-glow">Ready for the Heist?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of players preparing for the ultimate caper. Get exclusive updates, behind-the-scenes content, and early access opportunities.
+            Psst… The crew's meeting in the canopy. Sign here if you've got quick paws, sharp eyes, and no fear of heights.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild variant="hero" size="xl" className="hover-lift">
+            <Button asChild variant="hero" size="xl" className="hover-lift kip-heist-glow">
               <Link to="/join">Join the Heist</Link>
             </Button>
-            <Button asChild variant="outline" size="xl" className="hover-lift tech-border">
-              <Link to="/media">View Gallery</Link>
+            <Button asChild variant="outline" size="xl" className="hover-lift tech-border codex-peek">
+              <Link to="/media">See What's Missing</Link>
             </Button>
           </div>
         </div>

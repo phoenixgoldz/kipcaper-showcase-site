@@ -29,7 +29,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="container mx-auto flex items-center justify-between py-4">
           <Link to="/" className="flex items-center gap-3 hover-scale group">
             <StudioBadge size="sm" className="group-hover:rotate-12 transition-transform duration-300" />
-            <span className="font-display text-xl bg-gradient-to-r from-electric-blue to-cyber-purple bg-clip-text text-transparent">
+            <span className="font-display text-xl bg-gradient-to-r from-treasure-gold to-mystic-green bg-clip-text text-transparent">
               Kip Caper
             </span>
           </Link>
@@ -37,7 +37,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <NavLink to="/codex" className={navLinkClass}>Codex</NavLink>
             <NavLink to="/media" className={navLinkClass}>Media</NavLink>
             <NavLink to="/join" className={cn(navLinkClass({ isActive: false }), "ml-4")}>
-              <span className="px-4 py-2 bg-gradient-to-r from-electric-blue to-cyber-purple rounded-lg text-white font-semibold hover:scale-105 transition-transform">
+              <span className="px-4 py-2 bg-gradient-to-r from-treasure-gold to-mystic-green rounded-lg text-midnight-shadow font-semibold hover:scale-105 transition-transform kip-glow">
                 Join Heist
               </span>
             </NavLink>
@@ -56,12 +56,12 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 <span className="font-display text-lg">PhoenixGold Game Studios</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Creating immersive gaming experiences with cutting-edge technology and artistic vision.
+                Stealing hearts and pixels since 2025. Powered by eucalyptus and questionable life choices.
               </p>
             </div>
             
             <div className="space-y-4">
-              <h3 className="font-display text-lg text-electric-blue">Game</h3>
+              <h3 className="font-display text-lg" style={{color: 'hsl(var(--treasure-gold))'}}>Game</h3>
               <div className="flex flex-col gap-2 text-sm">
                 <Link to="/" className="story-link">Home</Link>
                 <Link to="/codex" className="story-link">Codex</Link>
@@ -71,7 +71,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
             
             <div className="space-y-4">
-              <h3 className="font-display text-lg text-cyber-purple">Connect</h3>
+              <h3 className="font-display text-lg" style={{color: 'hsl(var(--mystic-green))'}}>Connect</h3>
               <div className="flex flex-col gap-2 text-sm">
                 <a href="#" className="story-link">Steam Wishlist</a>
                 <a href="#" className="story-link">Press Kit</a>
@@ -84,9 +84,9 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
             <span>© {new Date().getFullYear()} PhoenixGold Game Studios. All rights reserved.</span>
             <div className="flex gap-4 mt-4 md:mt-0">
-              <a href="#" className="hover:text-electric-blue transition-colors">Privacy</a>
-              <a href="#" className="hover:text-electric-blue transition-colors">Terms</a>
-              <a href="#" className="hover:text-electric-blue transition-colors">Support</a>
+              <a href="#" className="hover:text-mystic-green transition-colors">Privacy</a>
+              <a href="#" className="hover:text-mystic-green transition-colors">Terms</a>
+              <a href="#" className="hover:text-mystic-green transition-colors">Support</a>
             </div>
           </div>
         </div>
