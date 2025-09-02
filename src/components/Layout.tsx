@@ -34,6 +34,8 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             </span>
           </Link>
           <nav className="flex items-center gap-2" aria-label="Main Navigation">
+            <NavLink to="/story" className={navLinkClass}>Story</NavLink>
+            <NavLink to="/characters" className={navLinkClass}>Characters</NavLink>
             <NavLink to="/codex" className={navLinkClass}>Codex</NavLink>
             <NavLink to="/media" className={navLinkClass}>Media</NavLink>
             <NavLink to="/join" className={cn(navLinkClass({ isActive: false }), "ml-4")}>
@@ -64,6 +66,8 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               <h3 className="font-display text-lg" style={{color: 'hsl(var(--treasure-gold))'}}>Game</h3>
               <div className="flex flex-col gap-2 text-sm">
                 <Link to="/" className="story-link">Home</Link>
+                <Link to="/story" className="story-link">Story</Link>
+                <Link to="/characters" className="story-link">Characters</Link>
                 <Link to="/codex" className="story-link">Codex</Link>
                 <Link to="/media" className="story-link">Media Gallery</Link>
                 <Link to="/join" className="story-link">Join the Heist</Link>

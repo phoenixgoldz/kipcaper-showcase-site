@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"; import { Link } from "react-router-dom";
 const EMBLEM_SRC = "/lovable-uploads/587ae039-a119-445b-a4ae-686bd447dace.png";
+const POSTER_SRC = "/lovable-uploads/feba1c36-3442-4724-9d16-7b7a9186e9ba.png";
 import parchment from "@/assets/parchment-texture.jpg";
 import { useEffect, useRef } from "react";
 import { StudioBadge } from "@/components/StudioBadge";
@@ -50,10 +51,11 @@ export const Hero = () => {
             <StudioBadge size="sm" />
           </div>
         </div>
-        <div className="relative h-[340px] sm:h-[420px] lg:h-[520px] grain-overlay panel-edge hover-glow parchment-sway">
-          <img src={parchment} alt="Codex parchment background" className="absolute inset-0 w-full h-full object-cover opacity-40 rounded-lg" />
-          <div ref={emblemRef} className="absolute inset-0 flex items-center justify-center transition-transform will-change-transform">
-            <img src={EMBLEM_SRC} alt="Masked koala calling card with mystic glow" loading="lazy" className="h-48 sm:h-64 lg:h-72 codex-pulse" />
+        <div className="relative h-[340px] sm:h-[420px] lg:h-[520px] grain-overlay panel-edge hover-glow">
+          <img src={POSTER_SRC} alt="Kip Caper and The Codex Caperius - Official Game Poster" loading="lazy" className="absolute inset-0 w-full h-full object-cover rounded-lg hover-scale" />
+          <div className="absolute inset-0 bg-gradient-to-t from-midnight-shadow/80 via-transparent to-transparent rounded-lg"></div>
+          <div ref={emblemRef} className="absolute bottom-4 right-4 transition-transform will-change-transform">
+            <img src={EMBLEM_SRC} alt="Masked koala calling card" loading="lazy" className="h-16 sm:h-20 lg:h-24 codex-pulse opacity-80" />
           </div>
         </div>
       </div>

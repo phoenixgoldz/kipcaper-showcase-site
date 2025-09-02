@@ -11,6 +11,8 @@ import Updates from "./pages/Updates";
 import Media from "./pages/Media";
 import Join from "./pages/Join";
 import Capers from "./pages/Capers";
+import Characters from "./pages/Characters";
+import Story from "./pages/Story";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/codex" element={<Codex />} />
+          <Route path="/story" element={<Story />} />
+          <Route path="/characters" element={<Characters />} />
           <Route path="/updates" element={<Updates />} />
           <Route path="/media" element={<Media />} />
           <Route path="/join" element={<Join />} />

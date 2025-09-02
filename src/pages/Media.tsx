@@ -4,6 +4,8 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useMemo, useState } from "react";
 
 const items = [
+  // Official Poster
+  { src: "/lovable-uploads/feba1c36-3442-4724-9d16-7b7a9186e9ba.png", alt: "Kip Caper and The Codex Caperius — Official Game Poster", category: "Key Art" },
   // Concept art (earlier batch)
   { src: "/lovable-uploads/7c20e02d-c842-4643-a1fa-673d6f5d784b.png", alt: "Kip Caper leaping with bo-staff — concept illustration", category: "Concept" },
   { src: "/lovable-uploads/34373479-80c6-46b2-b994-0e6961a507f0.png", alt: "Kip Caper character turnarounds — front, back, side views", category: "Concept" },
@@ -25,7 +27,7 @@ const items = [
   { src: "/lovable-uploads/ec5cf9bf-f675-42fe-9aff-41501382990c.png", alt: "Masked koala mark on parchment — logo study", category: "Concept" },
 ];
 
-const categories = ["All", "Concept"] as const;
+const categories = ["All", "Key Art", "Concept"] as const;
 
 type Category = typeof categories[number];
 
