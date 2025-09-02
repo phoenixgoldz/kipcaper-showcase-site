@@ -29,10 +29,10 @@ export const Hero = () => {
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight">
             Kip Caper and The Codex Caperius
           </h1>
-          <p className="text-lg text-muted-foreground max-w-prose">
+          <p className="text-lg text-eucalyptus-mist max-w-prose">
             "Join me, Kip Caper, for the greatest global heist of our time. We'll outwit poachers, nab relics, and put the Codex Caperius back where it belongs—one daring job at a time."
           </p>
-          <ul className="space-y-2 text-foreground/90">
+          <ul className="space-y-2 text-koala-grey">
             <li>• Swipe back the relics before the poachers sniff them out.</li>
             <li>• Master gadgets, glides, and eucalyptus-fueled tricks.</li>
             <li>• Crack the <span className="text-accent font-medium">Codex</span>—page by stolen page.</li>
@@ -45,7 +45,7 @@ export const Hero = () => {
               <Link to="/codex" aria-label="Peek Inside the Codex">Peek Inside the Codex</Link>
             </Button>
           </div>
-          <p className="text-sm text-muted-foreground">“Green means gone.”</p>
+          <p className="text-sm text-eucalyptus-mist italic">“Green means gone.”</p>
           <div className="pt-2 opacity-90">
             <StudioBadge size="sm" />
           </div>

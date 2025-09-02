@@ -13,7 +13,7 @@ const Index = () => {
       <section className="container mx-auto py-20">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl lg:text-5xl mb-4 neon-glow">Game Features</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-eucalyptus-mist max-w-2xl mx-auto">
             Experience the ultimate stealth-action adventure with cutting-edge gameplay mechanics
           </p>
         </div>
@@ -24,7 +24,7 @@ const Index = () => {
               <span className="text-2xl">🎯</span>
             </div>
             <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Precision Stealth</h3>
-            <p className="text-muted-foreground">Slip past the clueless with style and zero footprints.</p>
+            <p className="text-koala-grey">Slip past the clueless with style and zero footprints.</p>
           </div>
           
           <div className="glass-card p-8 hover-lift group">
@@ -32,7 +32,7 @@ const Index = () => {
               <span className="text-2xl">🥢</span>
             </div>
             <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Bo-Staff Mastery</h3>
-            <p className="text-muted-foreground">Spin it, vault with it, bonk with it—your trusty bamboo never quits.</p>
+            <p className="text-koala-grey">Spin it, vault with it, bonk with it—your trusty bamboo never quits.</p>
           </div>
           
           <div className="glass-card p-8 hover-lift group">
@@ -40,7 +40,7 @@ const Index = () => {
               <span className="text-2xl">🌿</span>
             </div>
             <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Canopy Traversal</h3>
-            <p className="text-muted-foreground">From drainpipes to treetop zip lines—if it's climbable, it's mine-able.</p>
+            <p className="text-koala-grey">From drainpipes to treetop zip lines—if it's climbable, it's mine-able.</p>
           </div>
         </div>
       </section>
@@ -49,7 +49,7 @@ const Index = () => {
       <section className="container mx-auto py-20">
         <div className="glass-card p-12 text-center tech-border">
           <h2 className="font-display text-4xl lg:text-5xl mb-4 neon-glow">Ready for the Heist?</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-eucalyptus-mist mb-8 max-w-2xl mx-auto">
             Psst… The crew's meeting in the canopy. Sign here if you've got quick paws, sharp eyes, and no fear of heights.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
