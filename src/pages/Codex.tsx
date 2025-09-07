@@ -29,7 +29,7 @@ const CardItem = ({ name, unlocked, text }: { name: string; unlocked: boolean; t
           <div className={cn(
             "rounded-xl p-8 border-2 transition-all duration-300",
             unlocked 
-              ? "border-gold-accent/30 bg-gradient-to-br from-gold-accent/10 to-electric-blue/10" 
+              ? "border-treasure-gold/30 bg-gradient-to-br from-treasure-gold/10 to-mystic-green/10" 
               : "border-muted bg-muted/20"
           )} style={{ transform: "rotateX(1deg) rotateY(-1deg)" }}>
             <div className="relative">
@@ -44,14 +44,14 @@ const CardItem = ({ name, unlocked, text }: { name: string; unlocked: boolean; t
               <div className="absolute inset-0 flex items-center justify-center">
                 <h3 className={cn(
                   "font-display text-xl text-center max-w-[90%] transition-all duration-300",
-                  unlocked ? "text-gold-accent neon-glow" : "text-muted-foreground"
+                  unlocked ? "text-treasure-gold neon-glow" : "text-muted-foreground"
                 )}>
                   {unlocked ? name : "???"}
                 </h3>
               </div>
               {unlocked && (
                 <div className="absolute top-4 right-4">
-                  <div className="w-8 h-8 bg-gradient-to-br from-gold-accent to-electric-blue rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-treasure-gold to-mystic-green rounded-full flex items-center justify-center">
                     <span className="text-white text-sm">✓</span>
                   </div>
                 </div>
@@ -65,7 +65,7 @@ const CardItem = ({ name, unlocked, text }: { name: string; unlocked: boolean; t
                 variant={unlocked ? "default" : "secondary"}
                 className={cn(
                   "transition-all duration-300",
-                  unlocked && "bg-gradient-to-r from-gold-accent to-electric-blue text-white"
+                  unlocked && "bg-gradient-to-r from-treasure-gold to-mystic-green text-midnight-shadow"
                 )}
               >
                 {unlocked ? "Recovered" : "Undiscovered"}
@@ -73,16 +73,16 @@ const CardItem = ({ name, unlocked, text }: { name: string; unlocked: boolean; t
             </div>
           </div>
           {!unlocked && (
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-stealth-dark/50 to-muted/50 flex items-center justify-center">
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-midnight-shadow/50 to-muted/50 flex items-center justify-center">
               <div className="text-4xl opacity-50">🔒</div>
             </div>
           )}
         </article>
       </DialogTrigger>
       {unlocked && (
-        <DialogContent className="glass-card border-2 border-gold-accent/30">
+        <DialogContent className="glass-card border-2 border-treasure-gold/30">
           <DialogHeader>
-            <DialogTitle className="font-display text-2xl text-gold-accent">{name}</DialogTitle>
+            <DialogTitle className="font-display text-2xl text-treasure-gold">{name}</DialogTitle>
           </DialogHeader>
           <p className="text-foreground/80 text-lg leading-relaxed">{text}</p>
         </DialogContent>

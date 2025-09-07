@@ -73,36 +73,33 @@ const Index = () => {
 
       {/* Technical Specs */}
       <section className="container mx-auto py-20">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl lg:text-5xl mb-4" style={{color: 'hsl(var(--treasure-gold))'}}>Built for Adventure</h2>
-          <p className="text-xl text-eucalyptus-mist max-w-2xl mx-auto">
-            Powered by cutting-edge technology and years of heist expertise
+        <div className="text-center mb-12">
+          <h2 className="font-display text-3xl sm:text-4xl mb-4 text-treasure-gold">Built for Adventure</h2>
+          <p className="text-eucalyptus-mist text-lg max-w-2xl mx-auto">
+            A cutting-edge stealth platformer powered by Unreal Engine 5.6, featuring global heists and progressive skill mastery.
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="glass-card p-8 hover-lift">
-            <div className="w-16 h-16 bg-gradient-to-br from-mystic-green to-treasure-gold rounded-2xl mb-6 flex items-center justify-center">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="group text-center p-6 rounded-xl glass-card hover-lift">
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-treasure-gold to-mystic-green flex items-center justify-center">
               <span className="text-2xl">🎮</span>
             </div>
-            <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Unreal Engine 5.6</h3>
-            <p className="text-koala-grey">Next-generation graphics with cel-shaded artistry and dynamic lighting.</p>
+            <h3 className="font-display text-xl mb-2 text-treasure-gold">Unreal Engine 5.6</h3>
+            <p className="text-eucalyptus-mist text-sm">Cutting-edge graphics with cel-shaded anime aesthetics and stunning Codex glow effects.</p>
           </div>
-          
-          <div className="glass-card p-8 hover-lift">
-            <div className="w-16 h-16 bg-gradient-to-br from-treasure-gold to-eucalyptus-mist rounded-2xl mb-6 flex items-center justify-center">
+          <div className="group text-center p-6 rounded-xl glass-card hover-lift">
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-mystic-green to-jungle-green flex items-center justify-center">
               <span className="text-2xl">🌍</span>
             </div>
-            <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Global Locations</h3>
-            <p className="text-koala-grey">Six exotic locations from Sydney's rooftops to Egyptian tombs.</p>
+            <h3 className="font-display text-xl mb-2 text-treasure-gold">Global Heists</h3>
+            <p className="text-eucalyptus-mist text-sm">From Sydney's rooftops to Amazon swamps, infiltrate exotic locations across six thrilling chapters.</p>
           </div>
-          
-          <div className="glass-card p-8 hover-lift">
-            <div className="w-16 h-16 bg-gradient-to-br from-eucalyptus-mist to-mystic-green rounded-2xl mb-6 flex items-center justify-center">
+          <div className="group text-center p-6 rounded-xl glass-card hover-lift sm:col-span-2 lg:col-span-1">
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-jungle-green to-bark-brown flex items-center justify-center">
               <span className="text-2xl">⚡</span>
             </div>
-            <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Progressive Skills</h3>
-            <p className="text-koala-grey">Unlock new abilities with each recovered Codex page.</p>
+            <h3 className="font-display text-xl mb-2 text-treasure-gold">Progressive Skills</h3>
+            <p className="text-eucalyptus-mist text-sm">Master new thief abilities each chapter—from Night-Eye Lenses to Shadow Decoys.</p>
           </div>
         </div>
       </section>

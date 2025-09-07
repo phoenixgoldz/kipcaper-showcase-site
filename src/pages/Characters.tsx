@@ -67,11 +67,12 @@ const Characters = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {characters.map((character, index) => (
             <Card key={character.name} className="glass-card hover-lift group overflow-hidden">
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-gradient-to-b from-jungle-green/20 to-midnight-shadow/60">
                 <img 
                   src={character.image} 
                   alt={`${character.name} character art`}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight-shadow/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4">

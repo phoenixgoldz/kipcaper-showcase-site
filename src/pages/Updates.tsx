@@ -36,7 +36,9 @@ const Updates = () => {
         <section className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
           {posts.map((p) => (
             <article key={p.id} className="group mb-6 break-inside-avoid rounded-lg overflow-hidden border bg-card hover:shadow-lg transition">
-              <img src={imageByWeek[p.week]} alt={p.alt || `Week ${p.week} update`} loading="lazy" className="w-full object-cover" />
+              <div className="aspect-[4/3] overflow-hidden">
+                <img src={imageByWeek[p.week]} alt={p.alt || `Week ${p.week} update`} loading="lazy" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+              </div>
               <div className="p-4 flex items-start gap-3">
                 <div className={p.hasHiddenMark ? "text-accent" : "text-muted-foreground"}>
                   <Leaf className={p.hasHiddenMark ? "transition group-hover:drop-shadow-[0_0_12px_hsl(142_53%_66%/.6)]" : ""} />

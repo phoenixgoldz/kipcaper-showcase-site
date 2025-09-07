@@ -18,8 +18,7 @@ const Join = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="font-display text-5xl lg:text-6xl mb-6 neon-glow">Join the Heist</h1>
             <p className="text-xl text-eucalyptus-mist">
-              Get exclusive access to development updates, behind-the-scenes content, and early gameplay previews. 
-              No spam. Only capers.
+              Ready to join the crew? Follow the green trail and become part of the most daring heist crew in gaming history.
             </p>
           </div>
         </div>
@@ -85,7 +84,7 @@ const Join = () => {
                 <span className="text-xl">📧</span>
               </div>
               <h3 className="font-display text-lg mb-2" style={{color: 'hsl(var(--treasure-gold))'}}>Exclusive Updates</h3>
-              <p className="text-sm text-koala-grey">Get the latest development news and gameplay reveals before anyone else.</p>
+              <p className="text-sm text-eucalyptus-mist">Get the latest development news and gameplay reveals before anyone else.</p>
             </div>
             
             <div className="glass-card p-6 text-center hover-lift">
@@ -93,7 +92,7 @@ const Join = () => {
                 <span className="text-xl">🎮</span>
               </div>
               <h3 className="font-display text-lg mb-2" style={{color: 'hsl(var(--mystic-green))'}}>Early Access</h3>
-              <p className="text-sm text-koala-grey">Opportunities for beta testing and exclusive gameplay previews.</p>
+              <p className="text-sm text-eucalyptus-mist">Opportunities for beta testing and exclusive gameplay previews.</p>
             </div>
             
             <div className="glass-card p-6 text-center hover-lift">
@@ -101,7 +100,7 @@ const Join = () => {
                 <span className="text-xl">🎨</span>
               </div>
               <h3 className="font-display text-lg mb-2" style={{color: 'hsl(var(--eucalyptus-mist))'}}>Behind the Scenes</h3>
-              <p className="text-sm text-koala-grey">Developer insights, concept art, and making-of content.</p>
+              <p className="text-sm text-eucalyptus-mist">Developer insights, concept art, and making-of content.</p>
             </div>
           </section>
         </div>

@@ -57,8 +57,10 @@ const Media = () => {
           {filtered.map((it, idx) => (
             <Dialog key={idx}>
               <DialogTrigger asChild>
-                <figure className="rounded-lg overflow-hidden border bg-card hover:shadow-lg cursor-pointer grain-overlay">
-                  <img src={it.src} alt={it.alt} className="w-full h-52 object-cover" loading="lazy" />
+                <figure className="group rounded-lg overflow-hidden border bg-card hover:shadow-lg cursor-pointer grain-overlay hover-lift">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={it.src} alt={it.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  </div>
                   <figcaption className="p-3 text-sm text-muted-foreground">{it.category}</figcaption>
                 </figure>
               </DialogTrigger>
