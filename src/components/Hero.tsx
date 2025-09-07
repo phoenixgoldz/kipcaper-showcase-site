@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"; import { Link } from "react-router-dom";
 const EMBLEM_SRC = "/lovable-uploads/587ae039-a119-445b-a4ae-686bd447dace.png";
-const POSTER_SRC = "/lovable-uploads/feba1c36-3442-4724-9d16-7b7a9186e9ba.png";
+const POSTER_SRC = "/lovable-uploads/075a6aba-4b19-4b87-a30f-c65c218b52dd.png";
 import parchment from "@/assets/parchment-texture.jpg";
 import { useEffect, useRef } from "react";
 import { StudioBadge } from "@/components/StudioBadge";

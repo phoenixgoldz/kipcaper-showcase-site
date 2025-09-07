@@ -16,7 +16,7 @@ const characters = [
       "Progressive Skills - Unlocks new abilities as Codex pages are recovered"
     ],
     motto: "\"Green means gone.\"",
-    image: "/lovable-uploads/11e6d061-53ae-420f-98ae-8974aef75cd1.png"
+    image: "/lovable-uploads/ce5bac29-1805-4689-a67b-2ecb9c945c22.png"
   },
   {
     name: "Tikka",
@@ -30,7 +30,7 @@ const characters = [
       "Strategic Planning - Maps optimal infiltration routes"
     ],
     motto: "\"Every lock has a digital key.\"",
-    image: "/lovable-uploads/966a52db-9402-45c5-8b72-2c1a4aad1d19.png"
+    image: "/lovable-uploads/7d3f4f03-868e-488d-acbc-bf6ee26fe908.png"
   },
   {
     name: "Peeka",
@@ -44,7 +44,7 @@ const characters = [
       "Route Planning - Maps safe passages and escape routes"
     ],
     motto: "\"Knowledge is the best weapon.\"",
-    image: "/lovable-uploads/966a52db-9402-45c5-8b72-2c1a4aad1d19.png"
+    image: "/lovable-uploads/be2fb648-1262-45b0-b454-0dcbc00b3279.png"
   }
 ];
 
