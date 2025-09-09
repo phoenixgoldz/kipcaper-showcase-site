@@ -1,6 +1,12 @@
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { Hero } from "@/components/Hero";
+import { GameTrailer } from "@/components/GameTrailer";
+import { ScreenshotsGallery } from "@/components/ScreenshotsGallery";
+import { SystemRequirements } from "@/components/SystemRequirements";
+import { AwardsSection } from "@/components/AwardsSection";
+import { CharacterSelector } from "@/components/CharacterSelector";
+import { Newsletter } from "@/components/Newsletter";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -9,6 +15,16 @@ const Index = () => {
     <Layout>
       <SEO title="Kip Caper and The Codex Caperius — Official Site" description="Master the art of thievery in this cel-shaded stealth-platformer. Join Kip, Tikka, and Peeka as they reclaim the stolen Codex Caperius across six exotic locations." image="/lovable-uploads/feba1c36-3442-4724-9d16-7b7a9186e9ba.png" />
       <Hero />
+      
+      {/* Game Trailer Section */}
+      <GameTrailer />
+      
+      {/* Character Selector */}
+      <CharacterSelector />
+      
+      {/* Screenshots Gallery */}
+      <ScreenshotsGallery />
+
       {/* Features Section */}
       <section className="container mx-auto py-20">
         <div className="text-center mb-16">
@@ -51,6 +67,17 @@ const Index = () => {
             <p className="text-koala-grey">Switch between Kip, Tikka, and Peeka—each with unique abilities.</p>
           </div>
         </div>
+      </section>
+
+      {/* System Requirements */}
+      <SystemRequirements />
+
+      {/* Awards Section */}
+      <AwardsSection />
+
+      {/* Newsletter Signup */}
+      <section className="container mx-auto py-20">
+        <Newsletter />
       </section>
 
       {/* Call to Action */}
