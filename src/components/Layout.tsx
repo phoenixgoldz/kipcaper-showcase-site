@@ -29,20 +29,28 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="container mx-auto flex items-center justify-between py-4">
           <Link to="/" className="flex items-center gap-3 hover-scale group">
             <StudioBadge size="sm" className="group-hover:rotate-12 transition-transform duration-300" />
-            <span className="font-display text-xl bg-gradient-to-r from-treasure-gold to-mystic-green bg-clip-text text-transparent">
+            <span className="font-display text-xl bg-gradient-to-r from-thief-gold to-emerald-glow bg-clip-text text-transparent">
               Kip Caper
             </span>
           </Link>
-          <nav className="flex items-center gap-2" aria-label="Main Navigation">
+          <nav className="hidden md:flex items-center gap-2" aria-label="Main Navigation">
             <NavLink to="/story" className={navLinkClass}>Story</NavLink>
             <NavLink to="/characters" className={navLinkClass}>Characters</NavLink>
             <NavLink to="/codex" className={navLinkClass}>Codex</NavLink>
             <NavLink to="/media" className={navLinkClass}>Media</NavLink>
             <NavLink to="/join" className={cn(navLinkClass({ isActive: false }), "ml-4")}>
-              <span className="px-4 py-2 bg-gradient-to-r from-treasure-gold to-mystic-green rounded-lg text-midnight-shadow font-semibold hover:scale-105 transition-transform kip-glow">
+              <span className="px-4 py-2 bg-gradient-to-r from-stealth-silver to-thief-gold rounded-lg text-shadow-black font-semibold hover:scale-105 transition-transform kip-glow">
                 Join Heist
               </span>
             </NavLink>
+          </nav>
+          
+          {/* Mobile Navigation */}
+          <nav className="md:hidden flex items-center gap-1" aria-label="Mobile Navigation">
+            <NavLink to="/story" className="px-2 py-1 text-sm rounded hover:bg-stealth-silver/10">Story</NavLink>
+            <NavLink to="/characters" className="px-2 py-1 text-sm rounded hover:bg-stealth-silver/10">Cast</NavLink>
+            <NavLink to="/media" className="px-2 py-1 text-sm rounded hover:bg-stealth-silver/10">Media</NavLink>
+            <NavLink to="/join" className="px-2 py-1 text-sm bg-thief-gold text-shadow-black rounded font-medium">Join</NavLink>
           </nav>
         </div>
       </header>
@@ -63,7 +71,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
             
             <div className="space-y-4">
-              <h3 className="font-display text-lg" style={{color: 'hsl(var(--treasure-gold))'}}>Game</h3>
+              <h3 className="font-display text-lg" style={{color: 'hsl(var(--thief-gold))'}}>Game</h3>
               <div className="flex flex-col gap-2 text-sm">
                 <Link to="/" className="story-link">Home</Link>
                 <Link to="/story" className="story-link">Story</Link>
@@ -75,7 +83,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
             
             <div className="space-y-4">
-              <h3 className="font-display text-lg" style={{color: 'hsl(var(--mystic-green))'}}>Connect</h3>
+              <h3 className="font-display text-lg" style={{color: 'hsl(var(--emerald-glow))'}}>Connect</h3>
               <div className="flex flex-col gap-2 text-sm">
                 <a href="#" className="story-link">Steam Wishlist</a>
                 <a href="#" className="story-link">Press Kit</a>
@@ -88,9 +96,9 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
             <span>© {new Date().getFullYear()} PhoenixGold Game Studios. All rights reserved.</span>
             <div className="flex gap-4 mt-4 md:mt-0">
-              <a href="#" className="hover:text-mystic-green transition-colors">Privacy</a>
-              <a href="#" className="hover:text-mystic-green transition-colors">Terms</a>
-              <a href="#" className="hover:text-mystic-green transition-colors">Support</a>
+              <a href="#" className="hover:text-emerald-glow transition-colors">Privacy</a>
+              <a href="#" className="hover:text-emerald-glow transition-colors">Terms</a>
+              <a href="#" className="hover:text-emerald-glow transition-colors">Support</a>
             </div>
           </div>
         </div>

@@ -51,8 +51,8 @@ export const Hero = () => {
             <StudioBadge size="sm" />
           </div>
         </div>
-        <div className="relative aspect-[3/4] lg:aspect-[4/5] grain-overlay panel-edge hover-glow overflow-hidden rounded-lg">
-          <img src={POSTER_SRC} alt="Kip Caper and The Codex Caperius - Official Game Poster" loading="lazy" className="w-full h-full object-cover hover-scale transition-transform duration-500" />
+        <div className="relative w-full max-w-md mx-auto grain-overlay panel-edge hover-glow overflow-hidden rounded-lg">
+          <img src={POSTER_SRC} alt="Kip Caper and The Codex Caperius - Official Game Poster" loading="lazy" className="w-full h-auto object-contain hover-scale transition-transform duration-500" />
           <div className="absolute inset-0 bg-gradient-to-t from-midnight-shadow/80 via-transparent to-transparent rounded-lg"></div>
           <div ref={emblemRef} className="absolute bottom-4 right-4 transition-transform will-change-transform">
             <img src={EMBLEM_SRC} alt="Masked koala calling card" loading="lazy" className="h-16 sm:h-20 lg:h-24 codex-pulse opacity-80" />

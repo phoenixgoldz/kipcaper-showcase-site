@@ -7,36 +7,45 @@ All colors MUST be HSL. */
 
 @layer base {
   :root {
-    /* Kip Caper color palette */
-    --background: 225 20% 8%;           /* Midnight Shadow base */
-    --foreground: 140 33% 93%;          /* Light mist text */
-    --card: 144 23% 20%;                /* Jungle Green cards */
-    --card-foreground: 140 33% 93%;     /* Light text on cards */
-    --popover: 144 23% 20%;             /* Jungle Green popover */
-    --popover-foreground: 140 33% 93%;  /* Light text */
-    --primary: 144 23% 20%;             /* Jungle Green primary */
-    --primary-foreground: 140 33% 93%;  /* Light text on primary */
-    --secondary: 27 35% 26%;            /* Bark Brown secondary */
-    --secondary-foreground: 140 33% 93%; /* Light text */
-    --muted: 36 10% 75%;                /* Koala Grey muted */
-    --muted-foreground: 225 20% 8%;     /* Dark text on muted */
-    --accent: 119 100% 72%;             /* Mystic Green Glow accent */
-    --accent-foreground: 225 20% 8%;    /* Dark text on accent */
+    /* Stealthy Kip Caper color palette - Silver, Gold, Dark Green theme */
+    --background: 200 15% 7%;           /* Deep shadow black */
+    --foreground: 0 0% 85%;             /* Silvery text */
+    --card: 140 25% 15%;                /* Dark forest green cards */
+    --card-foreground: 0 0% 85%;        /* Silver text on cards */
+    --popover: 140 25% 15%;             /* Dark green popover */
+    --popover-foreground: 0 0% 85%;     /* Silver text */
+    --primary: 140 25% 15%;             /* Dark forest green primary */
+    --primary-foreground: 0 0% 85%;     /* Silver text on primary */
+    --secondary: 0 0% 25%;              /* Charcoal secondary */
+    --secondary-foreground: 0 0% 85%;   /* Silver text */
+    --muted: 0 0% 20%;                  /* Dark muted */
+    --muted-foreground: 0 0% 65%;       /* Light silver muted text */
+    --accent: 45 85% 60%;               /* Thief gold accent */
+    --accent-foreground: 200 15% 7%;    /* Dark text on gold */
     --destructive: 0 84% 60%;           /* Red for errors */
-    --destructive-foreground: 140 33% 93%; /* Light text */
-    --border: 144 15% 30%;              /* Darker jungle border */
-    --input: 144 15% 30%;               /* Input borders */
-    --ring: 119 100% 72%;               /* Mystic Green ring */
+    --destructive-foreground: 0 0% 85%; /* Silver text */
+    --border: 140 15% 25%;              /* Dark green border */
+    --input: 140 15% 25%;               /* Input borders */
+    --ring: 45 85% 60%;                 /* Gold ring */
     --radius: 0.75rem;
     
-    /* Kip Caper brand colors */
-    --jungle-green: 144 23% 20%;        /* #2E5E3A */
-    --eucalyptus-mist: 134 34% 65%;     /* #8CBF8A */
-    --bark-brown: 27 35% 26%;           /* #5A3E2B */
-    --treasure-gold: 48 100% 68%;       /* #FFD55A */
-    --koala-grey: 36 10% 75%;           /* #BFB7AE */
-    --midnight-shadow: 225 20% 8%;      /* #1B1B2F */
-    --mystic-green: 119 100% 72%;       /* #76FF7B */
+    /* Stealthy Kip Caper brand colors */
+    --shadow-green: 140 25% 15%;        /* Deep forest stealth green */
+    --stealth-silver: 0 0% 75%;         /* Silvery highlights */
+    --charcoal-black: 200 15% 7%;       /* Deep shadow background */
+    --thief-gold: 45 85% 60%;           /* Heist gold accents */
+    --mist-grey: 0 0% 50%;              /* Neutral grey */
+    --shadow-black: 200 15% 7%;         /* True shadow */
+    --emerald-glow: 140 60% 50%;        /* Bright stealth green glow */
+    
+    /* Legacy colors for backward compatibility */
+    --jungle-green: 140 25% 15%;        
+    --eucalyptus-mist: 0 0% 65%;        
+    --bark-brown: 30 20% 20%;           
+    --treasure-gold: 45 85% 60%;        
+    --koala-grey: 0 0% 50%;             
+    --midnight-shadow: 200 15% 7%;      
+    --mystic-green: 140 60% 50%;
     
     /* Enhanced gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--treasure-gold)), hsl(var(--mystic-green)));
@@ -119,7 +128,11 @@ All colors MUST be HSL. */
   }
 
   h1,h2,h3,h4 { @apply font-display; }
-  h1, h2, h3 { color: hsl(var(--treasure-gold)); }
+  h1, h2, h3 { color: hsl(var(--thief-gold)); }
+  
+  /* Replace any black text with silver */
+  .text-black { color: hsl(var(--stealth-silver)) !important; }
+  [style*="color: black"], [style*="color: #000"] { color: hsl(var(--stealth-silver)) !important; }
 
   /* Focus styles for accessibility */
   a:focus-visible, button:focus-visible, [role="button"]:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
