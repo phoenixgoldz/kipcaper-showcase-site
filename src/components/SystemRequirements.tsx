@@ -4,22 +4,22 @@ import { Monitor, HardDrive, Cpu, Zap, GamepadIcon } from "lucide-react";
 export const SystemRequirements = () => {
   const requirements = {
     minimum: {
-      os: "Windows 10 64-bit",
-      processor: "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      memory: "8 GB RAM",
-      graphics: "GTX 1060 6GB / RX 580 8GB",
-      directx: "Version 12",
-      storage: "50 GB available space",
-      network: "Broadband Internet connection"
+      os: "TBD",
+      processor: "TBD",
+      memory: "TBD",
+      graphics: "TBD",
+      directx: "TBD",
+      storage: "TBD",
+      network: "TBD"
     },
     recommended: {
-      os: "Windows 11 64-bit",
-      processor: "Intel Core i7-10700K / AMD Ryzen 7 3700X",
-      memory: "16 GB RAM", 
-      graphics: "RTX 3070 / RX 6700 XT",
-      directx: "Version 12",
-      storage: "50 GB available space (SSD)",
-      network: "Broadband Internet connection"
+      os: "TBD",
+      processor: "TBD",
+      memory: "TBD", 
+      graphics: "TBD",
+      directx: "TBD",
+      storage: "TBD",
+      network: "TBD"
     }
   };
 
@@ -42,7 +42,7 @@ export const SystemRequirements = () => {
         >
           <h2 className="text-4xl font-bold text-foreground mb-4">System Requirements</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Ensure your system can handle the stealth and precision of Kip Caper
+            System requirements will be finalized as development progresses
           </p>
         </motion.div>
 
@@ -125,14 +125,13 @@ export const SystemRequirements = () => {
           className="text-center mt-12 bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-6"
         >
           <p className="text-muted-foreground mb-4">
-            <strong className="text-foreground">Note:</strong> Kip Caper is optimized for performance across a wide range of systems.
-            Ray tracing features require compatible graphics cards.
+            <strong className="text-foreground">Note:</strong> System requirements are currently being determined based on development progress. 
+            Final specifications will be announced closer to release.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <span className="bg-primary/10 text-primary px-3 py-1 rounded-full">Unreal Engine 5.6</span>
-            <span className="bg-secondary/10 text-secondary-foreground px-3 py-1 rounded-full">Ray Tracing Support</span>
-            <span className="bg-accent/10 text-accent-foreground px-3 py-1 rounded-full">DLSS 3.0</span>
-            <span className="bg-muted/20 text-muted-foreground px-3 py-1 rounded-full">FSR 2.0</span>
+            <span className="bg-primary/10 text-primary px-3 py-1 rounded-full">In Development</span>
+            <span className="bg-secondary/10 text-secondary-foreground px-3 py-1 rounded-full">Solo Project</span>
+            <span className="bg-accent/10 text-accent-foreground px-3 py-1 rounded-full">Early Stage</span>
           </div>
         </motion.div>
       </div>

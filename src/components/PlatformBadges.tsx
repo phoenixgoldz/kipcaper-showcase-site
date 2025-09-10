@@ -5,37 +5,13 @@ export const PlatformBadges = () => {
     {
       name: "Steam",
       logo: "🎮",
-      available: true,
-      link: "#"
-    },
-    {
-      name: "PlayStation 5", 
-      logo: "🎯",
-      available: true,
-      link: "#"
-    },
-    {
-      name: "Xbox Series X|S",
-      logo: "🎲",
-      available: true, 
-      link: "#"
-    },
-    {
-      name: "Nintendo Switch",
-      logo: "🕹️",
       available: false,
       link: "#"
     },
     {
       name: "Epic Games",
       logo: "⚡",
-      available: true,
-      link: "#"
-    },
-    {
-      name: "GOG",
-      logo: "🌟",
-      available: true,
+      available: false,
       link: "#"
     }
   ];
