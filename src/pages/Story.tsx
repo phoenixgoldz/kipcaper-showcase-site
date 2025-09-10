@@ -65,6 +65,7 @@ const chapters = [
     title: "Carpets, Crates, and Crooks Oh My?!",
     location: "Marrakesh, Morocco",
     villain: "Silka Sandfang (Silver wolf smuggler queen)",
+    villainImage: "/lovable-uploads/c7104955-097a-4316-b2fb-090253d9fae1.png",
     skillUnlocked: "Rope Snare → pull crates, drop chandeliers, snag levers",
     narrative: "Kip emerges safe from wreckage among desert ruins and cargo debris. Uses radio hints to track contraband crates glowing with glyphs.",
     puzzles: "Night-Eye Lenses reveal hidden thief opportunities and thief routes. Contraband crates marked with glyphs tied to Silka's smuggling ring.",
@@ -77,6 +78,7 @@ const chapters = [
     title: "Swamp Things You Don't Want to See", 
     location: "Manaus, Brazil (Amazon)",
     villain: "Don Croco (crocodile caiman mob boss)",
+    villainImage: "/lovable-uploads/cbe2153c-efe2-42cd-91fc-b5d058d9788f.png",
     skillUnlocked: "Bog Grapple → hook across swamp mud, drag lightweight bridges",
     narrative: "Kip teams with Peeka after mistaking her for a rival thief. Together they expose Croco's Codex-flooded defenses.",
     puzzles: "Pull vine bridges into place. Snare swamp lanterns to misdirect guards.",
@@ -89,6 +91,7 @@ const chapters = [
     title: "Tomb It May Concern",
     location: "Luxor, Egypt", 
     villain: "Anubis Jackalton (jackal tomb raider)",
+    villainImage: "/lovable-uploads/5d3a4fd5-773c-4e65-93d6-65d8a8f51e99.png",
     skillUnlocked: "Sand Shift → slip into sand/dust piles to evade and slide under gaps",
     narrative: "Kip & Peeka infiltrate cursed tombs. Anubis proves highly technical, pushing them to seek Tikka in Turkey.",
     puzzles: "Grapple crumbling bridges. Pull down counterweights to unlock doors.",
@@ -101,6 +104,7 @@ const chapters = [
     title: "Rocks, Robbers, and Rooftops",
     location: "Cappadocia, Turkey",
     villain: "Baron Talvik (owl sky-baron)",
+    villainImage: "/lovable-uploads/734355f8-c7fa-468f-83f7-65233ff06838.png",
     skillUnlocked: "Wind Glider → koala glider suit to float and ride drafts",
     narrative: "Kip & Peeka meet Tikka while sabotaging Talvik's auction. Baron retaliates with underground auctions full of traps. Crew unites.",
     puzzles: "Slide under collapsing cave walls. Sneak through sand vents.",
@@ -113,6 +117,7 @@ const chapters = [
     title: "The Long Con in the Safari Sun",
     location: "Johannesburg, South Africa",
     villain: "Mamba Noir (black mamba casino/poacher kingpin)",
+    villainImage: "/lovable-uploads/716a1dd8-ab52-4b17-8aa2-4698fe57226d.png",
     skillUnlocked: "Shadow Decoy → Codex illusion to lure guards",
     narrative: "Crew stages a casino heist con, Ocean's 11–style. Full team rotation playable.",
     puzzles: "Glide across air ducts and ledges. Balance against air trap corridors in vault.",
@@ -125,6 +130,7 @@ const chapters = [
     title: "An Elephant Never Forgets… to Steal",
     location: "The Shattered Sanctuary (Indian Ocean)",
     villain: "Magnus (elephant warlord mastermind)",
+    villainImage: "/lovable-uploads/259620bf-21b5-47d1-b0c0-e69d8557586f.png",
     skillUnlocked: "Codex Synergy → no new skill, but combine all previous powers",
     narrative: "Final island heist. Fortress puzzle-box built with Codex tricks. Magnus escapes in true Carmen Sandiego fashion, teasing sequel.",
     puzzles: "Night-Eye: glyph doors in lava tunnels. Rope Snare: chandeliers. Bog Grapple: swing magma chasms. Sand Shift: vents. Wind Glider: lava drafts. Shadow Decoy: lure guards into traps.",
@@ -291,7 +297,18 @@ const Story = () => {
                   {chapter.villain && (
                     <div>
                       <h4 className="font-display text-lg text-mystic-green mb-1">Villain</h4>
-                      <p className="text-eucalyptus-mist">{chapter.villain}</p>
+                      <div className="flex items-center gap-4">
+                        <p className="text-eucalyptus-mist flex-1">{chapter.villain}</p>
+                        {chapter.villainImage && (
+                          <div className="flex-shrink-0">
+                            <img 
+                              src={chapter.villainImage} 
+                              alt={chapter.villain}
+                              className="w-16 h-16 object-cover rounded-lg border border-border/30"
+                            />
+                          </div>
+                        )}
+                      </div>
                     </div>
                   )}
 

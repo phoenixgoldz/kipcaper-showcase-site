@@ -23,32 +23,32 @@ export const CharacterSelector = () => {
       background: "Raised in the shadows of the urban jungle, Kip learned to navigate both the concrete towers and forest canopies with equal skill."
     },
     {
-      name: "Echo",
-      role: "Tech Specialist", 
+      name: "Peeka",
+      role: "Scout & Reconnaissance", 
       image: "/lovable-uploads/dde5ee9f-8cd4-45b8-8c05-17c184e30c4a.png",
-      description: "The crew's technology expert, capable of hacking any system and providing crucial intel.",
+      description: "Expert tracker and scout who provides intelligence and support from the shadows.",
       stats: {
-        stealth: 70,
-        agility: 75,
-        combat: 60,
-        leadership: 85
-      },
-      abilities: ["System Hacking", "Drone Control", "Electronic Warfare", "Intel Gathering"],
-      background: "A former corporate programmer who turned to the shadows after discovering corruption in the system."
-    },
-    {
-      name: "Vex",
-      role: "Infiltrator",
-      image: "/lovable-uploads/ec5cf9bf-f675-42fe-9aff-41501382990c.png", 
-      description: "A master of disguise and social engineering, capable of infiltrating any organization.",
-      stats: {
-        stealth: 88,
-        agility: 82,
+        stealth: 92,
+        agility: 88,
         combat: 70,
         leadership: 75
       },
-      abilities: ["Master Disguise", "Social Engineering", "Crowd Manipulation", "Silent Takedown"],
-      background: "A charismatic operative who can blend into any crowd and assume any identity needed for the mission."
+      abilities: ["Advanced Tracking", "Silent Communication", "Environmental Navigation", "Trap Detection"],
+      background: "A mysterious voice on the radio who becomes Kip's invaluable partner, guiding him through dangerous territories with unmatched field intelligence."
+    },
+    {
+      name: "Tikka",
+      role: "Technical Specialist",
+      image: "/lovable-uploads/ec5cf9bf-f675-42fe-9aff-41501382990c.png", 
+      description: "The crew's technical expert, specializing in security systems and mechanical puzzles.",
+      stats: {
+        stealth: 78,
+        agility: 80,
+        combat: 75,
+        leadership: 85
+      },
+      abilities: ["Security Bypass", "Mechanical Engineering", "Electronic Warfare", "System Analysis"],
+      background: "Joins the crew in Turkey as their technical specialist, bringing crucial expertise in dismantling complex security systems and solving mechanical challenges."
     }
   ];
 
