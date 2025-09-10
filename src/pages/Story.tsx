@@ -54,6 +54,16 @@ const chapters = [
     openingLine: "Kip mutters: \"Time to snag that sweet golden treasure cargo…\"",
     gameplay: "Teach movement, jump, crouch-stealth. Crate climbing, rope-balancing, spotlight evasion. Traps (laser grid floor panels, swinging hooks to avoid, cargo boxes moving along floor to be crushed by).",
     climax: "Kip reaches the Codex cargo crate → ambushed by Magnus' lieutenant Silka sandfang.",
+    villain: "Silka Sandfang (Silver wolf smuggler queen)",
+    villainImage: "/lovable-uploads/c7104955-097a-4316-b2fb-090253d9fae1.png",
+    villainDetails: {
+      species: "Silver wolf",
+      role: "Smuggler Queen / Air Pirate", 
+      personality: "Silka is sharp-tongued, arrogant, and always two steps ahead. She loves the thrill of cornering prey in tight spaces. Kip is \"small-time\" to her, but she still toys with him because she enjoys the game.",
+      jobDescription: "Smuggling queen who traffics ancient Codex artifacts through cargo planes and hidden shipping routes. Think ruthless CEO + pirate captain.",
+      villainryStyle: "Stylish, practical, and pragmatic. She will cut losses (like crashing a plane) just to keep the Codex fragment out of Kip's hands.",
+      codexTie: "Knows how to weaponize contraband shipments."
+    },
     villainBanter: "Quips at Kip, shoots the engines, and escapes via airlock parachute. Before jumping another quip at kip.",
     setpiece: "Kip sprints through chaos, dodges sliding crates, then Koala Slides on a dangling cable to the cockpit.",
     radioMystery: "After wreck, Kip finds the Codex crate and a broken radio. A mysterious voice crackles in from someone watching, giving tutorial hints through Chapter 1.",
@@ -66,6 +76,14 @@ const chapters = [
     location: "Marrakesh, Morocco",
     villain: "Silka Sandfang (Silver wolf smuggler queen)",
     villainImage: "/lovable-uploads/c7104955-097a-4316-b2fb-090253d9fae1.png",
+    villainDetails: {
+      species: "Silver wolf",
+      role: "Smuggler Queen / Air Pirate",
+      personality: "Same as prologue, but here she shows her true colors — fiercely territorial, paranoid about Kip sniffing around her smuggling network.",
+      jobDescription: "Runs a sprawling smuggling cartel disguised as a shipping/export business. Contraband crates are marked with Codex glyphs, tying her shipments to Magnus.",
+      villainryStyle: "Uses traps, tricks, and diversions. Boss fight emphasizes pulling ropes/chandeliers, crate puzzles, and dodging her whip-like snare weapon.",
+      skillFocus: "Rope Snare"
+    },
     skillUnlocked: "Rope Snare → pull crates, drop chandeliers, snag levers",
     narrative: "Kip emerges safe from wreckage among desert ruins and cargo debris. Uses radio hints to track contraband crates glowing with glyphs.",
     puzzles: "Night-Eye Lenses reveal hidden thief opportunities and thief routes. Contraband crates marked with glyphs tied to Silka's smuggling ring.",
@@ -79,6 +97,14 @@ const chapters = [
     location: "Manaus, Brazil (Amazon)",
     villain: "Don Croco (crocodile caiman mob boss)",
     villainImage: "/lovable-uploads/cbe2153c-efe2-42cd-91fc-b5d058d9788f.png",
+    villainDetails: {
+      species: "Crocodile (caiman mob boss)",
+      role: "Swamp Crime Boss",
+      personality: "A swaggering brute who pretends to be \"civilized,\" but his temper snaps easily. Loves to monologue, calling himself a \"businessman.\"",
+      jobDescription: "Mob boss who uses Codex tricks to flood the Amazon and extort villages into paying him tribute. He's part crocodile, part casino-style showman.",
+      villainryStyle: "Uses brute strength, swamp-based traps, and underlings to do his dirty work. Kip must use agility and rope/snare tricks to outwit him.",
+      skillFocus: "Bog Grapple"
+    },
     skillUnlocked: "Bog Grapple → hook across swamp mud, drag lightweight bridges",
     narrative: "Kip teams with Peeka after mistaking her for a rival thief. Together they expose Croco's Codex-flooded defenses.",
     puzzles: "Pull vine bridges into place. Snare swamp lanterns to misdirect guards.",
@@ -92,6 +118,14 @@ const chapters = [
     location: "Luxor, Egypt", 
     villain: "Anubis Jackalton (jackal tomb raider)",
     villainImage: "/lovable-uploads/5d3a4fd5-773c-4e65-93d6-65d8a8f51e99.png",
+    villainDetails: {
+      species: "Jackal",
+      role: "Tomb Raider / Fake Archaeologist",
+      personality: "Obsessed, academic, and theatrical. Thinks he's the \"chosen guardian of the tombs\" but really he's just a Codex thief playing dress-up as a pharaoh's priest.",
+      jobDescription: "A tomb raider posing as an archaeologist. Sells stolen relics on the black market while hoarding Codex fragments for himself.",
+      villainryStyle: "Traps galore. Puzzles and riddles dominate the environment. Boss fight has him summoning sand shades and collapsing tombs.",
+      skillFocus: "Sand Shift"
+    },
     skillUnlocked: "Sand Shift → slip into sand/dust piles to evade and slide under gaps",
     narrative: "Kip & Peeka infiltrate cursed tombs. Anubis proves highly technical, pushing them to seek Tikka in Turkey.",
     puzzles: "Grapple crumbling bridges. Pull down counterweights to unlock doors.",
@@ -105,6 +139,14 @@ const chapters = [
     location: "Cappadocia, Turkey",
     villain: "Baron Talvik (owl sky-baron)",
     villainImage: "/lovable-uploads/734355f8-c7fa-468f-83f7-65233ff06838.png",
+    villainDetails: {
+      species: "Owl",
+      role: "Black-Market Auctioneer / Arms Dealer",
+      personality: "Cold, calculating, aristocratic. Speaks like a pompous noble. Believes himself untouchable above the rabble.",
+      jobDescription: "A black-market auctioneer and arms dealer, selling stolen Codex artifacts to the highest bidder. Uses underground caves as smuggling vaults.",
+      villainryStyle: "Air superiority — swooping attacks, wind gust traps, and henchmen with aerial gadgets. He fights from above while Kip uses stealth to ground him.",
+      skillFocus: "Wind Glider"
+    },
     skillUnlocked: "Wind Glider → koala glider suit to float and ride drafts",
     narrative: "Kip & Peeka meet Tikka while sabotaging Talvik's auction. Baron retaliates with underground auctions full of traps. Crew unites.",
     puzzles: "Slide under collapsing cave walls. Sneak through sand vents.",
@@ -118,6 +160,14 @@ const chapters = [
     location: "Johannesburg, South Africa",
     villain: "Mamba Noir (black mamba casino/poacher kingpin)",
     villainImage: "/lovable-uploads/716a1dd8-ab52-4b17-8aa2-4698fe57226d.png",
+    villainDetails: {
+      species: "Black Mamba snake",
+      role: "Casino Empire Owner / Poaching Kingpin",
+      personality: "Sleek, manipulative, and charismatic. Treats every encounter like a poker game. Loves gambling with other people's lives.",
+      jobDescription: "Runs a casino empire and a poaching operation on the side. His casino doubles as a vault for Codex treasures.",
+      villainryStyle: "Trickster, using illusions and traps. Boss fight is part con, part combat, requiring Kip and crew to spot the real Mamba among shadow decoys.",
+      skillFocus: "Shadow Decoy"
+    },
     skillUnlocked: "Shadow Decoy → Codex illusion to lure guards",
     narrative: "Crew stages a casino heist con, Ocean's 11–style. Full team rotation playable.",
     puzzles: "Glide across air ducts and ledges. Balance against air trap corridors in vault.",
@@ -131,6 +181,14 @@ const chapters = [
     location: "The Shattered Sanctuary (Indian Ocean)",
     villain: "Magnus (elephant warlord mastermind)",
     villainImage: "/lovable-uploads/259620bf-21b5-47d1-b0c0-e69d8557586f.png",
+    villainDetails: {
+      species: "Elephant",
+      role: "Warlord Mastermind",
+      personality: "Cunning, ruthless, and visionary. Unlike his lieutenants, he's not driven by greed alone — he wants the Codex for power and legacy.",
+      jobDescription: "Warlord mastermind who manipulates others to do his bidding. Each lieutenant was only a pawn in his Codex scheme.",
+      villainryStyle: "Uses every Codex trick mastered by the others, combining them into overwhelming challenges. His fortress is a living puzzle-box designed to break thieves.",
+      skillFocus: "Codex Synergy"
+    },
     skillUnlocked: "Codex Synergy → no new skill, but combine all previous powers",
     narrative: "Final island heist. Fortress puzzle-box built with Codex tricks. Magnus escapes in true Carmen Sandiego fashion, teasing sequel.",
     puzzles: "Night-Eye: glyph doors in lava tunnels. Rope Snare: chandeliers. Bog Grapple: swing magma chasms. Sand Shift: vents. Wind Glider: lava drafts. Shadow Decoy: lure guards into traps.",
@@ -296,19 +354,53 @@ const Story = () => {
 
                   {chapter.villain && (
                     <div>
-                      <h4 className="font-display text-lg text-mystic-green mb-1">Villain</h4>
-                      <div className="flex items-center gap-4">
-                        <p className="text-eucalyptus-mist flex-1">{chapter.villain}</p>
+                      <h4 className="font-display text-lg text-mystic-green mb-3">🎭 Villain Profile</h4>
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="flex-1">
+                          <h5 className="text-lg font-semibold text-treasure-gold mb-1">{chapter.villain}</h5>
+                          {chapter.villainDetails && (
+                            <div className="space-y-2 text-sm">
+                              <p><span className="text-mystic-green font-medium">Species:</span> <span className="text-eucalyptus-mist">{chapter.villainDetails.species}</span></p>
+                              <p><span className="text-mystic-green font-medium">Role:</span> <span className="text-eucalyptus-mist">{chapter.villainDetails.role}</span></p>
+                              {chapter.villainDetails.skillFocus && (
+                                <p><span className="text-mystic-green font-medium">Skill Focus:</span> <span className="text-treasure-gold">{chapter.villainDetails.skillFocus}</span></p>
+                              )}
+                            </div>
+                          )}
+                        </div>
                         {chapter.villainImage && (
                           <div className="flex-shrink-0">
                             <img 
                               src={chapter.villainImage} 
                               alt={chapter.villain}
-                              className="w-16 h-16 object-cover rounded-lg border border-border/30"
+                              className="w-20 h-20 object-cover rounded-lg border border-border/30"
                             />
                           </div>
                         )}
                       </div>
+                      
+                      {chapter.villainDetails && (
+                        <div className="space-y-3 text-sm">
+                          <div>
+                            <span className="text-mystic-green font-medium">Personality:</span>
+                            <p className="text-koala-grey mt-1">{chapter.villainDetails.personality}</p>
+                          </div>
+                          <div>
+                            <span className="text-mystic-green font-medium">Job Description:</span>
+                            <p className="text-koala-grey mt-1">{chapter.villainDetails.jobDescription}</p>
+                          </div>
+                          <div>
+                            <span className="text-mystic-green font-medium">Villainy Style:</span>
+                            <p className="text-koala-grey mt-1">{chapter.villainDetails.villainryStyle}</p>
+                          </div>
+                          {chapter.villainDetails.codexTie && (
+                            <div>
+                              <span className="text-mystic-green font-medium">Codex Connection:</span>
+                              <p className="text-koala-grey mt-1">{chapter.villainDetails.codexTie}</p>
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </div>
                   )}
 
