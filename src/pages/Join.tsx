@@ -61,7 +61,21 @@ const Join = () => {
             </form>
             
             <div className="mt-8 pt-8 border-t border-white/10">
-              <h3 className="font-display text-lg mb-4 text-center" style={{color: 'hsl(var(--eucalyptus-mist))'}}>Quick Links</h3>
+              <h3 className="font-display text-lg mb-4 text-center" style={{color: 'hsl(var(--eucalyptus-mist))'}}>Support the Project</h3>
+              <div className="mb-6">
+                <Button asChild variant="hero" size="xl" className="w-full hover-lift kip-heist-glow mb-4">
+                  <a 
+                    href="https://www.kickstarter.com/projects/phoenixgoldgames/kip-caper-and-the-codex-caperius" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="Back Kip Caper on Kickstarter"
+                  >
+                    🚀 Back on Kickstarter
+                  </a>
+                </Button>
+              </div>
+              
+              <h4 className="font-display text-lg mb-4 text-center" style={{color: 'hsl(var(--eucalyptus-mist))'}}>Quick Links</h4>
               <div className="grid sm:grid-cols-2 gap-4">
                 <Button variant="outline" asChild className="hover-lift tech-border codex-peek">
                   <a href="#" aria-label="Steam Wishlist placeholder">

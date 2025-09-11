@@ -48,9 +48,16 @@ export const Hero = () => {
             <li>• Crack the <span className="text-accent font-medium">Codex</span>—page by stolen page.</li>
           </ul>
           
-          <div className="flex gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
             <Button asChild variant="hero" className="hover-scale kip-heist-glow">
-              <Link to="/join" aria-label="Join the Heist">Join the Heist</Link>
+              <a 
+                href="https://www.kickstarter.com/projects/phoenixgoldgames/kip-caper-and-the-codex-caperius"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Back Kip Caper on Kickstarter"
+              >
+                🚀 Back on Kickstarter
+              </a>
             </Button>
             <Button asChild variant="outline" className="hover-scale codex-flip">
               <Link to="/codex" aria-label="Peek Inside the Codex">Peek Inside the Codex</Link>
