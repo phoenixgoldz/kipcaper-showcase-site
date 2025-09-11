@@ -25,57 +25,8 @@ const Index = () => {
       {/* Screenshots Gallery */}
       <ScreenshotsGallery />
 
-      {/* Features Section */}
-      <section className="container mx-auto py-20">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl lg:text-5xl mb-4 neon-glow">Game Features</h2>
-          <p className="text-xl text-eucalyptus-mist max-w-2xl mx-auto">
-            Master the art of thievery in this cel-shaded stealth-platformer. Unlock mystical bo-staff skills, traverse exotic locations, and assemble your crew to reclaim the stolen Codex Caperius.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="glass-card p-8 hover-lift group">
-            <div className="w-16 h-16 bg-gradient-to-br from-jungle-green to-eucalyptus-mist rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <span className="text-2xl">🎯</span>
-            </div>
-            <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Precision Stealth</h3>
-            <p className="text-koala-grey">Slip past the clueless with style and zero footprints.</p>
-          </div>
-          
-          <div className="glass-card p-8 hover-lift group">
-            <div className="w-16 h-16 bg-gradient-to-br from-eucalyptus-mist to-mystic-green rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <span className="text-2xl">🥢</span>
-            </div>
-            <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Bo-Staff Mastery</h3>
-            <p className="text-koala-grey">Spin it, vault with it, bonk with it—your trusty bamboo never quits.</p>
-          </div>
-          
-          <div className="glass-card p-8 hover-lift group">
-            <div className="w-16 h-16 bg-gradient-to-br from-mystic-green to-treasure-gold rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <span className="text-2xl">🌿</span>
-            </div>
-            <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Canopy Traversal</h3>
-            <p className="text-koala-grey">From drainpipes to treetop zip lines—if it's climbable, it's mine-able.</p>
-          </div>
-
-          <div className="glass-card p-8 hover-lift group">
-            <div className="w-16 h-16 bg-gradient-to-br from-treasure-gold to-jungle-green rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <span className="text-2xl">👥</span>
-            </div>
-            <h3 className="font-display text-xl mb-3" style={{color: 'hsl(var(--treasure-gold))'}}>Crew Rotations</h3>
-            <p className="text-koala-grey">Switch between Kip, Tikka, and Peeka—each with unique abilities.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* System Requirements */}
-      <SystemRequirements />
-
-      {/* Awards Section */}
-      <AwardsSection />
-
       {/* Newsletter Signup */}
+
       <section className="container mx-auto py-20">
         <Newsletter />
       </section>

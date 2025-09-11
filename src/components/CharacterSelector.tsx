@@ -25,7 +25,7 @@ export const CharacterSelector = () => {
     {
       name: "Peeka",
       role: "Scout & Reconnaissance", 
-      image: "/lovable-uploads/dde5ee9f-8cd4-45b8-8c05-17c184e30c4a.png",
+      image: "/lovable-uploads/ec8785c5-ccf0-4507-ac99-31d9f48dfe19.png",
       description: "Expert tracker and scout who provides intelligence and support from the shadows.",
       stats: {
         stealth: 92,
@@ -39,7 +39,7 @@ export const CharacterSelector = () => {
     {
       name: "Tikka",
       role: "Technical Specialist",
-      image: "/lovable-uploads/ec5cf9bf-f675-42fe-9aff-41501382990c.png", 
+      image: "/lovable-uploads/efb16d1f-b1a2-4b9b-be8a-9d7e8d3981ac.png",
       description: "The crew's technical expert, specializing in security systems and mechanical puzzles.",
       stats: {
         stealth: 78,
