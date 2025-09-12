@@ -12,12 +12,13 @@ const Join = () => {
       <SEO title="Join the Heist — Sign up for Updates" description="Get exclusive access to Kip Caper development updates, behind-the-scenes content, and early gameplay previews." />
       
       {/* Hero Section */}
-      <section className="relative py-20">
+      <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-jungle-green/10 to-mystic-green/10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,_rgba(45,212,191,0.15)_0%,_transparent_50%)]"></div>
         <div className="container mx-auto relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h1 className="font-display text-5xl lg:text-6xl mb-6 neon-glow">Join the Heist</h1>
-            <p className="text-xl text-eucalyptus-mist">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h1 className="font-display text-5xl lg:text-7xl mb-8 neon-glow text-treasure-gold">Join the Heist</h1>
+            <p className="text-xl lg:text-2xl text-eucalyptus-mist leading-relaxed">
               Ready to join the crew? Follow the green trail and become part of the most daring heist crew in gaming history.
             </p>
           </div>
@@ -26,8 +27,8 @@ const Join = () => {
 
       <main className="container mx-auto pb-20">
         <div className="max-w-2xl mx-auto">
-          <section className="glass-card p-8 tech-border hover-lift">
-            <h2 className="font-display text-2xl mb-6 text-center" style={{color: 'hsl(var(--treasure-gold))'}}>Sign Up for Updates</h2>
+          <section className="glass-card p-8 lg:p-12 tech-border hover-lift shadow-2xl">
+            <h2 className="font-display text-3xl lg:text-4xl mb-8 text-center text-treasure-gold neon-glow">Sign Up for Updates</h2>
             
             <form
               className="space-y-6"
@@ -92,29 +93,29 @@ const Join = () => {
           </section>
 
           {/* Benefits Section */}
-          <section className="mt-16 grid md:grid-cols-3 gap-6">
-            <div className="glass-card p-6 text-center hover-lift">
-              <div className="w-12 h-12 bg-gradient-to-br from-treasure-gold to-mystic-green rounded-xl mx-auto mb-4 flex items-center justify-center">
-                <span className="text-xl">📧</span>
+          <section className="mt-20 grid md:grid-cols-3 gap-8">
+            <div className="glass-card p-8 text-center hover-lift transition-all duration-500 hover:shadow-xl hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-treasure-gold to-mystic-green rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg hover:shadow-treasure-gold/30 transition-shadow duration-300">
+                <span className="text-2xl">📧</span>
               </div>
-              <h3 className="font-display text-lg mb-2" style={{color: 'hsl(var(--treasure-gold))'}}>Exclusive Updates</h3>
-              <p className="text-sm text-eucalyptus-mist">Get the latest development news and gameplay reveals before anyone else.</p>
+              <h3 className="font-display text-xl mb-3 text-treasure-gold">Exclusive Updates</h3>
+              <p className="text-eucalyptus-mist leading-relaxed">Get the latest development news and gameplay reveals before anyone else.</p>
             </div>
             
-            <div className="glass-card p-6 text-center hover-lift">
-              <div className="w-12 h-12 bg-gradient-to-br from-mystic-green to-eucalyptus-mist rounded-xl mx-auto mb-4 flex items-center justify-center">
-                <span className="text-xl">🎮</span>
+            <div className="glass-card p-8 text-center hover-lift transition-all duration-500 hover:shadow-xl hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-mystic-green to-eucalyptus-mist rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg hover:shadow-mystic-green/30 transition-shadow duration-300">
+                <span className="text-2xl">🎮</span>
               </div>
-              <h3 className="font-display text-lg mb-2" style={{color: 'hsl(var(--mystic-green))'}}>Early Access</h3>
-              <p className="text-sm text-eucalyptus-mist">Opportunities for beta testing and exclusive gameplay previews.</p>
+              <h3 className="font-display text-xl mb-3 text-mystic-green">Early Access</h3>
+              <p className="text-eucalyptus-mist leading-relaxed">Opportunities for beta testing and exclusive gameplay previews.</p>
             </div>
             
-            <div className="glass-card p-6 text-center hover-lift">
-              <div className="w-12 h-12 bg-gradient-to-br from-eucalyptus-mist to-treasure-gold rounded-xl mx-auto mb-4 flex items-center justify-center">
-                <span className="text-xl">🎨</span>
+            <div className="glass-card p-8 text-center hover-lift transition-all duration-500 hover:shadow-xl hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-eucalyptus-mist to-treasure-gold rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg hover:shadow-eucalyptus-mist/30 transition-shadow duration-300">
+                <span className="text-2xl">🎨</span>
               </div>
-              <h3 className="font-display text-lg mb-2" style={{color: 'hsl(var(--eucalyptus-mist))'}}>Behind the Scenes</h3>
-              <p className="text-sm text-eucalyptus-mist">Developer insights, concept art, and making-of content.</p>
+              <h3 className="font-display text-xl mb-3 text-eucalyptus-mist">Behind the Scenes</h3>
+              <p className="text-eucalyptus-mist leading-relaxed">Developer insights, concept art, and making-of content.</p>
             </div>
           </section>
         </div>

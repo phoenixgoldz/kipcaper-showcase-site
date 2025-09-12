@@ -25,7 +25,7 @@ export const CharacterSelector = () => {
     {
       name: "Peeka",
       role: "Scout & Reconnaissance", 
-      image: "/lovable-uploads/ec8785c5-ccf0-4507-ac99-31d9f48dfe19.png",
+      image: "/lovable-uploads/9a788c70-05af-45f4-b381-730104aca0a8.png",
       description: "Expert tracker and scout who provides intelligence and support from the shadows.",
       stats: {
         stealth: 92,
@@ -39,7 +39,7 @@ export const CharacterSelector = () => {
     {
       name: "Tikka",
       role: "Technical Specialist",
-      image: "/lovable-uploads/efb16d1f-b1a2-4b9b-be8a-9d7e8d3981ac.png",
+      image: "/lovable-uploads/129d0e68-6925-4c82-bde5-0f3dd556e9e6.png",
       description: "The crew's technical expert, specializing in security systems and mechanical puzzles.",
       stats: {
         stealth: 78,
@@ -63,18 +63,37 @@ export const CharacterSelector = () => {
   const character = characters[selectedCharacter];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background via-primary/5 to-secondary/10">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-midnight-shadow via-jungle-green/10 to-mystic-green/5 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-20">
+        <div className="w-full h-full bg-gradient-to-br from-treasure-gold/5 to-mystic-green/5"></div>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-foreground mb-4">Meet Your Crew</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Each crew member brings unique skills and abilities to master the perfect heist
-          </p>
+          <motion.h2 
+            className="font-display text-4xl lg:text-5xl mb-6 text-treasure-gold neon-glow"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            Meet Your Crew
+          </motion.h2>
+          <motion.p 
+            className="text-eucalyptus-mist text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            Each crew member brings unique skills and abilities to master the perfect heist. 
+            Choose your approach and leverage their specialized talents.
+          </motion.p>
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
@@ -85,21 +104,27 @@ export const CharacterSelector = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative"
+              className="relative group"
             >
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-card to-card/80 border border-border/50 p-8">
+              <div className="relative overflow-hidden rounded-2xl glass-card tech-border p-8 hover-lift transition-all duration-500 group-hover:shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-treasure-gold/5 to-mystic-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img
                   src={character.image}
                   alt={character.name}
-                  className="w-full h-96 object-cover rounded-lg"
+                  className="w-full h-96 object-contain rounded-lg transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-black/70 backdrop-blur-sm rounded-lg p-4">
-                    <h3 className="text-2xl font-bold text-white mb-1">{character.name}</h3>
-                    <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
+                  <motion.div 
+                    className="bg-midnight-shadow/90 backdrop-blur-md rounded-xl p-4 border border-treasure-gold/20"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    <h3 className="text-2xl font-bold text-treasure-gold mb-2 font-display">{character.name}</h3>
+                    <Badge variant="outline" className="bg-treasure-gold/10 text-treasure-gold border-treasure-gold/30 hover:bg-treasure-gold/20">
                       {character.role}
                     </Badge>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </motion.div>
@@ -161,27 +186,37 @@ export const CharacterSelector = () => {
           </div>
 
           {/* Navigation */}
-          <div className="flex justify-center items-center gap-4 mt-12">
-            <Button variant="outline" size="icon" onClick={prevCharacter}>
-              <ChevronLeft className="w-4 h-4" />
+          <motion.div 
+            className="flex justify-center items-center gap-6 mt-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <Button variant="gaming" size="icon" onClick={prevCharacter} className="hover-scale kip-heist-glow">
+              <ChevronLeft className="w-5 h-5" />
             </Button>
             
-            <div className="flex gap-2">
+            <div className="flex gap-3">
               {characters.map((_, index) => (
-                <button
+                <motion.button
                   key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === selectedCharacter ? 'bg-primary' : 'bg-muted'
+                  className={`w-4 h-4 rounded-full transition-all duration-500 hover:scale-125 ${
+                    index === selectedCharacter 
+                      ? 'bg-treasure-gold shadow-lg shadow-treasure-gold/50' 
+                      : 'bg-eucalyptus-mist/30 hover:bg-treasure-gold/50'
                   }`}
                   onClick={() => setSelectedCharacter(index)}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
                 />
               ))}
             </div>
 
-            <Button variant="outline" size="icon" onClick={nextCharacter}>
-              <ChevronRight className="w-4 h-4" />
+            <Button variant="gaming" size="icon" onClick={nextCharacter} className="hover-scale kip-heist-glow">
+              <ChevronRight className="w-5 h-5" />
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

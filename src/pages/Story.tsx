@@ -285,26 +285,6 @@ const Story = () => {
           </Card>
         </section>
 
-        {/* Gameplay Flow */}
-        <section className="mb-16">
-          <Card className="glass-card hover-lift">
-            <CardHeader>
-              <h2 className="font-display text-3xl text-treasure-gold">🎯 Core Gameplay Flow</h2>
-            </CardHeader>
-            <CardContent>
-              <ol className="space-y-3">
-                {gameplayFlow.map((step, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-treasure-gold to-mystic-green rounded-full flex items-center justify-center text-midnight-shadow font-bold text-sm">
-                      {index + 1}
-                    </span>
-                    <p className="text-eucalyptus-mist">{step}</p>
-                  </li>
-                ))}
-              </ol>
-            </CardContent>
-          </Card>
-        </section>
 
         {/* Chapters */}
         <section className="mb-16">

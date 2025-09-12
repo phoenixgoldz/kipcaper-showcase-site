@@ -48,8 +48,13 @@ export const Hero = () => {
             <li>• Crack the <span className="text-accent font-medium">Codex</span>—page by stolen page.</li>
           </ul>
           
-          <div className="flex flex-col sm:flex-row gap-3 pt-2">
-            <Button asChild variant="hero" className="hover-scale kip-heist-glow">
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 pt-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <Button asChild variant="hero" size="xl" className="hover-scale kip-heist-glow shadow-2xl">
               <a 
                 href="https://www.kickstarter.com/projects/phoenixgoldgames/kip-caper-and-the-codex-caperius"
                 target="_blank"
@@ -59,7 +64,7 @@ export const Hero = () => {
                 🚀 Back on Kickstarter
               </a>
             </Button>
-            <Button asChild variant="gaming" className="hover-scale kip-heist-glow">
+            <Button asChild variant="gaming" size="xl" className="hover-scale kip-heist-glow shadow-2xl">
               <a 
                 href="https://discord.gg/Xpana9fD"
                 target="_blank"
@@ -69,10 +74,10 @@ export const Hero = () => {
                 Join the Heist
               </a>
             </Button>
-            <Button asChild variant="outline" className="hover-scale codex-flip">
+            <Button asChild variant="outline" size="xl" className="hover-scale codex-flip shadow-lg">
               <Link to="/codex" aria-label="Peek Inside the Codex">Peek Inside the Codex</Link>
             </Button>
-          </div>
+          </motion.div>
 
           {/* Countdown Timer */}
           <div className="pt-4">
