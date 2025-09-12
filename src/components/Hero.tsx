@@ -59,6 +59,16 @@ export const Hero = () => {
                 🚀 Back on Kickstarter
               </a>
             </Button>
+            <Button asChild variant="gaming" className="hover-scale kip-heist-glow">
+              <a 
+                href="https://discord.gg/Xpana9fD"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Join the Heist on Discord"
+              >
+                Join the Heist
+              </a>
+            </Button>
             <Button asChild variant="outline" className="hover-scale codex-flip">
               <Link to="/codex" aria-label="Peek Inside the Codex">Peek Inside the Codex</Link>
             </Button>

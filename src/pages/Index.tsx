@@ -25,12 +25,6 @@ const Index = () => {
       {/* Screenshots Gallery */}
       <ScreenshotsGallery />
 
-      {/* Newsletter Signup */}
-
-      <section className="container mx-auto py-20">
-        <Newsletter />
-      </section>
-
       {/* Call to Action */}
       <section className="container mx-auto py-20">
         <div className="glass-card p-12 text-center tech-border">
@@ -40,7 +34,14 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="hero" size="xl" className="hover-lift kip-heist-glow">
-              <Link to="/join">Join the Heist</Link>
+              <a 
+                href="https://discord.gg/Xpana9fD"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Join the Heist on Discord"
+              >
+                Join the Heist
+              </a>
             </Button>
             <Button asChild variant="outline" size="xl" className="hover-lift tech-border codex-peek">
               <Link to="/story">See What's Missing</Link>

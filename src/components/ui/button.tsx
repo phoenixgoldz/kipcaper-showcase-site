@@ -11,10 +11,10 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transform hover:scale-105",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-lg hover:shadow-xl",
-        outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground shadow-md hover:shadow-lg",
+        outline: "border-2 border-treasure-gold bg-transparent text-treasure-gold hover:bg-treasure-gold hover:text-midnight-shadow shadow-md hover:shadow-lg",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-md hover:shadow-lg",
-        ghost: "hover:bg-accent/20 text-foreground hover:text-accent-foreground backdrop-blur-sm",
-        link: "text-primary underline-offset-4 hover:underline hover:text-mystic-green",
+        ghost: "hover:bg-treasure-gold/20 text-eucalyptus-mist hover:text-treasure-gold backdrop-blur-sm",
+        link: "text-treasure-gold underline-offset-4 hover:underline hover:text-mystic-green",
         hero: "bg-gradient-to-r from-treasure-gold to-mystic-green text-midnight-shadow shadow-xl hover:shadow-2xl transform hover:scale-105 hover:from-mystic-green hover:to-treasure-gold border border-treasure-gold/30",
         gaming: "bg-gradient-to-r from-jungle-green to-eucalyptus-mist text-white shadow-xl hover:shadow-2xl transform hover:scale-105 relative",
         premium: "bg-gradient-to-r from-treasure-gold to-jungle-green text-white shadow-xl hover:shadow-2xl transform hover:scale-105 border border-treasure-gold/30",
