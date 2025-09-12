@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { MapPin } from "lucide-react";
 
 const gameInfo = {
   title: "Koala Kip and The Codex Caperis",
@@ -288,7 +289,10 @@ const Story = () => {
 
         {/* Chapters */}
         <section className="mb-16">
-          <h2 className="font-display text-4xl text-center mb-12 text-treasure-gold">🗺️ Chapters & Progressive Skills</h2>
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <MapPin className="w-10 h-10 text-treasure-gold" strokeWidth={2.5} />
+            <h2 className="font-display text-4xl text-center text-treasure-gold">Chapters & Progressive Skills</h2>
+          </div>
           <div className="space-y-8">
             {chapters.map((chapter, index) => (
               <Card key={chapter.id} className="glass-card hover-lift overflow-hidden">

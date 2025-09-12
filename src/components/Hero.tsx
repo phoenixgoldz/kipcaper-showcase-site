@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import { StudioBadge } from "@/components/StudioBadge";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { PlatformBadges } from "@/components/PlatformBadges";
+import { Rocket } from "lucide-react";
 
 const EMBLEM_SRC = "/lovable-uploads/587ae039-a119-445b-a4ae-686bd447dace.png";
 const POSTER_SRC = "/lovable-uploads/075a6aba-4b19-4b87-a30f-c65c218b52dd.png";
@@ -61,7 +62,8 @@ export const Hero = () => {
                 rel="noopener noreferrer"
                 aria-label="Back Kip Caper on Kickstarter"
               >
-                🚀 Back on Kickstarter
+                <Rocket className="w-5 h-5 mr-2" />
+                Back on Kickstarter
               </a>
             </Button>
             <Button asChild variant="gaming" size="xl" className="hover-scale kip-heist-glow shadow-2xl">

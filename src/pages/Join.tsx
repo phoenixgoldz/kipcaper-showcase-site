@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { Mail, Gamepad2, Palette, Rocket } from "lucide-react";
 
 const Join = () => {
   const [email, setEmail] = useState("");
@@ -71,7 +72,8 @@ const Join = () => {
                     rel="noopener noreferrer"
                     aria-label="Back Kip Caper on Kickstarter"
                   >
-                    🚀 Back on Kickstarter
+                    <Rocket className="w-5 h-5 mr-2" />
+                    Back on Kickstarter
                   </a>
                 </Button>
               </div>
@@ -96,7 +98,7 @@ const Join = () => {
           <section className="mt-20 grid md:grid-cols-3 gap-8">
             <div className="glass-card p-8 text-center hover-lift transition-all duration-500 hover:shadow-xl hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-treasure-gold to-mystic-green rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg hover:shadow-treasure-gold/30 transition-shadow duration-300">
-                <span className="text-2xl">📧</span>
+                <Mail className="w-8 h-8 text-midnight-shadow" strokeWidth={2.5} />
               </div>
               <h3 className="font-display text-xl mb-3 text-treasure-gold">Exclusive Updates</h3>
               <p className="text-eucalyptus-mist leading-relaxed">Get the latest development news and gameplay reveals before anyone else.</p>
@@ -104,7 +106,7 @@ const Join = () => {
             
             <div className="glass-card p-8 text-center hover-lift transition-all duration-500 hover:shadow-xl hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-mystic-green to-eucalyptus-mist rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg hover:shadow-mystic-green/30 transition-shadow duration-300">
-                <span className="text-2xl">🎮</span>
+                <Gamepad2 className="w-8 h-8 text-midnight-shadow" strokeWidth={2.5} />
               </div>
               <h3 className="font-display text-xl mb-3 text-mystic-green">Early Access</h3>
               <p className="text-eucalyptus-mist leading-relaxed">Opportunities for beta testing and exclusive gameplay previews.</p>
@@ -112,7 +114,7 @@ const Join = () => {
             
             <div className="glass-card p-8 text-center hover-lift transition-all duration-500 hover:shadow-xl hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-eucalyptus-mist to-treasure-gold rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg hover:shadow-eucalyptus-mist/30 transition-shadow duration-300">
-                <span className="text-2xl">🎨</span>
+                <Palette className="w-8 h-8 text-midnight-shadow" strokeWidth={2.5} />
               </div>
               <h3 className="font-display text-xl mb-3 text-eucalyptus-mist">Behind the Scenes</h3>
               <p className="text-eucalyptus-mist leading-relaxed">Developer insights, concept art, and making-of content.</p>
