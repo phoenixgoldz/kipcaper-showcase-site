@@ -55,33 +55,33 @@ const Media = () => {
   return (
     <Layout>
       <SEO title="Media — Concept Art Gallery" description="Official concept art and key art for Kip Caper and the Codex Caperius." />
-      <header className="container mx-auto py-12">
-        <h1 className="font-display text-4xl">Media</h1>
-        <p className="text-muted-foreground mt-2">Official concept art and key art.</p>
-        <div className="mt-6 flex flex-wrap gap-2">
+      <header className="container mx-auto py-8 sm:py-12 px-4 sm:px-6">
+        <h1 className="font-display text-3xl sm:text-4xl">Media</h1>
+        <p className="text-muted-foreground mt-2 text-sm sm:text-base">Official concept art and key art.</p>
+        <div className="mt-4 sm:mt-6 flex flex-wrap gap-2">
           {categories.map(c => (
             <button
               key={c}
               onClick={() => setCat(c)}
-              className={"px-3 py-1.5 rounded-md border text-sm " + (cat === c ? "bg-primary text-primary-foreground" : "bg-background hover:bg-muted")}
+              className={"px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border text-xs sm:text-sm transition-all hover-scale " + (cat === c ? "bg-primary text-primary-foreground" : "bg-background hover:bg-muted")}
               aria-pressed={cat === c}
             >{c}</button>
           ))}
         </div>
       </header>
-      <main className="container mx-auto pb-16">
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <main className="container mx-auto pb-12 sm:pb-16 px-4 sm:px-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filtered.map((it, idx) => (
             <Dialog key={idx}>
               <DialogTrigger asChild>
-                <figure className="group rounded-lg overflow-hidden border bg-card hover:shadow-lg cursor-pointer grain-overlay hover-lift">
+                <figure className="group rounded-lg overflow-hidden border bg-card hover:shadow-lg cursor-pointer grain-overlay hover-lift transition-all duration-300">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img src={it.src} alt={it.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                   </div>
-                  <figcaption className="p-3 text-sm text-muted-foreground">{it.category}</figcaption>
+                  <figcaption className="p-2 sm:p-3 text-xs sm:text-sm text-muted-foreground">{it.category}</figcaption>
                 </figure>
               </DialogTrigger>
-              <DialogContent className="max-w-3xl">
+              <DialogContent className="max-w-[95vw] sm:max-w-3xl max-h-[90vh] p-2 sm:p-6">
                 <img src={it.src} alt={it.alt} className="w-full max-h-[80vh] object-contain rounded-md" loading="lazy" />
               </DialogContent>
             </Dialog>

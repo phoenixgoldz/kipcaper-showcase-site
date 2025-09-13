@@ -101,7 +101,7 @@ const Codex = () => {
         <p className="text-muted-foreground mt-2">Pages you’ve recovered. The rest remains in the canopy…</p>
       </header>
       <main className="container mx-auto pb-16">
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4 sm:px-0">
           {items.map((it) => (
             <CardItem key={it.name} {...it} />
           ))}

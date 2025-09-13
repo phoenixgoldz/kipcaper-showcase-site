@@ -49,32 +49,32 @@ const Capers = () => {
   return (
     <Layout>
       <SEO title="Capers — Secret" />
-      <main className="container mx-auto py-20">
+      <main className="container mx-auto py-12 sm:py-20 px-4 sm:px-6">
         <section className="mx-auto max-w-2xl text-center">
-          <div ref={cardRef} className={`relative mx-auto w-full rounded-xl border p-8 bg-card grain-overlay ${wrong ? 'flip-once' : 'animate-scale-in'}`}>
-            <div className="relative h-64 rounded-lg overflow-hidden">
+          <div ref={cardRef} className={`relative mx-auto w-full rounded-xl border p-4 sm:p-8 bg-card grain-overlay ${wrong ? 'flip-once' : 'animate-scale-in'}`}>
+            <div className="relative h-48 sm:h-64 rounded-lg overflow-hidden">
               <img src={parchment} alt="Codex page pedestal" className="absolute inset-0 w-full h-full object-cover opacity-40" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-display text-2xl">Codex Page</span>
+                <span className="font-display text-xl sm:text-2xl">Codex Page</span>
               </div>
             </div>
             {!unlocked ? (
-              <form onSubmit={submit} className="mt-6 grid gap-3">
+              <form onSubmit={submit} className="mt-4 sm:mt-6 grid gap-3">
                 <label htmlFor="capers" className="text-sm text-muted-foreground">Enter the recovered word.</label>
-                <Input id="capers" value={value} onChange={e => setValue(e.target.value)} placeholder="••••••" />
+                <Input id="capers" value={value} onChange={e => setValue(e.target.value)} placeholder="••••••" className="text-center" />
                 <div className="text-xs text-muted-foreground">Six leaves, one word.</div>
                 <div className="pt-1">
-                  <Button type="submit" variant="hero" className="hover-scale">Turn the page</Button>
+                  <Button type="submit" variant="hero" className="hover-scale w-full sm:w-auto">Turn the page</Button>
                 </div>
               </form>
             ) : (
-              <div className="mt-6 text-left">
-                <p className="text-accent font-medium">Nicely done, sleuth. Kip approves.</p>
-                <div className="mt-4 rounded-lg border p-4 bg-muted/20 flex items-center gap-4">
-                  <img src={reward} alt="Concept Art: Bo-Staff Shadow Run" className="h-20 w-32 object-cover rounded" />
-                  <div>
-                    <h3 className="font-display text-lg">Concept Art: Bo-Staff Shadow Run</h3>
-                    <a href={reward} download className="story-link" aria-label="Download reward image">Download PNG</a>
+              <div className="mt-4 sm:mt-6 text-left">
+                <p className="text-accent font-medium text-sm sm:text-base">Nicely done, sleuth. Kip approves.</p>
+                <div className="mt-4 rounded-lg border p-3 sm:p-4 bg-muted/20 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                  <img src={reward} alt="Concept Art: Bo-Staff Shadow Run" className="h-16 sm:h-20 w-24 sm:w-32 object-cover rounded mx-auto sm:mx-0" />
+                  <div className="text-center sm:text-left">
+                    <h3 className="font-display text-base sm:text-lg">Concept Art: Bo-Staff Shadow Run</h3>
+                    <a href={reward} download className="story-link text-sm sm:text-base" aria-label="Download reward image">Download PNG</a>
                   </div>
                 </div>
               </div>
