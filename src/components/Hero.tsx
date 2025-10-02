@@ -68,7 +68,7 @@ export const Hero = () => {
             </Button>
             <Button asChild variant="gaming" size="xl" className="hover-scale kip-heist-glow shadow-2xl">
               <a 
-                href="https://discord.gg/Xpana9fD"
+                href="https://discord.gg/FxpB2Zw2P6"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Join the Heist on Discord"

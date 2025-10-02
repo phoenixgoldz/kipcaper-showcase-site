@@ -36,7 +36,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button asChild variant="hero" size="xl" className="hover-lift kip-heist-glow shadow-2xl">
               <a 
-                href="https://discord.gg/Xpana9fD"
+                href="https://discord.gg/FxpB2Zw2P6"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Join the Heist on Discord"

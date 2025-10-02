@@ -143,27 +143,6 @@ export const CharacterSelector = () => {
                 <p className="text-foreground leading-relaxed">{character.background}</p>
               </div>
 
-              {/* Stats */}
-              <div className="space-y-4">
-                <h4 className="text-xl font-semibold text-foreground">Combat Stats</h4>
-                {Object.entries(character.stats).map(([stat, value]) => (
-                  <div key={stat} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-foreground capitalize font-medium">{stat}</span>
-                      <span className="text-primary font-bold">{value}/100</span>
-                    </div>
-                    <div className="w-full bg-muted rounded-full h-2">
-                      <motion.div
-                        className="bg-gradient-to-r from-primary to-secondary h-2 rounded-full"
-                        initial={{ width: 0 }}
-                        animate={{ width: `${value}%` }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-
               {/* Abilities */}
               <div>
                 <h4 className="text-xl font-semibold text-foreground mb-3">Special Abilities</h4>

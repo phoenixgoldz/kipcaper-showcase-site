@@ -79,15 +79,10 @@ const Join = () => {
               </div>
               
               <h4 className="font-display text-lg mb-4 text-center" style={{color: 'hsl(var(--eucalyptus-mist))'}}>Quick Links</h4>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Button variant="outline" asChild className="hover-lift tech-border codex-peek">
+              <div className="flex justify-center">
+                <Button variant="outline" asChild className="hover-lift tech-border codex-peek w-full sm:w-auto">
                   <a href="#" aria-label="Steam Wishlist placeholder">
                     Steam Wishlist
-                  </a>
-                </Button>
-                <Button variant="outline" asChild className="hover-lift tech-border codex-peek">
-                  <a href="#" aria-label="Press Kit soon">
-                    Press Kit (soon)
                   </a>
                 </Button>
               </div>

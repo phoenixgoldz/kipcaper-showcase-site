@@ -7,7 +7,6 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Codex from "./pages/Codex";
-import Updates from "./pages/Updates";
 import Media from "./pages/Media";
 import Join from "./pages/Join";
 import Capers from "./pages/Capers";
@@ -27,7 +26,6 @@ const App = () => (
           <Route path="/codex" element={<Codex />} />
           <Route path="/story" element={<Story />} />
           <Route path="/characters" element={<Characters />} />
-          <Route path="/updates" element={<Updates />} />
           <Route path="/media" element={<Media />} />
           <Route path="/join" element={<Join />} />
           <Route path="/capers" element={<Capers />} />
