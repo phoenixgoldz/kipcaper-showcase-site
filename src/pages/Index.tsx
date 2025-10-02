@@ -9,7 +9,7 @@ import { CharacterSelector } from "@/components/CharacterSelector";
 import { Newsletter } from "@/components/Newsletter";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Gamepad2, Globe, Zap } from "lucide-react";
+import { Globe, Zap } from "lucide-react";
 
 const Index = () => {
   return (
@@ -61,8 +61,12 @@ const Index = () => {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           <div className="group text-center p-8 rounded-2xl glass-card hover-lift transition-all duration-500 hover:shadow-2xl hover:scale-105">
-            <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-treasure-gold to-mystic-green flex items-center justify-center shadow-lg group-hover:shadow-treasure-gold/50 transition-all duration-300 group-hover:scale-110">
-              <Gamepad2 className="w-10 h-10 text-midnight-shadow" strokeWidth={2.5} />
+            <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-treasure-gold to-mystic-green flex items-center justify-center shadow-lg group-hover:shadow-treasure-gold/50 transition-all duration-300 group-hover:scale-110 p-3">
+              <img 
+                src="/images/unreal-engine-logo.svg" 
+                alt="Unreal Engine 5.6 logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <h3 className="font-display text-2xl mb-4 text-treasure-gold group-hover:text-mystic-green transition-colors">Unreal Engine 5.6</h3>
             <p className="text-eucalyptus-mist leading-relaxed">Cutting-edge graphics with cel-shaded anime aesthetics and stunning Codex glow effects.</p>

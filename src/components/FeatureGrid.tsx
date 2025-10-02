@@ -1,12 +1,17 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Gamepad2, Globe, Zap } from "lucide-react";
+import { Globe, Zap } from "lucide-react";
 
 export const FeatureGrid = () => {
-  const features = [
+  const features: Array<{
+    icon: string | React.ComponentType<any>;
+    title: string;
+    description: string;
+    badge: string;
+  }> = [
     {
-      icon: Gamepad2,
+      icon: "unreal",
       title: "Unreal Engine 5.6",
       description: "Cutting-edge graphics with cel-shaded anime aesthetics and stunning Codex glow effects.",
       badge: "Engine"
@@ -52,8 +57,16 @@ export const FeatureGrid = () => {
             >
               <Card className="h-full bg-gradient-to-br from-card to-card/80 border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:scale-105">
                 <CardHeader className="text-center pb-4">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                    <feature.icon className="w-8 h-8 text-primary-foreground" strokeWidth={2.5} />
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center p-3">
+                    {typeof feature.icon === "string" && feature.icon === "unreal" ? (
+                      <img 
+                        src="/images/unreal-engine-logo.svg" 
+                        alt="Unreal Engine logo" 
+                        className="w-full h-full object-contain"
+                      />
+                    ) : (
+                      typeof feature.icon !== "string" && <feature.icon className="w-8 h-8 text-primary-foreground" strokeWidth={2.5} />
+                    )}
                   </div>
                   <CardTitle className="text-foreground">{feature.title}</CardTitle>
                   <Badge variant="secondary" className="w-fit mx-auto">

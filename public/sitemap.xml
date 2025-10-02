@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>/</loc></url>
+  <url><loc>/story</loc></url>
+  <url><loc>/characters</loc></url>
   <url><loc>/codex</loc></url>
   <url><loc>/capers</loc></url>
+  <url><loc>/media</loc></url>
+  <url><loc>/join</loc></url>
 </urlset>

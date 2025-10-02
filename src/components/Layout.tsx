@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { StudioBadge } from "@/components/StudioBadge";
+import { AudioPlayer } from "@/components/AudioPlayer";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   cn(
@@ -21,6 +22,9 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="min-h-screen flex flex-col relative">
       {/* Background effects */}
       <div className="fixed inset-0 cyber-grid opacity-20 pointer-events-none"></div>
+      
+      {/* Global Audio Player */}
+      <AudioPlayer />
       
       <header className={cn(
         "sticky top-0 z-50 backdrop-blur-xl border-b border-white/10 transition-all duration-300", 
