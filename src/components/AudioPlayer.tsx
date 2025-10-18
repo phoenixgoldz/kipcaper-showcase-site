@@ -37,7 +37,7 @@ export const AudioPlayer = () => {
     <>
       <audio
         ref={audioRef}
-        src="/audio/kip-caper-theme.mp3"
+        src={`${import.meta.env.BASE_URL}audio/kip-caper-theme.mp3`}
         loop
         preload="auto"
       />

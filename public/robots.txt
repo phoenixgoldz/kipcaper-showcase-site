@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: https://phoenixgoldstudios.github.io/kipcaper/sitemap.xml

@@ -63,7 +63,7 @@ const Index = () => {
           <div className="group text-center p-6 sm:p-8 rounded-2xl glass-card hover-lift transition-all duration-500 hover:shadow-2xl hover:scale-105">
             <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 rounded-2xl bg-gradient-to-br from-treasure-gold to-mystic-green flex items-center justify-center shadow-lg group-hover:shadow-treasure-gold/50 transition-all duration-300 group-hover:scale-110 p-3">
               <img 
-                src="/images/unreal-engine-logo.svg" 
+                src={`${import.meta.env.BASE_URL}images/unreal-engine-logo.svg`}
                 alt="Unreal Engine 5.6 logo" 
                 className="w-full h-full object-contain"
               />

@@ -60,7 +60,7 @@ export const FeatureGrid = () => {
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center p-3">
                     {typeof feature.icon === "string" && feature.icon === "unreal" ? (
                       <img 
-                        src="/images/unreal-engine-logo.svg" 
+                        src={`${import.meta.env.BASE_URL}images/unreal-engine-logo.svg`}
                         alt="Unreal Engine logo" 
                         className="w-full h-full object-contain"
                       />
