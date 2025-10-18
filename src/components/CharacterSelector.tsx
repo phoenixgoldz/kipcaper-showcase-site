@@ -63,20 +63,20 @@ export const CharacterSelector = () => {
   const character = characters[selectedCharacter];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-midnight-shadow via-jungle-green/10 to-mystic-green/5 relative overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-midnight-shadow via-jungle-green/10 to-mystic-green/5 relative overflow-hidden">
       <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-gradient-to-br from-treasure-gold/5 to-mystic-green/5"></div>
       </div>
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <motion.h2 
-            className="font-display text-4xl lg:text-5xl mb-6 text-treasure-gold neon-glow"
+            className="font-display text-3xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6 text-treasure-gold neon-glow"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -85,7 +85,7 @@ export const CharacterSelector = () => {
             Meet Your Crew
           </motion.h2>
           <motion.p 
-            className="text-eucalyptus-mist text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
+            className="text-eucalyptus-mist text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed px-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -97,7 +97,7 @@ export const CharacterSelector = () => {
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Character Image */}
             <motion.div 
               key={selectedCharacter}
@@ -106,22 +106,22 @@ export const CharacterSelector = () => {
               transition={{ duration: 0.5 }}
               className="relative group"
             >
-              <div className="relative overflow-hidden rounded-2xl glass-card tech-border p-8 hover-lift transition-all duration-500 group-hover:shadow-2xl">
+              <div className="relative overflow-hidden rounded-2xl glass-card tech-border p-4 sm:p-6 lg:p-8 hover-lift transition-all duration-500 group-hover:shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-treasure-gold/5 to-mystic-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img
                   src={character.image}
                   alt={character.name}
-                  className="w-full h-96 object-contain rounded-lg transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-80 sm:h-96 object-contain rounded-lg transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute bottom-4 left-4 right-4">
                   <motion.div 
-                    className="bg-midnight-shadow/90 backdrop-blur-md rounded-xl p-4 border border-treasure-gold/20"
+                    className="bg-midnight-shadow/90 backdrop-blur-md rounded-xl p-3 sm:p-4 border border-treasure-gold/20"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                   >
-                    <h3 className="text-2xl font-bold text-treasure-gold mb-2 font-display">{character.name}</h3>
-                    <Badge variant="outline" className="bg-treasure-gold/10 text-treasure-gold border-treasure-gold/30 hover:bg-treasure-gold/20">
+                    <h3 className="text-xl sm:text-2xl font-bold text-treasure-gold mb-2 font-display">{character.name}</h3>
+                    <Badge variant="outline" className="bg-treasure-gold/10 text-treasure-gold border-treasure-gold/30 hover:bg-treasure-gold/20 text-xs sm:text-sm">
                       {character.role}
                     </Badge>
                   </motion.div>
@@ -135,17 +135,17 @@ export const CharacterSelector = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="space-y-6"
+              className="space-y-4 sm:space-y-6"
             >
               <div>
-                <h3 className="text-3xl font-bold text-foreground mb-2">{character.name}</h3>
-                <p className="text-lg text-muted-foreground mb-4">{character.description}</p>
-                <p className="text-foreground leading-relaxed">{character.background}</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">{character.name}</h3>
+                <p className="text-base sm:text-lg text-muted-foreground mb-4">{character.description}</p>
+                <p className="text-sm sm:text-base text-foreground leading-relaxed">{character.background}</p>
               </div>
 
               {/* Abilities */}
               <div>
-                <h4 className="text-xl font-semibold text-foreground mb-3">Special Abilities</h4>
+                <h4 className="text-lg sm:text-xl font-semibold text-foreground mb-3">Special Abilities</h4>
                 <div className="flex flex-wrap gap-2">
                   {character.abilities.map((ability, index) => (
                     <motion.div
@@ -154,7 +154,7 @@ export const CharacterSelector = () => {
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.7 + index * 0.1 }}
                     >
-                      <Badge variant="outline" className="bg-primary/5 border-primary/30 text-foreground">
+                      <Badge variant="outline" className="bg-primary/5 border-primary/30 text-foreground text-xs sm:text-sm">
                         {ability}
                       </Badge>
                     </motion.div>
@@ -166,7 +166,7 @@ export const CharacterSelector = () => {
 
           {/* Navigation */}
           <motion.div 
-            className="flex justify-center items-center gap-6 mt-16"
+            className="flex justify-center items-center gap-4 sm:gap-6 mt-12 sm:mt-16"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -176,11 +176,11 @@ export const CharacterSelector = () => {
               <ChevronLeft className="w-5 h-5" />
             </Button>
             
-            <div className="flex gap-3">
+            <div className="flex gap-2 sm:gap-3">
               {characters.map((_, index) => (
                 <motion.button
                   key={index}
-                  className={`w-4 h-4 rounded-full transition-all duration-500 hover:scale-125 ${
+                  className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-500 hover:scale-125 ${
                     index === selectedCharacter 
                       ? 'bg-treasure-gold shadow-lg shadow-treasure-gold/50' 
                       : 'bg-eucalyptus-mist/30 hover:bg-treasure-gold/50'

@@ -27,10 +27,10 @@ const Index = () => {
       <ScreenshotsGallery />
 
       {/* Call to Action */}
-      <section className="container mx-auto py-24">
-        <div className="glass-card p-16 text-center tech-border hover-lift shadow-2xl bg-gradient-to-br from-midnight-shadow via-jungle-green/5 to-mystic-green/10">
-          <h2 className="font-display text-5xl lg:text-6xl mb-6 neon-glow text-treasure-gold">Ready for the Heist?</h2>
-          <p className="text-xl lg:text-2xl text-eucalyptus-mist mb-12 max-w-3xl mx-auto leading-relaxed">
+      <section className="container mx-auto py-12 sm:py-24 px-4 sm:px-6">
+        <div className="glass-card p-8 sm:p-12 lg:p-16 text-center tech-border hover-lift shadow-2xl bg-gradient-to-br from-midnight-shadow via-jungle-green/5 to-mystic-green/10">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl mb-4 sm:mb-6 neon-glow text-treasure-gold">Ready for the Heist?</h2>
+          <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-eucalyptus-mist mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
             Psst… The crew's meeting in the canopy. Sign here if you've got quick paws, sharp eyes, and no fear of heights.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -52,16 +52,16 @@ const Index = () => {
       </section>
 
       {/* Technical Specs */}
-      <section className="container mx-auto py-24">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl lg:text-5xl mb-6 text-treasure-gold neon-glow">Built for Adventure</h2>
-          <p className="text-eucalyptus-mist text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed">
+      <section className="container mx-auto py-12 sm:py-24 px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6 text-treasure-gold neon-glow">Built for Adventure</h2>
+          <p className="text-eucalyptus-mist text-base sm:text-lg lg:text-xl xl:text-2xl max-w-3xl mx-auto leading-relaxed">
             A cutting-edge stealth platformer powered by Unreal Engine 5.6, featuring global heists and progressive skill mastery.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          <div className="group text-center p-8 rounded-2xl glass-card hover-lift transition-all duration-500 hover:shadow-2xl hover:scale-105">
-            <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-treasure-gold to-mystic-green flex items-center justify-center shadow-lg group-hover:shadow-treasure-gold/50 transition-all duration-300 group-hover:scale-110 p-3">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+          <div className="group text-center p-6 sm:p-8 rounded-2xl glass-card hover-lift transition-all duration-500 hover:shadow-2xl hover:scale-105">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 rounded-2xl bg-gradient-to-br from-treasure-gold to-mystic-green flex items-center justify-center shadow-lg group-hover:shadow-treasure-gold/50 transition-all duration-300 group-hover:scale-110 p-3">
               <img 
                 src="/images/unreal-engine-logo.svg" 
                 alt="Unreal Engine 5.6 logo" 

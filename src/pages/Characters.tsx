@@ -56,15 +56,15 @@ const Characters = () => {
         description="Meet Kip Caper and his crew of master thieves. Learn about their unique abilities, backgrounds, and roles in reclaiming the Codex Caperius." 
       />
       
-      <div className="container mx-auto py-12">
-        <div className="text-center mb-16">
-          <h1 className="font-display text-4xl lg:text-5xl mb-4 neon-glow">Meet the Crew</h1>
-          <p className="text-xl text-eucalyptus-mist max-w-2xl mx-auto">
+      <div className="container mx-auto py-8 sm:py-12 px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl mb-4 neon-glow px-4">Meet the Crew</h1>
+          <p className="text-lg sm:text-xl text-eucalyptus-mist max-w-2xl mx-auto px-4">
             The master thieves dedicated to reclaiming the stolen Codex Caperius, each bringing unique skills forged through generations of adventure.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0">
           {characters.map((character, index) => (
             <Card key={character.name} className="glass-card hover-lift group overflow-hidden">
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-gradient-to-b from-jungle-green/20 to-midnight-shadow/60">
@@ -118,12 +118,12 @@ const Characters = () => {
           ))}
         </div>
 
-        <div className="mt-20 text-center">
-          <div className="glass-card p-12 max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl mb-6" style={{color: 'hsl(var(--treasure-gold))'}}>
+        <div className="mt-12 sm:mt-20 text-center px-4 sm:px-0">
+          <div className="glass-card p-6 sm:p-12 max-w-4xl mx-auto">
+            <h2 className="font-display text-2xl sm:text-3xl mb-4 sm:mb-6" style={{color: 'hsl(var(--treasure-gold))'}}>
               The Legacy Continues
             </h2>
-            <p className="text-lg text-eucalyptus-mist leading-relaxed">
+            <p className="text-base sm:text-lg text-eucalyptus-mist leading-relaxed">
               For generations, the Caper family and their trusted allies have been guardians of ancient wisdom, 
               protectors of mystical artifacts, and masters of the impossible heist. Now, as Magnus the elephant 
               warlord threatens to abuse the power of the Codex Caperius, this unlikely crew must unite their 

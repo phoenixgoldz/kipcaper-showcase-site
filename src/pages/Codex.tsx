@@ -96,11 +96,11 @@ const Codex = () => {
   return (
     <Layout>
       <SEO title="Codex — Recovered Pages" />
-      <header className="container mx-auto py-12">
-        <h1 className="font-display text-4xl">The Codex</h1>
-        <p className="text-muted-foreground mt-2">Pages you’ve recovered. The rest remains in the canopy…</p>
+      <header className="container mx-auto py-8 sm:py-12 px-4 sm:px-6">
+        <h1 className="font-display text-3xl sm:text-4xl">The Codex</h1>
+        <p className="text-muted-foreground mt-2 text-sm sm:text-base">Pages you've recovered. The rest remains in the canopy…</p>
       </header>
-      <main className="container mx-auto pb-16">
+      <main className="container mx-auto pb-12 sm:pb-16">
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4 sm:px-0">
           {items.map((it) => (
             <CardItem key={it.name} {...it} />

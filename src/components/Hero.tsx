@@ -30,32 +30,32 @@ export const Hero = () => {
 
   return (
     <section className="relative overflow-hidden noir-vignette sweep-spotlight">
-      <div className="container mx-auto grid lg:grid-cols-2 gap-10 items-center py-20">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-8 lg:gap-10 items-center py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6"
+          className="space-y-4 sm:space-y-6"
         >
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
             Kip Caper and The Codex Caperius
           </h1>
-          <p className="text-lg text-eucalyptus-mist max-w-prose">
+          <p className="text-base sm:text-lg text-eucalyptus-mist max-w-prose">
             "Join me, Kip Caper, for the greatest global heist of our time. We'll outwit poachers, nab relics, and put the Codex Caperius back where it belongs—one daring job at a time."
           </p>
-          <ul className="space-y-2 text-koala-grey">
+          <ul className="space-y-2 text-sm sm:text-base text-koala-grey">
             <li>• Swipe back the relics before the poachers sniff them out.</li>
             <li>• Master gadgets, glides, and eucalyptus-fueled tricks.</li>
             <li>• Crack the <span className="text-accent font-medium">Codex</span>—page by stolen page.</li>
           </ul>
           
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 pt-6"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <Button asChild variant="hero" size="xl" className="hover-scale kip-heist-glow shadow-2xl">
+            <Button asChild variant="hero" size="lg" className="hover-scale kip-heist-glow shadow-2xl sm:size-xl">
               <a 
                 href="https://www.kickstarter.com/projects/phoenixgoldgames/kip-caper-and-the-codex-caperius"
                 target="_blank"
@@ -66,7 +66,7 @@ export const Hero = () => {
                 Back on Kickstarter
               </a>
             </Button>
-            <Button asChild variant="gaming" size="xl" className="hover-scale kip-heist-glow shadow-2xl">
+            <Button asChild variant="gaming" size="lg" className="hover-scale kip-heist-glow shadow-2xl sm:size-xl">
               <a 
                 href="https://discord.gg/FxpB2Zw2P6"
                 target="_blank"
@@ -76,7 +76,7 @@ export const Hero = () => {
                 Join the Heist
               </a>
             </Button>
-            <Button asChild variant="outline" size="xl" className="hover-scale codex-flip shadow-lg">
+            <Button asChild variant="outline" size="lg" className="hover-scale codex-flip shadow-lg sm:size-xl">
               <Link to="/codex" aria-label="Peek Inside the Codex">Peek Inside the Codex</Link>
             </Button>
           </motion.div>
@@ -116,10 +116,10 @@ export const Hero = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="container mx-auto pb-10"
+        className="container mx-auto pb-8 sm:pb-10 px-4 sm:px-6"
       >
-        <div className="text-center mb-6">
-          <p className="text-eucalyptus-mist">Available on</p>
+        <div className="text-center mb-4 sm:mb-6">
+          <p className="text-eucalyptus-mist text-sm sm:text-base">Available on</p>
         </div>
         <PlatformBadges />
       </motion.div>

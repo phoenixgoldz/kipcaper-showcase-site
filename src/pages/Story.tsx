@@ -216,11 +216,11 @@ const Story = () => {
         description="Follow Kip Caper's journey from cargo plane crash to global heist mastermind as he assembles his crew and reclaims the stolen Codex Caperius across six exotic chapters." 
       />
       
-      <div className="container mx-auto py-12">
+      <div className="container mx-auto py-8 sm:py-12 px-4 sm:px-6">
         {/* Game Overview */}
-        <div className="text-center mb-16">
-          <h1 className="font-display text-4xl lg:text-5xl mb-4 neon-glow">{gameInfo.title}</h1>
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl mb-4 neon-glow px-2">Kip Caper and The Codex Caperius</h1>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 px-4">
             <Badge variant="secondary" className="bg-treasure-gold/20 text-treasure-gold border-treasure-gold/30">
               {gameInfo.genre}
             </Badge>
@@ -228,22 +228,22 @@ const Story = () => {
               {gameInfo.engine}
             </Badge>
           </div>
-          <p className="text-xl text-eucalyptus-mist max-w-3xl mx-auto mb-4">
+          <p className="text-base sm:text-xl text-eucalyptus-mist max-w-3xl mx-auto mb-4 px-4">
             {gameInfo.artStyle}
           </p>
-          <p className="text-lg text-koala-grey">
+          <p className="text-sm sm:text-lg text-koala-grey px-4">
             {gameInfo.perspective}
           </p>
         </div>
 
         {/* DNA Blend Section */}
-        <section className="mb-16">
+        <section className="mb-12 sm:mb-16">
           <Card className="glass-card hover-lift">
-            <CardHeader>
-              <h2 className="font-display text-3xl text-treasure-gold">🎭 DNA Blend</h2>
+            <CardHeader className="p-4 sm:p-6">
+              <h2 className="font-display text-2xl sm:text-3xl text-treasure-gold">🎭 DNA Blend</h2>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-3 gap-6">
+            <CardContent className="space-y-4 sm:space-y-6 p-4 sm:p-6">
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
                 {dnaBlendsection.inspiration.map((item, index) => (
                   <div key={index} className="glass-card p-4 hover-lift">
                     <h3 className="font-display text-lg text-mystic-green mb-2">{item.game}</h3>
@@ -261,13 +261,13 @@ const Story = () => {
         </section>
 
         {/* Kip Identity Section */}
-        <section className="mb-16">
+        <section className="mb-12 sm:mb-16">
           <Card className="glass-card hover-lift">
-            <CardHeader>
-              <h2 className="font-display text-3xl text-treasure-gold">🐨 Core Identity: Kip Caper</h2>
+            <CardHeader className="p-4 sm:p-6">
+              <h2 className="font-display text-2xl sm:text-3xl text-treasure-gold">🐨 Core Identity: Kip Caper</h2>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-6">
+            <CardContent className="space-y-4 p-4 sm:p-6">
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <h3 className="font-display text-xl text-mystic-green mb-2">Character Profile</h3>
                   <p className="text-eucalyptus-mist mb-2"><strong>Species:</strong> {kipIdentity.species}</p>
@@ -288,21 +288,21 @@ const Story = () => {
 
 
         {/* Chapters */}
-        <section className="mb-16">
-          <div className="flex items-center justify-center gap-4 mb-12">
-            <MapPin className="w-10 h-10 text-treasure-gold" strokeWidth={2.5} />
-            <h2 className="font-display text-4xl text-center text-treasure-gold">Chapters & Progressive Skills</h2>
+        <section className="mb-12 sm:mb-16">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-4">
+            <MapPin className="w-8 h-8 sm:w-10 sm:h-10 text-treasure-gold flex-shrink-0" strokeWidth={2.5} />
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl text-center text-treasure-gold">Chapters & Skills</h2>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {chapters.map((chapter, index) => (
               <Card key={chapter.id} className="glass-card hover-lift overflow-hidden">
-                <CardHeader className={`bg-gradient-to-r ${index === 0 ? "from-treasure-gold/20 to-mystic-green/20" : "from-jungle-green/20 to-eucalyptus-mist/20"}`}>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <Badge variant="secondary" className="mb-2 bg-treasure-gold/30 text-treasure-gold">
+                <CardHeader className={`bg-gradient-to-r ${index === 0 ? "from-treasure-gold/20 to-mystic-green/20" : "from-jungle-green/20 to-eucalyptus-mist/20"} p-4 sm:p-6`}>
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <div className="flex-1">
+                      <Badge variant="secondary" className="mb-2 bg-treasure-gold/30 text-treasure-gold text-xs">
                         {chapter.chapter}
                       </Badge>
-                      <h3 className="font-display text-2xl text-treasure-gold">{chapter.title}</h3>
+                      <h3 className="font-display text-xl sm:text-2xl text-treasure-gold">{chapter.title}</h3>
                       {chapter.location && (
                         <p className="text-mystic-green font-medium">{chapter.location}</p>
                       )}
