@@ -76,6 +76,16 @@ export const Hero = () => {
                 Join the Heist
               </a>
             </Button>
+            <Button asChild variant="outline" size="lg" className="hover-scale shadow-lg sm:size-xl bg-[#E60023] hover:bg-[#E60023]/90 text-white border-[#E60023]">
+              <a 
+                href="https://pin.it/2Bv3LCNGx"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Pinterest"
+              >
+                Pinterest
+              </a>
+            </Button>
             <Button asChild variant="outline" size="lg" className="hover-scale codex-flip shadow-lg sm:size-xl">
               <Link to="/codex" aria-label="Peek Inside the Codex">Peek Inside the Codex</Link>
             </Button>
