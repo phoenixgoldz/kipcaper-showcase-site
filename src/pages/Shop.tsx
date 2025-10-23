@@ -2,7 +2,7 @@ import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ShoppingCart } from "lucide-react";
 
 const tools = [
   {
@@ -47,6 +47,16 @@ const tools = [
     link: "https://www.audacityteam.org/",
     category: "Audio"
   }
+];
+
+const affiliateProducts = [
+  {
+    name: "Game Development Equipment",
+    description: "Essential hardware and accessories we use for game development",
+    link: "https://amzn.to/42OyVpW",
+    category: "Hardware"
+  },
+  // Add more affiliate products here
 ];
 
 const Shop = () => {
@@ -109,6 +119,58 @@ const Shop = () => {
               </CardContent>
             </Card>
           ))}
+        </section>
+
+        {/* Affiliate Products Section */}
+        <section className="mt-16 sm:mt-20">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl mb-3 bg-gradient-to-r from-emerald-glow to-thief-gold bg-clip-text text-transparent">
+              Recommended Gear
+            </h2>
+            <p className="text-muted-foreground text-sm sm:text-base">
+              Support our development by checking out the equipment and products we use. 
+              <span className="text-xs block mt-1 opacity-70">As Amazon Associates, we earn from qualifying purchases.</span>
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {affiliateProducts.map((product) => (
+              <Card key={product.name} className="group hover-lift transition-all duration-300 glass-card border-thief-gold/20 bg-gradient-to-br from-background to-thief-gold/5">
+                <CardHeader className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="h-12 w-12 sm:h-14 sm:w-14 flex items-center justify-center rounded-lg bg-thief-gold/10 group-hover:bg-thief-gold/20 transition-all">
+                      <ShoppingCart className="h-6 w-6 sm:h-7 sm:w-7 text-thief-gold" />
+                    </div>
+                    <span className="text-xs px-2 py-1 rounded-full bg-thief-gold/10 text-thief-gold border border-thief-gold/30">
+                      {product.category}
+                    </span>
+                  </div>
+                  <CardTitle className="text-lg sm:text-xl">{product.name}</CardTitle>
+                  <CardDescription className="text-xs sm:text-sm">
+                    {product.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button 
+                    asChild 
+                    variant="default"
+                    size="sm" 
+                    className="w-full bg-gradient-to-r from-thief-gold to-emerald-glow hover:opacity-90 transition-all"
+                  >
+                    <a 
+                      href={product.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2"
+                    >
+                      View on Amazon
+                      <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </section>
 
         <footer className="mt-12 sm:mt-16 text-center max-w-2xl mx-auto">
