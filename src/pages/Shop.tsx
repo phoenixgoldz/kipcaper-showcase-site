@@ -51,12 +51,45 @@ const tools = [
 
 const affiliateProducts = [
   {
-    name: "Game Development Equipment",
-    description: "Essential hardware and accessories we use for game development",
+    name: "MSI Optix MAG342CQR 34\" Gaming Monitor",
+    description: "1500R Curvature 21:9 Ultra-Wide Monitor with 144Hz Refresh Rate - Perfect for detailed game development work",
     link: "https://amzn.to/42OyVpW",
-    category: "Hardware"
+    price: "$219.99",
+    image: "https://m.media-amazon.com/images/I/71EGJf9cUcL._AC_SL1500_.jpg",
+    category: "Monitor"
   },
-  // Add more affiliate products here
+  {
+    name: "INNOCN 49\" Curved Gaming Monitor",
+    description: "144Hz Ultrawide 32:9 Display with HDR400 - Incredible screen real estate for multitasking",
+    link: "https://amzn.to/47mvF6E",
+    price: "$549.98",
+    image: "https://m.media-amazon.com/images/I/71OhD9KjGrL._AC_SL1500_.jpg",
+    category: "Monitor"
+  },
+  {
+    name: "MSI Codex Z2 Gaming Desktop",
+    description: "AMD R7-8700F, RTX 5070, 32GB DDR5 - Our main development workstation for Unreal Engine 5",
+    link: "https://amzn.to/4qpjJJW",
+    price: "$1,699.99",
+    image: "https://m.media-amazon.com/images/I/61P+fGjGLiL._AC_SL1500_.jpg",
+    category: "Desktop"
+  },
+  {
+    name: "MSI Gaming RTX 5070 Graphics Card",
+    description: "12GB GDDR7 - Essential for rendering high-quality game graphics and real-time previews",
+    link: "https://amzn.to/4hm44XA",
+    price: "$549.99",
+    image: "https://m.media-amazon.com/images/I/71pdLSkA4NL._AC_SL1500_.jpg",
+    category: "GPU"
+  },
+  {
+    name: "MSI Katana 15 HX Gaming Laptop",
+    description: "Intel Core i9-14900HX, RTX 5070, 32GB DDR5 - Portable powerhouse for development on the go",
+    link: "https://amzn.to/3WVxRwM",
+    price: "$1,661.88",
+    image: "https://m.media-amazon.com/images/I/71Y4L0zr+1L._AC_SL1500_.jpg",
+    category: "Laptop"
+  }
 ];
 
 const Shop = () => {
@@ -135,22 +168,30 @@ const Shop = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {affiliateProducts.map((product) => (
-              <Card key={product.name} className="group hover-lift transition-all duration-300 glass-card border-thief-gold/20 bg-gradient-to-br from-background to-thief-gold/5">
-                <CardHeader className="space-y-3">
+              <Card key={product.name} className="group hover-lift transition-all duration-300 glass-card border-thief-gold/20 bg-gradient-to-br from-background to-thief-gold/5 overflow-hidden">
+                <div className="aspect-video relative overflow-hidden bg-background/50">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-2 right-2 bg-thief-gold/90 text-shadow-black px-2 py-1 rounded-md text-xs sm:text-sm font-bold">
+                    {product.price}
+                  </div>
+                </div>
+                <CardHeader className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <div className="h-12 w-12 sm:h-14 sm:w-14 flex items-center justify-center rounded-lg bg-thief-gold/10 group-hover:bg-thief-gold/20 transition-all">
-                      <ShoppingCart className="h-6 w-6 sm:h-7 sm:w-7 text-thief-gold" />
-                    </div>
                     <span className="text-xs px-2 py-1 rounded-full bg-thief-gold/10 text-thief-gold border border-thief-gold/30">
                       {product.category}
                     </span>
                   </div>
-                  <CardTitle className="text-lg sm:text-xl">{product.name}</CardTitle>
-                  <CardDescription className="text-xs sm:text-sm">
+                  <CardTitle className="text-base sm:text-lg leading-tight">{product.name}</CardTitle>
+                  <CardDescription className="text-xs sm:text-sm line-clamp-2">
                     {product.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-0">
                   <Button 
                     asChild 
                     variant="default"
