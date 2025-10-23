@@ -17,6 +17,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://phoenixgoldstudios.github.io/kipcaper/shop</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://phoenixgoldstudios.github.io/kipcaper/join</loc>
     <priority>0.9</priority>
   </url>

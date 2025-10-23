@@ -12,6 +12,7 @@ import Join from "./pages/Join";
 import Capers from "./pages/Capers";
 import Characters from "./pages/Characters";
 import Story from "./pages/Story";
+import Shop from "./pages/Shop";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/media" element={<Media />} />
           <Route path="/join" element={<Join />} />
           <Route path="/capers" element={<Capers />} />
+          <Route path="/shop" element={<Shop />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

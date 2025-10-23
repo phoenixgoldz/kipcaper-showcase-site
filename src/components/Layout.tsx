@@ -41,6 +41,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <NavLink to="/story" className={navLinkClass}>Story</NavLink>
             <NavLink to="/characters" className={navLinkClass}>Characters</NavLink>
             <NavLink to="/codex" className={navLinkClass}>Codex</NavLink>
+            <NavLink to="/shop" className={navLinkClass}>Shop</NavLink>
             <NavLink to="/join" className={cn(navLinkClass({ isActive: false }), "ml-4")}>
               <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-stealth-silver to-thief-gold rounded-lg text-shadow-black font-semibold hover:scale-105 transition-transform kip-glow text-sm sm:text-base">
                 Join Heist
@@ -52,6 +53,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           <nav className="lg:hidden flex items-center gap-1 text-xs sm:text-sm" aria-label="Mobile Navigation">
             <NavLink to="/story" className="px-1.5 sm:px-2 py-1 rounded hover:bg-stealth-silver/10 transition-colors">Story</NavLink>
             <NavLink to="/characters" className="px-1.5 sm:px-2 py-1 rounded hover:bg-stealth-silver/10 transition-colors">Cast</NavLink>
+            <NavLink to="/shop" className="px-1.5 sm:px-2 py-1 rounded hover:bg-stealth-silver/10 transition-colors">Shop</NavLink>
             <NavLink to="/join" className="px-2 sm:px-3 py-1 bg-thief-gold text-shadow-black rounded font-medium hover-scale">Join</NavLink>
           </nav>
         </div>
@@ -79,6 +81,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Link to="/story" className="story-link">Story</Link>
                 <Link to="/characters" className="story-link">Characters</Link>
                 <Link to="/codex" className="story-link">Codex</Link>
+                <Link to="/shop" className="story-link">Shop</Link>
                 <Link to="/join" className="story-link">Join the Heist</Link>
               </div>
             </div>
