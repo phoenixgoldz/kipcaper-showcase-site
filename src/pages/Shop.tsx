@@ -14,35 +14,35 @@ const tools = [
   {
     name: "Blender",
     description: "3D modeling and animation software for creating characters and assets",
-    logo: "https://download.blender.org/branding/blender_logo_socket.png",
+    logo: "/images/tools/blender-logo.png",
     link: "https://www.blender.org/",
     category: "3D Modeling"
   },
   {
     name: "Photoshop",
     description: "Professional image editing for textures, concept art, and marketing materials",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg",
+    logo: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg",
     link: "https://www.adobe.com/products/photoshop.html",
     category: "Design"
   },
   {
     name: "Substance Painter",
     description: "3D painting software for creating realistic textures and materials",
-    logo: "https://cdn.worldvectorlogo.com/logos/substance-painter.svg",
+    logo: "/images/tools/substance-painter.svg",
     link: "https://www.adobe.com/products/substance3d-painter.html",
     category: "Texturing"
   },
   {
     name: "Git & GitHub",
     description: "Version control and collaboration platform for our development workflow",
-    logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    logo: "/images/tools/github-mark.png",
     link: "https://github.com/",
     category: "Development"
   },
   {
     name: "Audacity",
     description: "Open-source audio editing software for sound design and music production",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Audacity_Logo.svg",
+    logo: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/f/f6/Audacity_Logo.svg",
     link: "https://www.audacityteam.org/",
     category: "Audio"
   }
@@ -54,7 +54,7 @@ const affiliateProducts = [
     description: "1500R Curvature 21:9 Ultra-Wide Monitor with 144Hz Refresh Rate - Perfect for detailed game development work",
     link: "https://amzn.to/42OyVpW",
     price: "$219.99",
-    image: "https://m.media-amazon.com/images/I/71EGJf9cUcL._AC_SL1500_.jpg",
+    image: "https://images.weserv.nl/?url=m.media-amazon.com/images/I/71EGJf9cUcL._AC_SL1500_.jpg",
     category: "Monitor"
   },
   {
@@ -62,7 +62,7 @@ const affiliateProducts = [
     description: "144Hz Ultrawide 32:9 Display with HDR400 - Incredible screen real estate for multitasking",
     link: "https://amzn.to/47mvF6E",
     price: "$549.98",
-    image: "https://m.media-amazon.com/images/I/71OhD9KjGrL._AC_SL1500_.jpg",
+    image: "https://images.weserv.nl/?url=m.media-amazon.com/images/I/71OhD9KjGrL._AC_SL1500_.jpg",
     category: "Monitor"
   },
   {
@@ -70,7 +70,7 @@ const affiliateProducts = [
     description: "AMD R7-8700F, RTX 5070, 32GB DDR5 - Our main development workstation for Unreal Engine 5",
     link: "https://amzn.to/4qpjJJW",
     price: "$1,699.99",
-    image: "https://m.media-amazon.com/images/I/61P+fGjGLiL._AC_SL1500_.jpg",
+    image: "https://images.weserv.nl/?url=m.media-amazon.com/images/I/61P%2BfGjGLiL._AC_SL1500_.jpg",
     category: "Desktop"
   },
   {
@@ -78,7 +78,7 @@ const affiliateProducts = [
     description: "12GB GDDR7 - Essential for rendering high-quality game graphics and real-time previews",
     link: "https://amzn.to/4hm44XA",
     price: "$549.99",
-    image: "https://m.media-amazon.com/images/I/71pdLSkA4NL._AC_SL1500_.jpg",
+    image: "https://images.weserv.nl/?url=m.media-amazon.com/images/I/71pdLSkA4NL._AC_SL1500_.jpg",
     category: "GPU"
   },
   {
@@ -86,7 +86,7 @@ const affiliateProducts = [
     description: "Intel Core i9-14900HX, RTX 5070, 32GB DDR5 - Portable powerhouse for development on the go",
     link: "https://amzn.to/3WVxRwM",
     price: "$1,661.88",
-    image: "https://m.media-amazon.com/images/I/71Y4L0zr+1L._AC_SL1500_.jpg",
+    image: "https://images.weserv.nl/?url=m.media-amazon.com/images/I/71Y4L0zr%2B1L._AC_SL1500_.jpg",
     category: "Laptop"
   }
 ];

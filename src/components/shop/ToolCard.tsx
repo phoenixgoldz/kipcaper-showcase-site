@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { ImageOptimized } from "@/components/ImageOptimized";
 
 interface ToolCardProps {
   name: string;
@@ -16,11 +17,12 @@ export const ToolCard = ({ name, description, logo, link, category }: ToolCardPr
       <CardHeader className="space-y-3">
         <div className="flex items-center justify-between">
           <div className="h-16 w-16 flex items-center justify-center rounded-xl bg-gradient-to-br from-background/80 to-primary/5 p-3 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-            <img 
-              src={logo} 
-              alt={`${name} logo`} 
-              className="w-full h-full object-contain"
-              loading="lazy"
+            <ImageOptimized
+              src={logo}
+              alt={`${name} logo`}
+              aspectRatio="square"
+              objectFit="contain"
+              className="w-full h-full"
             />
           </div>
           <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 font-medium">

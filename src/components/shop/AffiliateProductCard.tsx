@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Tag } from "lucide-react";
+import { ImageOptimized } from "@/components/ImageOptimized";
 
 interface AffiliateProductCardProps {
   name: string;
@@ -14,22 +15,19 @@ interface AffiliateProductCardProps {
 export const AffiliateProductCard = ({ name, description, link, price, image, category }: AffiliateProductCardProps) => {
   return (
     <Card className="group hover-lift transition-all duration-500 glass-card border-thief-gold/20 bg-gradient-to-br from-background via-background to-thief-gold/5 overflow-hidden hover:border-thief-gold/40 hover:shadow-xl hover:shadow-thief-gold/10">
-      <div className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-background/50 to-white/5">
-        <img 
-          src={image} 
+      <div className="relative overflow-hidden">
+        <ImageOptimized 
+          src={image}
           alt={name}
-          className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500"
-          loading="lazy"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23333'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='16' fill='%23666'%3ENo Image%3C/text%3E%3C/svg%3E";
-          }}
+          aspectRatio="landscape"
+          objectFit="contain"
+          className="w-full"
         />
         <div className="absolute top-3 right-3 flex items-center gap-2 bg-thief-gold text-shadow-black px-3 py-1.5 rounded-lg text-sm font-bold shadow-lg">
           <Tag className="h-3 w-3" />
           {price}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60 pointer-events-none" />
       </div>
       <CardHeader className="space-y-3">
         <div className="flex items-center justify-between">
