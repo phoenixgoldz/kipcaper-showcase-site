@@ -9,9 +9,10 @@ interface ToolCardProps {
   logo: string;
   link: string;
   category: string;
+  invert?: boolean;
 }
 
-export const ToolCard = ({ name, description, logo, link, category }: ToolCardProps) => {
+export const ToolCard = ({ name, description, logo, link, category, invert }: ToolCardProps) => {
   return (
     <Card className="group hover-lift transition-all duration-300 glass-card border-white/10 hover:border-primary/30">
       <CardHeader className="space-y-3">
@@ -22,7 +23,7 @@ export const ToolCard = ({ name, description, logo, link, category }: ToolCardPr
               alt={`${name} logo`}
               aspectRatio="square"
               objectFit="contain"
-              className="w-full h-full"
+              className={`w-full h-full ${invert ? 'invert' : ''}`}
             />
           </div>
           <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 font-medium">

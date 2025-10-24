@@ -21,7 +21,7 @@ const tools = [
   {
     name: "Photoshop",
     description: "Professional image editing for textures, concept art, and marketing materials",
-    logo: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg",
+    logo: "/images/tools/photoshop.svg",
     link: "https://www.adobe.com/products/photoshop.html",
     category: "Design"
   },
@@ -42,7 +42,7 @@ const tools = [
   {
     name: "Audacity",
     description: "Open-source audio editing software for sound design and music production",
-    logo: "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/f/f6/Audacity_Logo.svg",
+    logo: "/images/tools/audacity.svg",
     link: "https://www.audacityteam.org/",
     category: "Audio"
   }

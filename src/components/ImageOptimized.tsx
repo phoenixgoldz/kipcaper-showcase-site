@@ -52,6 +52,8 @@ export const ImageOptimized = ({
         src={src}
         alt={alt}
         loading={loading}
+        decoding="async"
+        referrerPolicy="no-referrer"
         className={cn(
           "w-full h-full transition-all duration-300",
           objectFitClasses[objectFit],
