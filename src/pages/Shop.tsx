@@ -1,8 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ToolCard } from "@/components/shop/ToolCard";
+import { AffiliateProductCard } from "@/components/shop/AffiliateProductCard";
 
 const tools = [
   {
@@ -110,47 +109,9 @@ const Shop = () => {
           </p>
         </header>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tools.map((tool) => (
-            <Card key={tool.name} className="group hover-lift transition-all duration-300 glass-card border-white/10">
-              <CardHeader className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <div className="h-12 w-12 sm:h-16 sm:w-16 flex items-center justify-center rounded-lg bg-background/50 p-2 group-hover:scale-110 transition-transform duration-300">
-                    <img 
-                      src={tool.logo} 
-                      alt={`${tool.name} logo`} 
-                      className="w-full h-full object-contain"
-                      loading="lazy"
-                    />
-                  </div>
-                  <span className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
-                    {tool.category}
-                  </span>
-                </div>
-                <CardTitle className="text-lg sm:text-xl">{tool.name}</CardTitle>
-                <CardDescription className="text-xs sm:text-sm">
-                  {tool.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full group-hover:bg-primary/10 group-hover:border-primary/30 transition-all"
-                >
-                  <a 
-                    href={tool.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2"
-                  >
-                    Learn More
-                    <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
+            <ToolCard key={tool.name} {...tool} />
           ))}
         </section>
 
@@ -166,50 +127,9 @@ const Shop = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {affiliateProducts.map((product) => (
-              <Card key={product.name} className="group hover-lift transition-all duration-300 glass-card border-thief-gold/20 bg-gradient-to-br from-background to-thief-gold/5 overflow-hidden">
-                <div className="aspect-video relative overflow-hidden bg-background/50">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-2 right-2 bg-thief-gold/90 text-shadow-black px-2 py-1 rounded-md text-xs sm:text-sm font-bold">
-                    {product.price}
-                  </div>
-                </div>
-                <CardHeader className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs px-2 py-1 rounded-full bg-thief-gold/10 text-thief-gold border border-thief-gold/30">
-                      {product.category}
-                    </span>
-                  </div>
-                  <CardTitle className="text-base sm:text-lg leading-tight">{product.name}</CardTitle>
-                  <CardDescription className="text-xs sm:text-sm line-clamp-2">
-                    {product.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <Button 
-                    asChild 
-                    variant="default"
-                    size="sm" 
-                    className="w-full bg-gradient-to-r from-thief-gold to-emerald-glow hover:opacity-90 transition-all"
-                  >
-                    <a 
-                      href={product.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2"
-                    >
-                      View on Amazon
-                      <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+              <AffiliateProductCard key={product.name} {...product} />
             ))}
           </div>
         </section>
