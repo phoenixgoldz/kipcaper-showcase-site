@@ -64,9 +64,9 @@ const Characters = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-2 sm:px-0">
           {characters.map((character, index) => (
-            <Card key={character.name} className="glass-card hover-lift group overflow-hidden">
+            <Card key={character.name} className="glass-card hover-lift group overflow-hidden animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-gradient-to-b from-jungle-green/20 to-midnight-shadow/60">
                 <img 
                   src={character.image} 
@@ -75,32 +75,32 @@ const Characters = () => {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight-shadow/80 via-transparent to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <Badge variant="secondary" className="mb-2 bg-treasure-gold/20 text-treasure-gold border-treasure-gold/30">
+                <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4">
+                  <Badge variant="secondary" className="mb-2 bg-treasure-gold/20 text-treasure-gold border-treasure-gold/30 text-xs sm:text-sm">
                     {character.species}
                   </Badge>
                 </div>
               </div>
               
-              <CardContent className="p-6 space-y-4">
+              <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                 <div>
-                  <h2 className="font-display text-2xl mb-1" style={{color: 'hsl(var(--treasure-gold))'}}>
+                  <h2 className="font-display text-xl sm:text-2xl mb-1" style={{color: 'hsl(var(--treasure-gold))'}}>
                     {character.name}
                   </h2>
-                  <p className="text-mystic-green font-medium">{character.role}</p>
+                  <p className="text-mystic-green font-medium text-sm sm:text-base">{character.role}</p>
                 </div>
                 
-                <p className="text-koala-grey leading-relaxed">
+                <p className="text-koala-grey leading-relaxed text-sm sm:text-base">
                   {character.description}
                 </p>
                 
-                <div className="space-y-3">
-                  <h3 className="font-display text-lg" style={{color: 'hsl(var(--eucalyptus-mist))'}}>
+                <div className="space-y-2 sm:space-y-3">
+                  <h3 className="font-display text-base sm:text-lg" style={{color: 'hsl(var(--eucalyptus-mist))'}}>
                     Signature Abilities
                   </h3>
-                  <ul className="space-y-2">
+                  <ul className="space-y-1.5 sm:space-y-2">
                     {character.abilities.map((ability, idx) => (
-                      <li key={idx} className="text-sm flex items-start gap-2">
+                      <li key={idx} className="text-xs sm:text-sm flex items-start gap-2">
                         <span className="text-mystic-green mt-1 text-xs">▸</span>
                         <span className="text-koala-grey">{ability}</span>
                       </li>
@@ -108,8 +108,8 @@ const Characters = () => {
                   </ul>
                 </div>
                 
-                <div className="pt-4 border-t border-white/10">
-                  <p className="text-sm italic text-eucalyptus-mist">
+                <div className="pt-3 sm:pt-4 border-t border-white/10">
+                  <p className="text-xs sm:text-sm italic text-eucalyptus-mist">
                     {character.motto}
                   </p>
                 </div>

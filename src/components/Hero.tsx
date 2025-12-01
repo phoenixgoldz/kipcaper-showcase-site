@@ -30,20 +30,20 @@ export const Hero = () => {
 
   return (
     <section className="relative overflow-hidden noir-vignette sweep-spotlight">
-      <div className="container mx-auto grid lg:grid-cols-2 gap-8 lg:gap-10 items-center py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-6 lg:gap-10 items-center py-8 sm:py-12 lg:py-20 px-4 sm:px-6">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-4 sm:space-y-6"
+          className="space-y-3 sm:space-y-4 lg:space-y-6"
         >
-          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight px-2">
             Kip Caper and The Codex Caperius
           </h1>
-          <p className="text-base sm:text-lg text-eucalyptus-mist max-w-prose">
+          <p className="text-sm sm:text-base lg:text-lg text-eucalyptus-mist max-w-prose px-2">
             "Join me, Kip Caper, for the greatest global heist of our time. We'll outwit poachers, nab relics, and put the Codex Caperius back where it belongs—one daring job at a time."
           </p>
-          <ul className="space-y-2 text-sm sm:text-base text-koala-grey">
+          <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm lg:text-base text-koala-grey px-2">
             <li>• Swipe back the relics before the poachers sniff them out.</li>
             <li>• Master gadgets, glides, and eucalyptus-fueled tricks.</li>
             <li>• Crack the <span className="text-accent font-medium">Codex</span>—page by stolen page.</li>
@@ -55,7 +55,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <Button asChild variant="hero" size="lg" className="hover-scale kip-heist-glow shadow-2xl sm:size-xl whitespace-nowrap">
+            <Button asChild variant="hero" size="lg" className="hover-scale kip-heist-glow shadow-2xl sm:size-xl whitespace-nowrap w-full sm:w-auto">
               <a 
                 href="https://www.kickstarter.com/projects/phoenixgoldgames/kip-caper-and-the-codex-caperius"
                 target="_blank"
@@ -63,31 +63,33 @@ export const Hero = () => {
                 aria-label="Back Kip Caper on Kickstarter"
               >
                 <Rocket className="w-5 h-5 mr-2 flex-shrink-0" />
-                Back on Kickstarter
+                <span className="text-sm sm:text-base">Back on Kickstarter</span>
               </a>
             </Button>
-            <Button asChild variant="gaming" size="lg" className="hover-scale kip-heist-glow shadow-2xl sm:size-xl whitespace-nowrap">
+            <Button asChild variant="gaming" size="lg" className="hover-scale kip-heist-glow shadow-2xl sm:size-xl whitespace-nowrap w-full sm:w-auto">
               <a 
                 href="https://discord.gg/FxpB2Zw2P6"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Join the Heist on Discord"
               >
-                Join the Heist
+                <span className="text-sm sm:text-base">Join the Heist</span>
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="hover-scale shadow-lg sm:size-xl bg-[#E60023] hover:bg-[#E60023]/90 text-white border-[#E60023] whitespace-nowrap">
+            <Button asChild variant="outline" size="lg" className="hover-scale shadow-lg sm:size-xl bg-[#E60023] hover:bg-[#E60023]/90 text-white border-[#E60023] whitespace-nowrap w-full sm:w-auto">
               <a 
                 href="https://pin.it/2Bv3LCNGx"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on Pinterest"
               >
-                Pinterest
+                <span className="text-sm sm:text-base">Pinterest</span>
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="hover-scale codex-flip shadow-lg sm:size-xl whitespace-nowrap">
-              <Link to="/codex" aria-label="Peek Inside the Codex">Peek Inside the Codex</Link>
+            <Button asChild variant="outline" size="lg" className="hover-scale codex-flip shadow-lg sm:size-xl whitespace-nowrap w-full sm:w-auto">
+              <Link to="/codex" aria-label="Peek Inside the Codex">
+                <span className="text-sm sm:text-base">Peek Inside the Codex</span>
+              </Link>
             </Button>
           </motion.div>
 
