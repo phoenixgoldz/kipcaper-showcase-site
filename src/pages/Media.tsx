@@ -55,33 +55,33 @@ const Media = () => {
   return (
     <Layout>
       <SEO title="Media — Concept Art Gallery" description="Official concept art and key art for Kip Caper and the Codex Caperius." />
-      <header className="container mx-auto py-8 sm:py-12 px-4 sm:px-6">
-        <h1 className="font-display text-3xl sm:text-4xl">Media</h1>
-        <p className="text-muted-foreground mt-2 text-sm sm:text-base">Official concept art and key art.</p>
-        <div className="mt-4 sm:mt-6 flex flex-wrap gap-2">
+      <header className="container mx-auto py-6 sm:py-8 lg:py-12 px-4 sm:px-6">
+        <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl mb-2">Media</h1>
+        <p className="text-muted-foreground mt-2 text-xs sm:text-sm lg:text-base">Official concept art and key art.</p>
+        <div className="mt-3 sm:mt-4 lg:mt-6 flex flex-wrap gap-2">
           {categories.map(c => (
             <button
               key={c}
               onClick={() => setCat(c)}
-              className={"px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border text-xs sm:text-sm transition-all hover-scale " + (cat === c ? "bg-primary text-primary-foreground" : "bg-background hover:bg-muted")}
+              className={"px-3 py-2 rounded-md border text-xs sm:text-sm transition-all hover-scale min-h-[44px] " + (cat === c ? "bg-primary text-primary-foreground" : "bg-background hover:bg-muted")}
               aria-pressed={cat === c}
             >{c}</button>
           ))}
         </div>
       </header>
       <main className="container mx-auto pb-12 sm:pb-16 px-4 sm:px-6">
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
           {filtered.map((it, idx) => (
             <Dialog key={idx}>
               <DialogTrigger asChild>
-                <figure className="group rounded-lg overflow-hidden border bg-card hover:shadow-lg cursor-pointer grain-overlay hover-lift transition-all duration-300">
+                <figure className="group rounded-lg overflow-hidden border bg-card hover:shadow-lg cursor-pointer grain-overlay hover-lift transition-all duration-300 animate-fade-in" style={{ animationDelay: `${(idx % 9) * 50}ms` }}>
                   <div className="aspect-[4/3] overflow-hidden">
                     <img src={it.src} alt={it.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                   </div>
-                  <figcaption className="p-2 sm:p-3 text-xs sm:text-sm text-muted-foreground">{it.category}</figcaption>
+                  <figcaption className="p-2 sm:p-3 text-xs sm:text-sm text-muted-foreground truncate">{it.category}</figcaption>
                 </figure>
               </DialogTrigger>
-              <DialogContent className="max-w-[95vw] sm:max-w-3xl max-h-[90vh] p-2 sm:p-6">
+              <DialogContent className="max-w-[95vw] sm:max-w-3xl max-h-[90vh] p-2 sm:p-4 lg:p-6">
                 <img src={it.src} alt={it.alt} className="w-full max-h-[80vh] object-contain rounded-md" loading="lazy" />
               </DialogContent>
             </Dialog>

@@ -99,47 +99,51 @@ const Shop = () => {
         description="Discover the tools and software we use to create Kip Caper and the Codex Caperis." 
       />
       
-      <div className="container mx-auto py-8 sm:py-12 px-4 sm:px-6">
-        <header className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl mb-4 bg-gradient-to-r from-thief-gold to-emerald-glow bg-clip-text text-transparent">
+      <div className="container mx-auto py-6 sm:py-8 lg:py-12 px-4 sm:px-6">
+        <header className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12 animate-fade-in">
+          <h1 className="font-display text-2xl sm:text-3xl lg:text-5xl mb-3 sm:mb-4 bg-gradient-to-r from-thief-gold to-emerald-glow bg-clip-text text-transparent px-2">
             Behind the Heist
           </h1>
-          <p className="text-muted-foreground text-sm sm:text-base lg:text-lg">
+          <p className="text-muted-foreground text-xs sm:text-sm lg:text-lg px-4">
             The tools and software we use to bring Kip Caper's world to life. From stunning visuals to immersive gameplay, here's what powers our development.
           </p>
         </header>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tools.map((tool) => (
-            <ToolCard key={tool.name} {...tool} />
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 animate-fade-in [animation-delay:100ms]">
+          {tools.map((tool, idx) => (
+            <div key={tool.name} className="animate-fade-in" style={{ animationDelay: `${idx * 50 + 200}ms` }}>
+              <ToolCard {...tool} />
+            </div>
           ))}
         </section>
 
         {/* Affiliate Products Section */}
-        <section className="mt-16 sm:mt-20">
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl mb-3 bg-gradient-to-r from-emerald-glow to-thief-gold bg-clip-text text-transparent">
+        <section className="mt-12 sm:mt-16 lg:mt-20">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 lg:mb-10 animate-fade-in">
+            <h2 className="font-display text-xl sm:text-2xl lg:text-4xl mb-2 sm:mb-3 bg-gradient-to-r from-emerald-glow to-thief-gold bg-clip-text text-transparent px-2">
               Recommended Gear
             </h2>
-            <p className="text-muted-foreground text-sm sm:text-base">
+            <p className="text-muted-foreground text-xs sm:text-sm lg:text-base px-4">
               Support our development by checking out the equipment and products we use. 
-              <span className="text-xs block mt-1 opacity-70">As Amazon Associates, we earn from qualifying purchases.</span>
+              <span className="text-[10px] sm:text-xs block mt-1 opacity-70">As Amazon Associates, we earn from qualifying purchases.</span>
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {affiliateProducts.map((product) => (
-              <AffiliateProductCard key={product.name} {...product} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+            {affiliateProducts.map((product, idx) => (
+              <div key={product.name} className="animate-fade-in" style={{ animationDelay: `${idx * 50 + 400}ms` }}>
+                <AffiliateProductCard {...product} />
+              </div>
             ))}
           </div>
         </section>
 
-        <footer className="mt-12 sm:mt-16 text-center max-w-2xl mx-auto">
-          <div className="glass-card p-6 sm:p-8 rounded-lg border-white/10">
-            <h2 className="font-display text-xl sm:text-2xl mb-3 text-thief-gold">
+        <footer className="mt-10 sm:mt-12 lg:mt-16 text-center max-w-2xl mx-auto animate-fade-in">
+          <div className="glass-card p-5 sm:p-6 lg:p-8 rounded-lg border-white/10">
+            <h2 className="font-display text-lg sm:text-xl lg:text-2xl mb-2 sm:mb-3 text-thief-gold">
               Want to Create Games?
             </h2>
-            <p className="text-muted-foreground text-sm sm:text-base mb-4">
+            <p className="text-muted-foreground text-xs sm:text-sm lg:text-base mb-4">
               Many of these tools have free versions or educational licenses. Start your game development journey today!
             </p>
           </div>

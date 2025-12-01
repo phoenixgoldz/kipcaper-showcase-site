@@ -82,6 +82,18 @@ All colors MUST be HSL. */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
   /* Light theme fallback (if .dark not active) */
   .light {
     --background: 140 33% 93%;
@@ -151,6 +163,12 @@ All colors MUST be HSL. */
 @layer utilities {
   .hover-scale { @apply transition-all duration-300; }
   .hover-scale:hover { transform: scale(1.05) translateZ(0); filter: brightness(1.1); }
+  
+  /* Touch-friendly hover on mobile */
+  @media (hover: none) and (pointer: coarse) {
+    .hover-scale:active { transform: scale(0.98) translateZ(0); filter: brightness(0.95); }
+    .hover-lift:active { transform: translateY(2px) scale(0.98); }
+  }
 
   .hover-lift { @apply transition-all duration-300; }
   .hover-lift:hover { transform: translateY(-8px) scale(1.02); box-shadow: var(--shadow-primary); }
@@ -177,6 +195,14 @@ All colors MUST be HSL. */
       linear-gradient(hsl(var(--mystic-green) / 0.1) 1px, transparent 1px),
       linear-gradient(90deg, hsl(var(--mystic-green) / 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
+  }
+  
+  /* Better touch targets for mobile */
+  @media (max-width: 640px) {
+    button, a[role="button"], .interactive {
+      min-height: 44px;
+      min-width: 44px;
+    }
   }
 
   .floating-animation { animation: float 6s ease-in-out infinite; }
