@@ -55,18 +55,18 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <Button asChild variant="hero" size="lg" className="hover-scale kip-heist-glow shadow-2xl sm:size-xl">
+            <Button asChild variant="hero" size="lg" className="hover-scale kip-heist-glow shadow-2xl sm:size-xl whitespace-nowrap">
               <a 
                 href="https://www.kickstarter.com/projects/phoenixgoldgames/kip-caper-and-the-codex-caperius"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Back Kip Caper on Kickstarter"
               >
-                <Rocket className="w-5 h-5 mr-2" />
+                <Rocket className="w-5 h-5 mr-2 flex-shrink-0" />
                 Back on Kickstarter
               </a>
             </Button>
-            <Button asChild variant="gaming" size="lg" className="hover-scale kip-heist-glow shadow-2xl sm:size-xl">
+            <Button asChild variant="gaming" size="lg" className="hover-scale kip-heist-glow shadow-2xl sm:size-xl whitespace-nowrap">
               <a 
                 href="https://discord.gg/FxpB2Zw2P6"
                 target="_blank"
@@ -76,7 +76,7 @@ export const Hero = () => {
                 Join the Heist
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="hover-scale shadow-lg sm:size-xl bg-[#E60023] hover:bg-[#E60023]/90 text-white border-[#E60023]">
+            <Button asChild variant="outline" size="lg" className="hover-scale shadow-lg sm:size-xl bg-[#E60023] hover:bg-[#E60023]/90 text-white border-[#E60023] whitespace-nowrap">
               <a 
                 href="https://pin.it/2Bv3LCNGx"
                 target="_blank"
@@ -86,7 +86,7 @@ export const Hero = () => {
                 Pinterest
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="hover-scale codex-flip shadow-lg sm:size-xl">
+            <Button asChild variant="outline" size="lg" className="hover-scale codex-flip shadow-lg sm:size-xl whitespace-nowrap">
               <Link to="/codex" aria-label="Peek Inside the Codex">Peek Inside the Codex</Link>
             </Button>
           </motion.div>
