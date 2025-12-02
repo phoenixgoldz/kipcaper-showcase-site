@@ -49,12 +49,12 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             </NavLink>
           </nav>
           
-          {/* Mobile Navigation - Touch-friendly */}
-          <nav className="lg:hidden flex items-center gap-1.5 sm:gap-2 text-xs" aria-label="Mobile Navigation">
-            <NavLink to="/story" className="px-2 py-1.5 rounded hover:bg-stealth-silver/10 transition-colors min-h-[44px] flex items-center">Story</NavLink>
-            <NavLink to="/characters" className="px-2 py-1.5 rounded hover:bg-stealth-silver/10 transition-colors min-h-[44px] flex items-center">Cast</NavLink>
-            <NavLink to="/shop" className="px-2 py-1.5 rounded hover:bg-stealth-silver/10 transition-colors min-h-[44px] flex items-center">Shop</NavLink>
-            <NavLink to="/join" className="px-2.5 py-1.5 bg-thief-gold text-shadow-black rounded font-medium hover-scale min-h-[44px] flex items-center">Join</NavLink>
+          {/* Mobile Navigation - Touch-friendly with 44px minimum touch targets */}
+          <nav className="lg:hidden flex items-center gap-1 text-xs" aria-label="Mobile Navigation">
+            <NavLink to="/story" className="px-2.5 py-2.5 rounded hover:bg-stealth-silver/10 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center">Story</NavLink>
+            <NavLink to="/characters" className="px-2.5 py-2.5 rounded hover:bg-stealth-silver/10 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center">Cast</NavLink>
+            <NavLink to="/shop" className="px-2.5 py-2.5 rounded hover:bg-stealth-silver/10 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center">Shop</NavLink>
+            <NavLink to="/join" className="px-3 py-2.5 bg-thief-gold text-shadow-black rounded font-medium hover-scale min-h-[44px] flex items-center justify-center">Join</NavLink>
           </nav>
         </div>
       </header>
@@ -62,46 +62,46 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <main className="flex-1 relative z-10">{children}</main>
 
       <footer className="relative z-10 border-t border-white/10 mt-8 sm:mt-12 lg:mt-20 glass-card" role="contentinfo">
-        <div className="container mx-auto py-6 sm:py-8 lg:py-12 px-4 sm:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            <div className="space-y-2 sm:space-y-3 lg:space-y-4 text-center md:text-left">
+        <div className="container mx-auto py-8 sm:py-10 lg:py-12 px-4 sm:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
+            <div className="space-y-3 sm:space-y-4 text-center md:text-left">
               <div className="flex items-center gap-2 sm:gap-3 justify-center md:justify-start">
                 <StudioBadge size="sm" />
-                <span className="font-display text-sm sm:text-base lg:text-lg">PhoenixGold Game Studios</span>
+                <span className="font-display text-base sm:text-lg lg:text-xl">PhoenixGold Game Studios</span>
               </div>
-              <p className="text-[10px] sm:text-xs lg:text-sm text-muted-foreground">
+              <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed">
                 Stealing hearts and pixels since 2025. Powered by eucalyptus and questionable life choices.
               </p>
             </div>
             
-            <div className="space-y-2 sm:space-y-3 lg:space-y-4 text-center md:text-left">
-              <h3 className="font-display text-sm sm:text-base lg:text-lg" style={{color: 'hsl(var(--thief-gold))'}}>Game</h3>
-              <div className="flex flex-col gap-1 sm:gap-1.5 lg:gap-2 text-[10px] sm:text-xs lg:text-sm">
-                <Link to="/" className="story-link hover:text-emerald-glow transition-colors">Home</Link>
-                <Link to="/story" className="story-link hover:text-emerald-glow transition-colors">Story</Link>
-                <Link to="/characters" className="story-link hover:text-emerald-glow transition-colors">Characters</Link>
-                <Link to="/codex" className="story-link hover:text-emerald-glow transition-colors">Codex</Link>
-                <Link to="/shop" className="story-link hover:text-emerald-glow transition-colors">Shop</Link>
-                <Link to="/join" className="story-link hover:text-emerald-glow transition-colors">Join the Heist</Link>
+            <div className="space-y-3 sm:space-y-4 text-center md:text-left">
+              <h3 className="font-display text-base sm:text-lg lg:text-xl" style={{color: 'hsl(var(--thief-gold))'}}>Game</h3>
+              <div className="flex flex-col gap-2 sm:gap-2.5 text-sm sm:text-base">
+                <Link to="/" className="story-link hover:text-emerald-glow transition-colors py-1">Home</Link>
+                <Link to="/story" className="story-link hover:text-emerald-glow transition-colors py-1">Story</Link>
+                <Link to="/characters" className="story-link hover:text-emerald-glow transition-colors py-1">Characters</Link>
+                <Link to="/codex" className="story-link hover:text-emerald-glow transition-colors py-1">Codex</Link>
+                <Link to="/shop" className="story-link hover:text-emerald-glow transition-colors py-1">Shop</Link>
+                <Link to="/join" className="story-link hover:text-emerald-glow transition-colors py-1">Join the Heist</Link>
               </div>
             </div>
             
-            <div className="space-y-2 sm:space-y-3 lg:space-y-4 text-center md:text-left">
-              <h3 className="font-display text-sm sm:text-base lg:text-lg" style={{color: 'hsl(var(--emerald-glow))'}}>Connect</h3>
-              <div className="flex flex-col gap-1 sm:gap-1.5 lg:gap-2 text-[10px] sm:text-xs lg:text-sm">
-                <a href="https://discord.gg/FxpB2Zw2P6" target="_blank" rel="noopener noreferrer" className="story-link hover:text-emerald-glow transition-colors">Discord Community</a>
-                <a href="#" className="story-link hover:text-emerald-glow transition-colors">Steam Wishlist</a>
-                <a href="#" className="story-link hover:text-emerald-glow transition-colors">Contact</a>
+            <div className="space-y-3 sm:space-y-4 text-center md:text-left">
+              <h3 className="font-display text-base sm:text-lg lg:text-xl" style={{color: 'hsl(var(--emerald-glow))'}}>Connect</h3>
+              <div className="flex flex-col gap-2 sm:gap-2.5 text-sm sm:text-base">
+                <a href="https://discord.gg/FxpB2Zw2P6" target="_blank" rel="noopener noreferrer" className="story-link hover:text-emerald-glow transition-colors py-1">Discord Community</a>
+                <a href="#" className="story-link hover:text-emerald-glow transition-colors py-1">Steam Wishlist</a>
+                <a href="#" className="story-link hover:text-emerald-glow transition-colors py-1">Contact</a>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-white/10 mt-4 sm:mt-6 lg:mt-8 pt-4 sm:pt-6 lg:pt-8 flex flex-col md:flex-row items-center justify-between text-[10px] sm:text-xs lg:text-sm text-muted-foreground gap-3">
+          <div className="border-t border-white/10 mt-6 sm:mt-8 lg:mt-10 pt-6 sm:pt-8 flex flex-col md:flex-row items-center justify-between text-xs sm:text-sm text-muted-foreground gap-4">
             <span className="text-center md:text-left">© {new Date().getFullYear()} PhoenixGold Game Studios. All rights reserved.</span>
-            <div className="flex gap-3 sm:gap-4">
-              <a href="#" className="hover:text-emerald-glow transition-colors">Privacy</a>
-              <a href="#" className="hover:text-emerald-glow transition-colors">Terms</a>
-              <a href="#" className="hover:text-emerald-glow transition-colors">Support</a>
+            <div className="flex gap-4 sm:gap-6">
+              <a href="#" className="hover:text-emerald-glow transition-colors py-2">Privacy</a>
+              <a href="#" className="hover:text-emerald-glow transition-colors py-2">Terms</a>
+              <a href="#" className="hover:text-emerald-glow transition-colors py-2">Support</a>
             </div>
           </div>
         </div>
