@@ -82,9 +82,11 @@ All colors MUST be HSL. */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Smooth scrolling */
+  /* Smooth scrolling with mobile optimizations */
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
   
   /* Better text rendering */
@@ -92,6 +94,25 @@ All colors MUST be HSL. */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  }
+
+  /* Mobile-first responsive typography */
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    html {
+      font-size: 16px;
+    }
   }
 
   /* Light theme fallback (if .dark not active) */
@@ -131,7 +152,11 @@ All colors MUST be HSL. */
     @apply border-border;
   }
 
-  html { scroll-behavior: smooth; }
+  html { 
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;

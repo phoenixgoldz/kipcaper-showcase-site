@@ -216,22 +216,22 @@ const Story = () => {
         description="Follow Kip Caper's journey from cargo plane crash to global heist mastermind as he assembles his crew and reclaims the stolen Codex Caperius across six exotic chapters." 
       />
       
-      <div className="container mx-auto py-8 sm:py-12 px-4 sm:px-6">
+      <div className="container mx-auto py-10 sm:py-14 lg:py-16 px-5 sm:px-6">
         {/* Game Overview */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl mb-4 neon-glow px-2">Kip Caper and The Codex Caperius</h1>
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 px-4">
-            <Badge variant="secondary" className="bg-treasure-gold/20 text-treasure-gold border-treasure-gold/30">
+        <div className="text-center mb-16 sm:mb-20">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-6 neon-glow px-2 leading-tight">Kip Caper and The Codex Caperius</h1>
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 px-4">
+            <Badge variant="secondary" className="bg-treasure-gold/20 text-treasure-gold border-treasure-gold/30 text-sm sm:text-base py-2 px-4">
               {gameInfo.genre}
             </Badge>
-            <Badge variant="secondary" className="bg-mystic-green/20 text-mystic-green border-mystic-green/30">
+            <Badge variant="secondary" className="bg-mystic-green/20 text-mystic-green border-mystic-green/30 text-sm sm:text-base py-2 px-4">
               {gameInfo.engine}
             </Badge>
           </div>
-          <p className="text-base sm:text-xl text-eucalyptus-mist max-w-3xl mx-auto mb-4 px-4">
+          <p className="text-lg sm:text-xl lg:text-2xl text-eucalyptus-mist max-w-3xl mx-auto mb-5 px-4 leading-relaxed">
             {gameInfo.artStyle}
           </p>
-          <p className="text-sm sm:text-lg text-koala-grey px-4">
+          <p className="text-base sm:text-lg lg:text-xl text-koala-grey px-4 leading-relaxed">
             {gameInfo.perspective}
           </p>
         </div>
