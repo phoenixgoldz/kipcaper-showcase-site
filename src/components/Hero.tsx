@@ -7,8 +7,8 @@ import { CountdownTimer } from "@/components/CountdownTimer";
 import { PlatformBadges } from "@/components/PlatformBadges";
 import { Rocket } from "lucide-react";
 
-const EMBLEM_SRC = "/lovable-uploads/587ae039-a119-445b-a4ae-686bd447dace.png";
-const POSTER_SRC = "/lovable-uploads/075a6aba-4b19-4b87-a30f-c65c218b52dd.png";
+const EMBLEM_SRC = `${import.meta.env.BASE_URL}lovable-uploads/587ae039-a119-445b-a4ae-686bd447dace.png`;
+const POSTER_SRC = `${import.meta.env.BASE_URL}lovable-uploads/075a6aba-4b19-4b87-a30f-c65c218b52dd.png`;
 
 export const Hero = () => {
   const emblemRef = useRef<HTMLDivElement>(null);

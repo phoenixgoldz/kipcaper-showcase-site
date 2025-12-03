@@ -11,7 +11,7 @@ export const CharacterSelector = () => {
     {
       name: "Kip Caper",
       role: "Master Thief",
-      image: "/lovable-uploads/ce5bac29-1805-4689-a67b-2ecb9c945c22.png",
+      image: `${import.meta.env.BASE_URL}lovable-uploads/ce5bac29-1805-4689-a67b-2ecb9c945c22.png`,
       description: "A nimble and resourceful thief with unmatched stealth capabilities and bo-staff mastery.",
       stats: {
         stealth: 95,
@@ -25,7 +25,7 @@ export const CharacterSelector = () => {
     {
       name: "Peeka",
       role: "Scout & Reconnaissance", 
-      image: "/lovable-uploads/9a788c70-05af-45f4-b381-730104aca0a8.png",
+      image: `${import.meta.env.BASE_URL}lovable-uploads/9a788c70-05af-45f4-b381-730104aca0a8.png`,
       description: "Expert tracker and scout who provides intelligence and support from the shadows.",
       stats: {
         stealth: 92,
@@ -39,7 +39,7 @@ export const CharacterSelector = () => {
     {
       name: "Tikka",
       role: "Technical Specialist",
-      image: "/lovable-uploads/129d0e68-6925-4c82-bde5-0f3dd556e9e6.png",
+      image: `${import.meta.env.BASE_URL}lovable-uploads/129d0e68-6925-4c82-bde5-0f3dd556e9e6.png`,
       description: "The crew's technical expert, specializing in security systems and mechanical puzzles.",
       stats: {
         stealth: 78,

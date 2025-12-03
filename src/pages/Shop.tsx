@@ -3,46 +3,48 @@ import { SEO } from "@/components/SEO";
 import { ToolCard } from "@/components/shop/ToolCard";
 import { AffiliateProductCard } from "@/components/shop/AffiliateProductCard";
 
+const getImagePath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 const tools = [
   {
     name: "Unreal Engine 5",
     description: "Our primary game engine for building stunning environments and gameplay mechanics",
-    logo: "/images/unreal-engine-logo.svg",
+    logo: getImagePath("/images/unreal-engine-logo.svg"),
     link: "https://www.unrealengine.com/",
     category: "Game Engine"
   },
   {
     name: "Blender",
     description: "3D modeling and animation software for creating characters and assets",
-    logo: "/images/tools/blender-logo.png",
+    logo: getImagePath("/images/tools/blender-logo.png"),
     link: "https://www.blender.org/",
     category: "3D Modeling"
   },
   {
     name: "Photoshop",
     description: "Professional image editing for textures, concept art, and marketing materials",
-    logo: "/images/tools/photoshop.svg",
+    logo: getImagePath("/images/tools/photoshop.svg"),
     link: "https://www.adobe.com/products/photoshop.html",
     category: "Design"
   },
   {
     name: "Substance Painter",
     description: "3D painting software for creating realistic textures and materials",
-    logo: "/images/tools/substance-painter.svg",
+    logo: getImagePath("/images/tools/substance-painter.svg"),
     link: "https://www.adobe.com/products/substance3d-painter.html",
     category: "Texturing"
   },
   {
     name: "Git & GitHub",
     description: "Version control and collaboration platform for our development workflow",
-    logo: "/images/tools/github-mark.png",
+    logo: getImagePath("/images/tools/github-mark.png"),
     link: "https://github.com/",
     category: "Development"
   },
   {
     name: "Audacity",
     description: "Open-source audio editing software for sound design and music production",
-    logo: "/images/tools/audacity.svg",
+    logo: getImagePath("/images/tools/audacity.svg"),
     link: "https://www.audacityteam.org/",
     category: "Audio"
   }
