@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin } from "lucide-react";
 
+const getImagePath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 const gameInfo = {
   title: "Koala Kip and The Codex Caperis",
   genre: "Stealth • Action-Adventure • Platformer", 
@@ -56,7 +58,7 @@ const chapters = [
     gameplay: "Teach movement, jump, crouch-stealth. Crate climbing, rope-balancing, spotlight evasion. Traps (laser grid floor panels, swinging hooks to avoid, cargo boxes moving along floor to be crushed by).",
     climax: "Kip reaches the Codex cargo crate → ambushed by Magnus' lieutenant Silka sandfang.",
     villain: "Silka Sandfang (Silver wolf smuggler queen)",
-    villainImage: "/lovable-uploads/c7104955-097a-4316-b2fb-090253d9fae1.png",
+    villainImage: getImagePath("/lovable-uploads/c7104955-097a-4316-b2fb-090253d9fae1.png"),
     villainDetails: {
       species: "Silver wolf",
       role: "Smuggler Queen / Air Pirate", 
@@ -76,7 +78,7 @@ const chapters = [
     title: "Carpets, Crates, and Crooks Oh My?!",
     location: "Marrakesh, Morocco",
     villain: "Silka Sandfang (Silver wolf smuggler queen)",
-    villainImage: "/lovable-uploads/c7104955-097a-4316-b2fb-090253d9fae1.png",
+    villainImage: getImagePath("/lovable-uploads/c7104955-097a-4316-b2fb-090253d9fae1.png"),
     villainDetails: {
       species: "Silver wolf",
       role: "Smuggler Queen / Air Pirate",
@@ -97,7 +99,7 @@ const chapters = [
     title: "Swamp Things You Don't Want to See", 
     location: "Manaus, Brazil (Amazon)",
     villain: "Don Croco (crocodile caiman mob boss)",
-    villainImage: "/lovable-uploads/cbe2153c-efe2-42cd-91fc-b5d058d9788f.png",
+    villainImage: getImagePath("/lovable-uploads/cbe2153c-efe2-42cd-91fc-b5d058d9788f.png"),
     villainDetails: {
       species: "Crocodile (caiman mob boss)",
       role: "Swamp Crime Boss",
@@ -118,7 +120,7 @@ const chapters = [
     title: "Tomb It May Concern",
     location: "Luxor, Egypt", 
     villain: "Anubis Jackalton (jackal tomb raider)",
-    villainImage: "/lovable-uploads/5d3a4fd5-773c-4e65-93d6-65d8a8f51e99.png",
+    villainImage: getImagePath("/lovable-uploads/5d3a4fd5-773c-4e65-93d6-65d8a8f51e99.png"),
     villainDetails: {
       species: "Jackal",
       role: "Tomb Raider / Fake Archaeologist",
@@ -139,7 +141,7 @@ const chapters = [
     title: "Rocks, Robbers, and Rooftops",
     location: "Cappadocia, Turkey",
     villain: "Baron Talvik (owl sky-baron)",
-    villainImage: "/lovable-uploads/734355f8-c7fa-468f-83f7-65233ff06838.png",
+    villainImage: getImagePath("/lovable-uploads/734355f8-c7fa-468f-83f7-65233ff06838.png"),
     villainDetails: {
       species: "Owl",
       role: "Black-Market Auctioneer / Arms Dealer",
@@ -160,7 +162,7 @@ const chapters = [
     title: "The Long Con in the Safari Sun",
     location: "Johannesburg, South Africa",
     villain: "Mamba Noir (black mamba casino/poacher kingpin)",
-    villainImage: "/lovable-uploads/716a1dd8-ab52-4b17-8aa2-4698fe57226d.png",
+    villainImage: getImagePath("/lovable-uploads/716a1dd8-ab52-4b17-8aa2-4698fe57226d.png"),
     villainDetails: {
       species: "Black Mamba snake",
       role: "Casino Empire Owner / Poaching Kingpin",
@@ -181,7 +183,7 @@ const chapters = [
     title: "An Elephant Never Forgets… to Steal",
     location: "The Shattered Sanctuary (Indian Ocean)",
     villain: "Magnus (elephant warlord mastermind)",
-    villainImage: "/lovable-uploads/259620bf-21b5-47d1-b0c0-e69d8557586f.png",
+    villainImage: getImagePath("/lovable-uploads/259620bf-21b5-47d1-b0c0-e69d8557586f.png"),
     villainDetails: {
       species: "Elephant",
       role: "Warlord Mastermind",
