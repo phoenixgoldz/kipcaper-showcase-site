@@ -6,7 +6,7 @@ interface ImageOptimizedProps {
   alt: string;
   className?: string;
   loading?: "eager" | "lazy";
-  aspectRatio?: "square" | "portrait" | "landscape" | "video";
+  aspectRatio?: "square" | "portrait" | "landscape" | "video" | "product" | "auto";
   objectFit?: "cover" | "contain" | "fill";
 }
 
@@ -21,11 +21,13 @@ export const ImageOptimized = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
-  const aspectRatioClasses = {
+const aspectRatioClasses = {
     square: "aspect-square",
     portrait: "aspect-[3/4]",
     landscape: "aspect-[4/3]",
-    video: "aspect-video"
+    video: "aspect-video",
+    product: "aspect-[4/3]",
+    auto: ""
   };
 
   const objectFitClasses = {

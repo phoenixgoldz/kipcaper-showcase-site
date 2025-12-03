@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Tag } from "lucide-react";
-import { ImageOptimized } from "@/components/ImageOptimized";
 
 interface AffiliateProductCardProps {
   name: string;
@@ -16,12 +15,17 @@ export const AffiliateProductCard = ({ name, description, link, price, image, ca
   return (
     <Card className="group hover-lift transition-all duration-500 glass-card border-thief-gold/20 bg-gradient-to-br from-background via-background to-thief-gold/5 overflow-hidden hover:border-thief-gold/40 hover:shadow-xl hover:shadow-thief-gold/10">
       <div className="relative overflow-hidden">
-        <ImageOptimized 
+        <img 
           src={image}
           alt={name}
-          aspectRatio="landscape"
-          objectFit="contain"
-          className="w-full"
+          loading="lazy"
+          referrerPolicy="no-referrer"
+          crossOrigin="anonymous"
+          className="w-full h-48 object-contain bg-white/5 p-2"
+          onError={(e) => {
+            const target = e.target as HTMLImageElement;
+            target.style.display = 'none';
+          }}
         />
         <div className="absolute top-3 right-3 flex items-center gap-2 bg-thief-gold text-shadow-black px-3 py-1.5 rounded-lg text-sm font-bold shadow-lg">
           <Tag className="h-3 w-3" />
